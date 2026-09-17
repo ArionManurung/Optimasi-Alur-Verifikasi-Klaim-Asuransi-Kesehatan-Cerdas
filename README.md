@@ -5,8 +5,6 @@ Proyek ini merupakan implementasi agen cerdas berbasis algoritma **Uniform Cost 
 ## 📌 Studi Kasus
 Prosedur Penjaminan *Cashless* Jaringan **Allianz-AdMedika**.
 
-![Visualisasi Graf Ruang Keadaan](graph_ucs_asuransi.png)
-
 ## 🚀 Spesifikasi PEAS
 - **Performance Measure**: Meminimalkan total waktu verifikasi (menit) & biaya operasional.
 - **Environment**: Transaksi EDC AdMedika, database limit polis, Laporan Medis Awal RS, dan tabel tarif perawatan.
