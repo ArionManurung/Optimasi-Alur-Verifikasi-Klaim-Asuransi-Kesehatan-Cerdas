@@ -1,0 +1,11 @@
+[project]
+name = "asuransii"
+version = "0.1.0"
+description = "Sistem Verifikasi Klaim Asuransi Kesehatan berbasis Uniform Cost Search (UCS)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
