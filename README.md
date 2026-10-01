@@ -1,125 +1,142 @@
-# Tugas 01 Milestone 1: Optimasi Alur Verifikasi Klaim Asuransi dengan Uniform Cost Search
+# Tugas 02 Milestone 2: Modul Pemecahan Batasan Keputusan Bisnis (CSP / GA Optimization)
 
-Program ini mencari jalur tercepat pada alur verifikasi klaim asuransi Allianz menggunakan algoritma Uniform Cost Search (UCS), mulai dari tahap pengajuan klaim sampai pencairan dana.
+Sistem Inferensi Batasan Keputusan Bisnis (**Constraint Solver Engine**) untuk **Optimasi Penjadwalan Shift Staf Verifikasi Klaim Asuransi Kesehatan Allianz**. Modul ini mengembangkan hasil Milestone 1 (*Uniform Cost Search*) dengan mengintegrasikan dua pendekatan algoritmik utama: **Constraint Satisfaction Problem (CSP)** dengan **AC-3 & Backtracking MRV** serta **Algoritma Genetika (GA)** dengan **Operator Turnamen & Elitisme**.
 
-## Deskripsi Masalah
+---
 
-Proses klaim asuransi tidak selalu berjalan lurus dari satu tahap ke tahap berikutnya. Satu klaim bisa melewati beberapa jalur yang berbeda, dan setiap jalur memakan waktu yang berbeda pula.
+## 📌 Deskripsi Masalah & Context Bisnis
 
-Alur proses dimodelkan sebagai graf berbobot tak berarah:
+Dalam operasional verifikasi klaim asuransi kesehatan Allianz, alokasi verifikator klaim (dokter examiner, spesialis fraud audit, supervisor persetujuan) dibatasi oleh regulasi ketat:
+1. **Sertifikasi Kualifikasi**: Tahap `Verifikasi_RS` wajib dilakukan oleh verifikator bersertifikat medis (`Medical_Reviewer_Cert`), `Audit_Fraud` wajib oleh spesialis fraud (`Fraud_Audit_Cert`), dan `Persetujuan` oleh senior manager (`Senior_Approval_Cert`).
+2. **Eksklusivitas Shift**: Seorang staf hanya dapat bertugas di satu tahap klaim pada slot waktu (hari & shift) yang sama.
+3. **Batas Jam Kerja Ketenagakerjaan**: Staf tidak boleh melebihi kuota maksimum shift mingguan (maksimum 4-5 shift/minggu).
+4. **Aturan Istirahat Wajib**: Staf yang bertugas pada Shift Malam Hari $D$ tidak boleh dijadwalkan pada Shift Pagi Hari $D+1$.
 
-- Node: tahapan proses klaim (Pengajuan, Cek Polis, Verifikasi RS, Audit Fraud, Persetujuan, Pencairan)
-- Edge: kemungkinan perpindahan antar tahapan
-- Bobot: estimasi waktu proses dalam satuan menit
+---
 
-Tujuan program adalah menemukan rangkaian tahapan dari Pengajuan ke Pencairan dengan total waktu paling kecil.
+## 🧮 Pemodelan Matematis Formal
 
-## Struktur Graf
+### 1. Formulasi CSP (Constraint Satisfaction Problem)
+* **Variabel ($V$)**:
+  $$V = \{ X_{s, d, t} \mid s \in \text{Stages}, d \in \{1 \dots D\}, t \in \text{Shifts} \}$$
+  Dengan $\text{Stages} = \{\text{Cek\_Polis}, \text{Verifikasi\_RS}, \text{Audit\_Fraud}, \text{Persetujuan}\}$, $\text{Shifts} = \{\text{Pagi}, \text{Siang}, \text{Malam}\}$.
 
-| Dari | Ke | Waktu (menit) |
-|---|---|---|
-| Pengajuan | Cek_Polis | 5 |
-| Pengajuan | Verifikasi_RS | 15 |
-| Cek_Polis | Audit_Fraud | 10 |
-| Verifikasi_RS | Audit_Fraud | 5 |
-| Verifikasi_RS | Persetujuan | 20 |
-| Audit_Fraud | Persetujuan | 10 |
-| Persetujuan | Pencairan | 5 |
+* **Domain ($D$)**:
+  $$D(X_{s,d,t}) = \{ e \in \text{StaffPool} \mid \text{HasQual}(e, \text{ReqQual}(s)) \}$$
 
-Graf disimpan dalam bentuk adjacency list menggunakan dictionary bersarang:
+* **Batasan Ketat / Hard Constraints ($C_{\text{hard}}$)**:
+  1. **Kualifikasi Khusus**: 
+     $$\forall X_{s,d,t}, \quad \text{HasQual}(\text{Assign}(X_{s,d,t}), \text{ReqQual}(s)) = \text{True}$$
+  2. **Eksklusivitas Shift**:
+     $$\forall s_1 \neq s_2, \quad \text{Assign}(X_{s_1,d,t}) \neq \text{Assign}(X_{s_2,d,t})$$
+  3. **Kapasitas Beban Kerja Maksimum**:
+     $$\forall e \in \text{StaffPool}, \quad \sum_{v \in V} \mathbb{I}(\text{Assign}(v) = e) \le \text{MaxShifts}(e)$$
+  4. **Periode Istirahat Antar Shift**:
+     $$\text{Assign}(X_{s_1, d, \text{"Malam"}}) \neq \text{Assign}(X_{s_2, d+1, \text{"Pagi"}})$$
 
-```python
-graph_allianz = {
-    'Pengajuan':     {'Cek_Polis': 5, 'Verifikasi_RS': 15},
-    'Cek_Polis':     {'Pengajuan': 5, 'Audit_Fraud': 10},
-    'Verifikasi_RS': {'Pengajuan': 15, 'Audit_Fraud': 5, 'Persetujuan': 20},
-    'Audit_Fraud':   {'Cek_Polis': 10, 'Verifikasi_RS': 5, 'Persetujuan': 10},
-    'Persetujuan':   {'Verifikasi_RS': 20, 'Audit_Fraud': 10, 'Pencairan': 5},
-    'Pencairan':     {'Persetujuan': 5}
-}
-```
+---
 
-## Visualisasi Graf
+### 2. Skema Kromosom & Kebugaran GA (Genetic Algorithm)
+* **Kromosom**: Vektor integer berukuran $N$ (di mana $N = |V|$), di mana elemen ke-$i$ merepresentasikan index staf dari domain terfilter yang dialokasikan pada variabel $V_i$.
+* **Fungsi Kebugaran (Fitness Function)**:
+  $$f(\text{Indiv}) = 1000 - (W_{\text{hard}} \times N_{\text{violations}}) + \text{Bonus}_{\text{pref}} - \text{Penalty}_{\text{fairness}}$$
+  - $W_{\text{hard}} = 250.0$ (penalti per pelanggaran batasan ketat).
+  - $\text{Bonus}_{\text{pref}} = +10.0$ per penyesuaian shift favorit staf.
+  - $\text{Penalty}_{\text{fairness}} = 5.0 \times \text{Var}(\text{AssignedShifts})$ (pemerataan beban kerja).
 
-Jalur optimal hasil UCS ditandai dengan warna oranye.
+---
 
-![Graf Alur Verifikasi Klaim Allianz](graph_alianz.png)
+## 🛠️ Arsitektur & Algoritma Engine (`solver.py`)
 
-## Algoritma Uniform Cost Search
+1. **CSP Solver (`CSPSolver`)**:
+   - **AC-3 (Arc Consistency 3)**: Memangkas domain nilai secara berulang melalui propagasi batasan biner sebelum dan selama pencarian.
+   - **Backtracking Search**: Menelusuri ruang pencarian keputusan.
+   - **MRV (Minimum Remaining Values)**: Mengembangkan variabel dengan ukuran domain tersisa paling sedikit terlebih dahulu.
+   - **Degree Heuristic**: Memecahkan *tie-breaking* berdasarkan variabel dengan jumlah batasan terbanyak terhadap variabel belum terisi.
+   - **LCV (Least Constraining Value)**: Mengurutkan nilai domain yang meminimalkan konflik pada variabel tetangga.
 
-UCS adalah algoritma pencarian uninformed yang selalu mengembangkan node dengan biaya kumulatif terkecil terlebih dahulu. Selama semua bobot bernilai non-negatif, UCS dijamin menemukan solusi yang optimal.
+2. **GA Solver (`GASolver`)**:
+   - **Seleksi**: *k-Tournament Selection* ($k=5$).
+   - **Rekombinasi**: *Two-Point Crossover* & *Uniform Crossover* dengan $P_c = 0.85$.
+   - **Mutasi**: *Random Resetting & Swap Mutation* dengan $P_m = 0.05$.
+   - **Elitisme**: Menyimpan $E=4$ individu terbaik tanpa perubahan ke generasi berikutnya.
 
-Langkah kerja algoritma pada program ini:
+---
 
-1. Masukkan node awal ke priority queue dengan biaya 0.
-2. Ambil elemen dengan biaya terkecil dari antrean menggunakan `heapq.heappop`.
-3. Jika node terakhir pada jalur sudah sama dengan node tujuan, kembalikan biaya dan jalurnya.
-4. Jika node belum pernah dikunjungi, tandai sebagai visited, lalu masukkan semua tetangganya ke antrean dengan biaya baru sebesar biaya sekarang ditambah bobot edge.
-5. Ulangi sampai antrean kosong. Jika antrean habis tanpa menemukan tujuan, kembalikan nilai tak hingga.
+## 📊 Hasil Analisis Sensitivitas & Performa
 
-Struktur data yang digunakan:
+Pengujian dilakukan pada dua skala masalah:
+* **Skala Kecil**: 3 Hari, 2 Shift, 4 Tahap Klaim (**24 Variabel**, 8 Staf).
+* **Skala Besar**: 7 Hari, 3 Shift, 4 Tahap Klaim (**84 Variabel**, 24 Staf).
 
-| Komponen | Implementasi | Kegunaan |
-|---|---|---|
-| Priority queue | `heapq` (min-heap) | Memproses jalur dengan biaya terkecil lebih dulu |
-| Visited set | `set()` | Mencegah node diproses berulang dan menghindari siklus |
-| Jalur | `list` | Menyimpan rangkaian node yang sudah ditempuh |
+### Tabel Hasil Benchmark
 
-Kompleksitas waktu O(E log V) dan kompleksitas ruang O(V), dengan V adalah jumlah node dan E adalah jumlah edge.
+| Metode Solver | Skala Masalah | Status Solusi | Waktu Eksekusi (ms) | Hard Violations | Node Expanded |
+|---|---|---|---|---|---|
+| **CSP (AC-3 + MRV)** | Small (24 Vars) | **Exact Solved** | **34.47 ms** | **0** | **24** |
+| **GA (Elitism)** | Small (24 Vars) | Feasible Optimal | 4,469.48 ms | 0 | N/A |
+| **CSP (AC-3 + MRV)** | Large (84 Vars) | **Exact Solved** | **3,835.36 ms** | **0** | **84** |
+| **GA (Elitism)** | Large (84 Vars) | Approx Solution | 40,272.76 ms | 26 | N/A |
 
-## Penelusuran Eksekusi
+### Analisis Temuan:
+1. **CSP (AC-3 + Backtracking MRV)** sangat unggul secara eksak (100% legal, 0 pelanggaran batasan) dan menyelesaikan masalah skala besar dalam 3.8 detik tanpa memerlukan *backtracking* tambahan berkat propagasi AC-3 yang presisi.
+2. **Algoritma Genetika (GA)** berhasil menemukan solusi optimal pada skala kecil, namun memerlukan evaluasi generasi yang lebih lama pada skala besar untuk menghilangkan seluruh penalti batasan ketat.
 
-| Langkah | Node dikembangkan | Biaya kumulatif | Isi antrean setelahnya |
-|---|---|---|---|
-| 1 | Pengajuan | 0 | (5, Cek_Polis), (15, Verifikasi_RS) |
-| 2 | Cek_Polis | 5 | (15, Audit_Fraud), (15, Verifikasi_RS) |
-| 3 | Audit_Fraud | 15 | (15, Verifikasi_RS), (20, Verifikasi_RS), (25, Persetujuan) |
-| 4 | Verifikasi_RS | 15 | (20, Verifikasi_RS), (25, Persetujuan), (35, Persetujuan) |
-| 5 | Persetujuan | 25 | (30, Pencairan), (35, Persetujuan) |
-| 6 | Pencairan | 30 | Tujuan tercapai |
+---
 
-Jalur alternatif melalui Verifikasi_RS membutuhkan 15 + 5 + 10 + 5 = 35 menit, sehingga tidak terpilih sebagai jalur optimal.
+## 🧪 Pengujian Otomatis & Kasus Ekstrem (*Edge Cases*)
 
-## Cara Menjalankan
+Unit test otomatis disusun menggunakan `pytest` di [`tests/test_solver.py`](file:///c:/Users/ASUS/Documents/Semester%205/CERTAN/Tugas01_Milestone1/tests/test_solver.py):
 
-Program utama hanya menggunakan modul bawaan Python yaitu `heapq`, sehingga tidak memerlukan instalasi library tambahan.
+* `test_ac3_domain_reduction`: Verifikasi pemangkasan domain oleh AC-3.
+* `test_csp_backtracking_small_problem`: Solusi penuh tanpa pelanggaran pada skala kecil.
+* `test_ga_solver_small_problem`: Uji konvergensi fitness per generasi pada GA.
+* `test_edge_case_unsatisfiable_overconstrained`: Penanganan kasus jadwal tidak memungkinkan (over-constrained).
+* `test_edge_case_empty_domain`: Penanganan variabel tanpa staf kualifikasi.
+* `test_edge_case_single_variable`: Kasus minimal 1 variabel.
+* `test_csp_and_ga_large_scale_stability`: Uji stabilitas memori & eksekusi pada 84 variabel.
 
+### Menjalankan Pengujian:
 ```bash
-python Alianz.py
+.venv\Scripts\python.exe -m pytest tests/test_solver.py -v
 ```
 
-Untuk membuat ulang gambar graf, diperlukan dua library tambahan:
-
+### Menjalankan Benchmark:
 ```bash
-pip install networkx matplotlib
-python visualisasi_graph.py
+.venv\Scripts\python.exe benchmark.py
 ```
 
-## Contoh Output
-
-```
-Jalur Optimal : Pengajuan -> Cek_Polis -> Audit_Fraud -> Persetujuan -> Pencairan
-Total Waktu   : 30 Menit
+### Menjalankan App Dashboard Streamlit:
+```bash
+.venv\Scripts\streamlit run app.py
 ```
 
-Jalur tersebut menyelesaikan proses klaim dalam waktu 30 menit, yang merupakan waktu tercepat dari seluruh kemungkinan jalur yang ada.
+---
 
-## Struktur Proyek
+## 📁 Struktur Repositori
 
 ```
 Tugas01_Milestone1/
-├── Alianz.py              # Program utama: definisi graf dan implementasi UCS
-├── visualisasi_graph.py   # Skrip pembuat gambar graf
-├── graph_alianz.png       # Hasil visualisasi graf
-├── pyproject.toml         # Konfigurasi proyek
-├── .python-version        # Versi Python yang digunakan
-├── .gitignore
-├── README.md
-└── src/
-    └── tugas01_milestone1/
-        └── __init__.py
+├── Alianz.py                   # Program utama Milestone 1 (UCS)
+├── app.py                      # Interactive Streamlit Dashboard (Milestone 1 & 2)
+├── benchmark.py                # Runner Analisis Sensitivitas & Benchmark Performa
+├── solver.py                   # Top-level wrapper modul solver CSP & GA
+├── pyproject.toml              # Definisi dependensi & proyek
+├── README.md                   # Dokumentasi Laporan Proyek
+├── src/
+│   └── tugas02_milestone2/
+│       ├── __init__.py         # Package init
+│       ├── domain.py           # Pemodelan domain matematis, variabel & batasan
+│       └── solver.py           # Modul algoritma AC-3, Backtracking MRV, dan GA Elitism
+└── tests/
+    └── test_solver.py          # Modul pengujian otomatis pytest (termasuk edge cases)
 ```
 
-## Kesimpulan
+---
 
-Uniform Cost Search berhasil menemukan alur verifikasi klaim tercepat, yaitu Pengajuan, Cek_Polis, Audit_Fraud, Persetujuan, Pencairan dengan total waktu 30 menit. Hasil ini menunjukkan bahwa pemodelan alur kerja sebagai graf berbobot dapat membantu perusahaan asuransi menekan waktu tunggu nasabah tanpa melewatkan tahapan verifikasi yang wajib dilalui.
+## 🏷️ GitHub Release Tag
+
+Rilis ini telah di-tag dengan versi `v0.2-milestone2`:
+```bash
+git tag v0.2-milestone2
+```
