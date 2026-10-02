@@ -26,19 +26,16 @@ st.set_page_config(
 # Custom CSS Styling
 st.markdown("""
 <style>
-    .stApp { background-color: #f8fafc; font-family: 'Segoe UI', Roboto, sans-serif; }
+    .stApp { font-family: 'Segoe UI', Roboto, sans-serif; }
     .kpi-card {
-        background: white; border-radius: 12px; padding: 18px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #e2e8f0;
+        background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 18px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .kpi-title { color: #64748b; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; }
-    .kpi-value { color: #0f172a; font-size: 1.6rem; font-weight: 700; }
+    .kpi-title { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; opacity: 0.8;}
+    .kpi-value { font-size: 1.6rem; font-weight: 700; }
     .status-badge {
         display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;
     }
-    .badge-success { background-color: #d1fae5; color: #065f46; }
-    .badge-warning { background-color: #fef3c7; color: #92400e; }
-    div[data-testid="stSidebar"] { background-color: #ffffff; border-right: 1px solid #e2e8f0; }
 </style>
 """, unsafe_allow_html=True)
 
