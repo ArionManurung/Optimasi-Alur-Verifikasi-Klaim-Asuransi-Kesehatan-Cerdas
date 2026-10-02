@@ -1,6 +1,7 @@
 import heapq
 
-# Formulasi Graf Alur Verifikasi Klaim Allianz (Node: {Tetangga: Waktu_Menit})
+# Formulasi Graf Alur Verifikasi Klaim Allianz
+# Node: {Tetangga: Waktu_Detik}
 graph_allianz = {
     'Pengajuan': {'Cek_Polis': 5, 'Verifikasi_RS': 15},
     'Cek_Polis': {'Pengajuan': 5, 'Audit_Fraud': 10},
@@ -9,6 +10,7 @@ graph_allianz = {
     'Persetujuan': {'Verifikasi_RS': 20, 'Audit_Fraud': 10, 'Pencairan': 5},
     'Pencairan': {'Persetujuan': 5}
 }
+
 
 def ucs_claim_verification(start, goal, graph):
     pq = [(0, [start])]
@@ -23,11 +25,23 @@ def ucs_claim_verification(start, goal, graph):
 
         if node not in visited:
             visited.add(node)
+
             for neighbor, weight in graph[node].items():
                 if neighbor not in visited:
-                    heapq.heappush(pq, (cost + weight, path + [neighbor]))
+                    heapq.heappush(
+                        pq,
+                        (cost + weight, path + [neighbor])
+                    )
+
     return float("inf"), []
 
-waktu_opt, jalur_opt = ucs_claim_verification('Pengajuan', 'Pencairan', graph_allianz)
+
+# Menjalankan UCS
+waktu_opt, jalur_opt = ucs_claim_verification(
+    'Pengajuan',
+    'Pencairan',
+    graph_allianz
+)
+
 print(f"Jalur Optimal : {' -> '.join(jalur_opt)}")
-print(f"Total Waktu   : {waktu_opt} Menit")
+print(f"Total Waktu   : {waktu_opt} Detik")
