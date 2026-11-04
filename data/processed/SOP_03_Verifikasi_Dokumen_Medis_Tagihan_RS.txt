@@ -1,0 +1,83 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_03
+- Judul Dokumen: Prosedur Verifikasi Dokumen Medis dan Tagihan Rumah Sakit (Medical Documents and Hospital Bills Verification)
+- Tahapan UCS Terkait: N_2 – Verifikasi RS (Pemeriksaan Dokumen Medis dan Tagihan Fasilitas Kesehatan)
+- Klasifikasi: Dokumen Operasional Standar Evaluasi Medis dan Audit Finansial Fasilitas Kesehatan
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Memberikan panduan baku bagi dokter pemeriksa (Medical Reviewer) dan staf verifikator klaim dalam memvalidasi kewajaran tindakan medis serta keabsahan rincian tagihan dari fasilitas kesehatan.
+b. Memastikan adanya keselarasan mutlak antara keluhan pasien, hasil pemeriksaan klinis/penunjang, diagnosis dokter (berdasarkan kode ICD-10), dan terapi pengobatan yang ditagihkan.
+c. Memeriksa keabsahan kuitansi pembayaran asli, perincian tagihan (itemized bill), salinan resep, serta bukti pembelian obat di instalasi farmasi resmi.
+d. Mendeteksi potensi ketidaksesuaian informasi, tagihan ganda (double billing), atau tindakan medis berlebih yang tidak memiliki indikasi klinis nyata (over-treatment).
+e. Mengatur alur penanganan berkas medis yang tidak lengkap atau meragukan, serta menetapkan kriteria kelayakan untuk mengalirkan berkas ke tahap N_3 – Audit Fraud atau ke tahap persetujuan.
+3. RUANG LINGKUP
+Prosedur ini mencakup seluruh kegiatan audit medis dan audit tagihan finansial terhadap berkas klaim yang telah dinyatakan lolos verifikasi kepesertaan dan masa tunggu pada tahap N_1 – Cek Polis. Ruang lingkup mencakup telaah dokumen resume medis rawat inap maupun rawat jalan, verifikasi kuitansi dan perincian pos biaya fasilitas pelayanan kesehatan (rumah sakit, klinik, atau laboratorium penunjang), serta konfirmasi keabsahan dokumen resep obat. Prosedur ini melibatkan pemohon klaim, pihak fasilitas kesehatan penerbit dokumen, dokter pemeriksa klaim internal, dan analis audit fraud.
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Verifikator Medis (Medical Reviewer): Tenaga medis profesional atau dokter pemeriksa yang bertugas mengevaluasi kewajaran riwayat pengobatan, tindakan klinis, dan tagihan medis pada berkas klaim asuransi.
+b. Indikasi Medis / Kewajaran Medis (Medical Necessity): Prinsip bahwa suatu tindakan perawatan, tes diagnostik, pembedahan, atau peresepan obat wajib didasarkan pada kebutuhan pengobatan yang rasional dan terbukti secara ilmiah untuk menyembuhkan penyakit pasien, bukan atas dasar permintaan subjektif atau kenyamanan pribadi pasien.
+c. Rincian Tagihan Rumah Sakit (Itemized Bill): Lembar perincian resmi dari rumah sakit yang mencatat rincian nominal biaya per komponen pelayanan secara transparan, seperti tarif kamar rawat inap, honor dokter pemeriksa/spesialis, biaya obat, alat kesehatan habis pakai, dan tindakan medis.
+d. Resep Obat Resmi (Doctor Prescription): Lembar perintah pemberian obat tertulis dari dokter yang memiliki Surat Izin Praktik (SIP) sah yang merinci nama obat, dosis pemakaian, jumlah hari terapi, dan aturan pakai.
+e. Tagihan Ganda (Double Billing): Kesalahan administratif atau kesengajaan penagihan di mana satu jenis layanan medis, obat, atau kamar yang sama ditagihkan lebih dari satu kali dalam kuitansi klaim.
+f. Hasil Pemeriksaan Penunjang (Diagnostic Test Results): Lembaran laporan objektif hasil laboratorium darah/urin, foto rontgen radiologi, hasil USG, CT-Scan, MRI, atau patologi anatomi yang mengonfirmasi ketepatan diagnosis dokter.
+g. Resume Medis Lengkap: Ringkasan kronologis perawatan pasien yang ditulis dokter yang memuat riwayat masuk, keluhan, hasil pemeriksaan fisik, tindakan medis, diagnosis akhir, dan anjuran saat pasien keluar dari fasilitas kesehatan.
+5. KETENTUAN
+Kebijakan dan aturan operasional yang mendasari proses verifikasi dokumen medis dan tagihan rumah sakit adalah:
+a. Prinsip Kewajaran Medis: Penggantian biaya hanya diberikan untuk tindakan dan obat yang memiliki hubungan langsung dengan diagnosis penyakit yang ditegakkan dokter. Tindakan penunjang tanpa indikasi klinis (misal tes laboratorium penunjang yang tidak relevan dengan keluhan utama) tidak dapat disetujui.
+b. Keselarasan Nilai Finansial: Total nominal pada kuitansi pembayaran asli wajib sama persis dengan penjumlahan seluruh komponen biaya pada rincian tagihan (itemized bill). Apabila terdapat selisih perhitungan, verifikator wajib mengklarifikasi rincian tagihan kepada fasilitas kesehatan terkait.
+c. Validitas Kuitansi dan Resep Obat: Kuitansi pembayaran wajib memuat nomor kuitansi resmi, cap stempel lunas asli dari fasilitas kesehatan, serta tanggal pembayaran yang konsisten dengan periode perawatan. Pembelian obat di luar apotek rumah sakit wajib disertai salinan resep dokter dan kuitansi apotek resmi berlisensi.
+d. Larangan Tagihan Ganda: Sistem wajib melakukan audit silang untuk mendeteksi apakah kuitansi atau nomor tagihan rumah sakit yang diajukan pernah ditagihkan pada klaim sebelumnya (mencegah duplikasi klaim).
+e. Ketergantungan pada Polis Masing-Masing Peserta: Batasan tarif kamar, plafon tindakan pembedahan, batasan obat paten vs generik, dan klausul uji laboratorium penunjang sepenuhnya merujuk pada tabel hak manfaat polis masing-masing peserta.
+f. Parameter Model Simulasi Akademik: Khusus dalam model simulasi proyek kelompok ini:
+1) Waktu evaluasi dokumen medis dan tagihan rumah sakit ditargetkan maksimal 2x24 jam kerja sejak berkas diterima dari tahap N_1.
+2) Jika terdapat keraguan medis atau ketidaksesuaian dokumen, batas waktu pemberian tanggapan konfirmasi dari pihak rumah sakit/nasabah dimodelkan 14 hari kalender.
+Catatan penting: Parameter waktu ini merupakan rancangan model simulasi pembelajaran dan dapat bervariasi sesuai SLA operasional nyata penanggung asuransi.
+6. PROSEDUR
+Urutan langkah operasional verifikasi dokumen medis dan tagihan fasilitas kesehatan pada tahap N_2 dilaksanakan sebagai berikut:
+- Langkah 1 (Penerimaan Berkas dari Tahap N_1): Verifikator medis menerima berkas klaim berstatus "Lolos Uji Polis" dari tahap N_1 – Cek Polis beserta seluruh dokumen lampiran (resume medis, kuitansi, rincian biaya, resep, dan hasil tes penunjang).
+- Langkah 2 (Pemeriksaan Resume Medis dan Diagnosis): Dokter pemeriksa membaca resume medis: mencocokkan keluhan utama pasien dengan diagnosis akhir (kode ICD-10). Memastikan diagnosis bukan merupakan akibat dari kondisi yang dilarang atau penyakit tanpa indikasi rawat.
+- Langkah 3 (Audit Rincian Tagihan / Itemized Bill): Petugas membedah rincian biaya baris demi baris:
+1) Mencocokkan tarif kamar dengan kelas kamar yang ditempati dan hak polis peserta.
+2) Memeriksa kewajaran frekuensi kunjungan dokter umum atau dokter spesialis.
+3) Memeriksa komponen biaya administrasi rumah sakit dan alat kesehatan habis pakai.
+- Langkah 4 (Validasi Resep dan Pemakaian Obat): Verifikator memeriksa kesesuaian obat yang ditagihkan terhadap diagnosis penyakit. Memastikan tidak terdapat peresepan suplemen kecantikan, vitamin tanpa indikasi medis mendesak, atau obat non-medis yang dikecualikan polis.
+- Langkah 5 (Pemeriksaan Bukti Penunjang Diagnostik): Untuk klaim rawat inap atau pembedahan, verifikator memeriksa lampiran hasil laboratorium dan radiologi (misal hasil rontgen patah tulang atau hasil lab leukosit pada infeksi akut) sebagai bukti objektif keabsahan diagnosis.
+- Langkah 6 (Audit Silang dan Deteksi Anomali): Memeriksa potensi duplikasi klaim atau tanda-tanda kecurigaan awal (misal stempel rumah sakit yang mencurigakan, tanggal kuitansi tidak berurutan, atau kuitansi tanpa cap resmi).
+- Langkah 7 (Keputusan Verifikasi Medis dan Eskalasi Alur UCS):
+- Berkas Lolos Medis & Tagihan Sesuai: Seluruh dokumen lengkap, diagnosis wajar, dan rincian biaya valid. Jika klaim memiliki karakteristik risiko tertentu atau sesuai alur standar sistem, berkas diteruskan ke tahap N_3 – Audit Fraud untuk penapisan indikator kecurangan terstruktur.
+- Berkas Memerlukan Klarifikasi (Pending Clarification): Terdapat tulisan diagnosis yang tidak terbaca atau rincian obat belum dilampirkan. Petugas menerbitkan Permintaan Klarifikasi Medis kepada nasabah atau rumah sakit dengan tenggat waktu simulasi 14 hari.
+- Berkas Ditolak Medis (Medically Ineligible): Tindakan terbukti tidak memenuhi indikasi medis mutlak (misal rawat inap semata-mata untuk istirahat/observasi tanpa terapi khusus). Sistem menerbitkan surat penolakan alasan medis.
+7. DOKUMEN PENDUKUNG
+Dokumen yang diverifikasi secara mendalam pada tahap ini adalah:
+a. Berkas registrasi klaim dan status kelayakan polis dari tahap N_0 dan N_1.
+b. Resume medis asli atau surat keterangan dokter yang mencantumkan anamnesis, diagnosis ICD-10, dan terapi.
+c. Kuitansi pembayaran asli bertanda tangan kasir dan berstempel resmi rumah sakit/klinik.
+d. Lembar perincian tagihan lengkap (itemized hospital bill) yang merinci seluruh biaya tindakan, kamar, dan obat.
+e. Salinan resep dokter yang ditebus di instalasi farmasi.
+f. Berkas hasil pemeriksaan diagnostik objektif (hasil lab darah/urin, hasil ekspertise rontgen/radiologi, hasil patologi).
+g. Laporan operasi atau tindakan pembedahan (khusus untuk klaim yang melibatkan tindakan bedah).
+8. CONTOH KASUS
+Skenario Kasus 1 (Klaim Medis Sesuai - Lolos ke Tahap N_3):
+Klaim Doni (anak Ibu Ratna) dengan Claim ID: CLM-2026-08119 lolos dari N_1 untuk diagnosis demam berdarah dengue di Klinik Medika Sejahtera dengan total tagihan Rp1.850.000,-.
+Penerapan Prosedur pada Tahap N_2:
+1. Verifikator medis menerima berkas dari N_1 dan menelaah resume medis dokter klinik: diagnosis Dengue Fever (kode ICD-10: A90).
+2. Hasil laboratorium darah dilampirkan lengkap: trombosit tercatat 72.000 /uL (kondisi trombositopenia nyata yang membuktikan infeksi dengue secara objektif).
+3. Rincian tagihan (itemized bill) diperiksa: biaya jasa dokter rawat jalan Rp200.000,-, biaya tes darah lengkap Rp350.000,-, biaya cairan infus dan tindakan Rp400.000,-, serta biaya obat resep farmasi Rp900.000,-. Jumlah total tepat Rp1.850.000,- sama dengan kuitansi asli berstempel klinik.
+4. Resep obat diperiksa: mencakup cairan rehidrasi elektrolit, antipiretik parasetamol, dan multivitamin pendukung trombosit. Tidak ditemukan peresepan obat non-medis.
+5. Hasil audit: seluruh tindakan dan obat memiliki indikasi medis yang logis dan biaya terbukti akurat. Berkas disetujui lolos tahap N_2 dan diteruskan ke tahap N_3 – Audit Fraud untuk penapisan profil risiko.
+Skenario Kasus 2 (Klaim Ditunda karena Dokumen Medis Tidak Lengkap):
+Bapak Sitorus mengajukan klaim penggantian biaya rawat jalan sebesar Rp3.200.000,- untuk keluhan nyeri dada dan sesak napas. Berkas lolos tahap N_1 karena status polis aktif.
+Penerapan Prosedur pada Tahap N_2:
+1. Verifikator memeriksa rincian biaya: terdapat pos pemeriksaan rekam jantung (EKG) sebesar Rp500.000,- dan pemeriksaan enzim jantung sebesar Rp1.200.000,-.
+2. Namun, berkas pengajuan tidak melampirkan lembar hasil rekam EKG dan hasil laboratorium enzim jantung dari rumah sakit.
+3. Tindakan Verifikator: Klaim tidak dapat dilanjutkan ke N_3. Petugas memberikan status "Pending Medis" dan menerbitkan surat permintaan kelengkapan lembar hasil uji EKG dan lab kepada Bapak Sitorus dalam batas waktu simulasi 14 hari kalender.
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sistem Informasi, Fakultas Informatika dan Teknik Elektro, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Prosedur audit medis dan batasan penjaminan yang berlaku secara nyata sepenuhnya mengacu pada buku polis dan ketentuan medis penanggung asuransi yang bersangkutan.
+- Rujukan Prinsip Umum: Diadaptasi dari prinsip tata kelola verifikasi rekam medis dan penagihan fasilitas kesehatan yang mengacu pada Undang-Undang Republik Indonesia Nomor 17 Tahun 2023 tentang Kesehatan, Peraturan Konsil Kedokteran Indonesia terkait Rekam Medis, serta standar audit medis Asosiasi Asuransi Jiwa Indonesia (AAJI).
+================================================================================

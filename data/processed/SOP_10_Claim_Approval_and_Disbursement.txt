@@ -1,0 +1,181 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_10
+- Judul Dokumen: Prosedur Persetujuan Akhir dan Pembayaran Klaim Asuransi Kesehatan (Claim Approval and Disbursement Procedure)
+- Tahapan UCS Terkait: N_4 – Persetujuan Akhir Klaim dan N_5 – Pencairan Dana
+- Klasifikasi: Dokumen Operasional Standar Penetapan Otorisasi Klaim dan Eksekusi Pembayaran Finansial
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Mengatur tata kelola dan urutan kerja setelah berkas klaim selesai melalui seluruh tahapan verifikasi teknis, mencakup penelaahan hasil pemeriksaan polis, evaluasi medis, audit pengecualian, dan penapisan kepatuhan.
+b. Menetapkan mekanisme pengambilan keputusan akhir klaim secara objektif, akuntabel, dan terdokumentasi pada simpul N_4 – Persetujuan Akhir Klaim.
+c. Menghitung dan menetapkan nilai nominal klaim bersih yang disetujui (Approved Claim Amount) berdasarkan formula perhitungan manfaat yang sah.
+d. Mengatur tata cara eksekusi pemindahan dana (Disbursement) pada simpul N_5 – Pencairan Dana kepada pihak penerima pembayaran yang berhak.
+e. Menegaskan perbedaan mendasar antara status persetujuan klaim dengan status pembayaran dana:
+1) Klaim Disetujui (Claim Approved / Partially Approved): Pernyataan resmi penanggung bahwa pengajuan klaim telah memenuhi syarat dan nilai nominal hak klaim telah disahkan secara administratif dan legal.
+2) Klaim Dibayarkan (Claim Paid): Kondisi di mana dana santunan atau pembayaran biaya perawatan benar-benar telah berhasil ditransfer dan masuk ke rekening bank penerima yang berhak, dibuktikan dengan resi transaksi perbankan yang valid.
+f. Mengatur penanganan sistematis apabila terjadi kendala kegagalan transaksi perbankan (Failed Payment) agar proses pembayaran dapat diselesaikan dengan benar sebelum berkas dinyatakan ditutup resmi (Claim Closure).
+3. RUANG LINGKUP
+Prosedur ini mencakup seluruh rangkaian kegiatan penyelesaian akhir klaim, meliputi:
+a. Penerimaan dan konsolidasi berkas hasil verifikasi dari tahapan N_0, N_1, N_2, dan N_3.
+b. Pemeriksaan kelengkapan hasil evaluasi status polis, dokumen medis, klausul pengecualian, serta rekomendasi investigasi fraud.
+c. Penetapan keputusan akhir persetujuan klaim pada simpul N_4.
+d. Perhitungan nilai nominal persetujuan berdasarkan ketentuan perhitungan manfaat (SOP_07).
+e. Penyampaian surat keputusan dan lembar penjelasan rincian manfaat (Explanation of Benefits - EoB) kepada pemohon.
+f. Verifikasi data identitas dan keabsahan rekening bank penerima pembayaran.
+g. Penerbitan instruksi pembayaran dan eksekusi transfer dana pada simpul N_5.
+h. Pemantauan status transaksi perbankan hingga dana terkonfirmasi berhasil diterima.
+i. Tata laksana penanganan kegagalan pembayaran akibat ketidaksesuaian data rekening.
+j. Pembaruan status klaim dalam basis data hingga penutupan resmi berkas.
+Ruang lingkup skema pembayaran dalam prosedur ini berlaku untuk dua mekanisme:
+- Skema Penggantian Mandiri (Reimbursement): Penyaluran dana transfer langsung ke rekening bank pemegang polis, peserta tertanggung, atau ahli waris/kuasa yang sah.
+- Skema Pembayaran Fasilitas Rekanan (Cashless / Hospital Settlement): Penyelesaian kewajiban penjaminan kepada fasilitas rumah sakit rekanan berdasarkan rekonsiliasi tagihan akhir yang telah disahkan.
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Persetujuan Akhir Klaim (Final Claim Approval): Keputusan formal yang disahkan oleh pejabat berwenang penanggung pada tahap N_4 yang menetapkan apakah suatu klaim disetujui penuh, disetujui sebagian, ditolak, atau ditunda.
+b. Nilai Klaim yang Disetujui (Approved Claim Amount): Jumlah uang yang ditetapkan secara sah oleh pihak asuransi untuk dibayarkan setelah memperhitungkan pemotongan biaya tidak layak (ineligible), biaya pengurang mandiri (deductible), persentase pembagian biaya (co-payment), dan batas limit pertanggungan.
+c. Pencairan Dana (Disbursement): Proses akuntansi dan transfer dana aktual dari kas perusahaan asuransi ke rekening penerima yang berhak melalui sistem perbankan.
+d. Penggantian Biaya (Reimbursement): Pembayaran dana klaim dari asuransi kepada nasabah untuk mengganti biaya pengobatan yang telah dibayar terlebih dahulu oleh nasabah.
+e. Penyelesaian Pembayaran Rumah Sakit (Hospital Settlement): Proses transfer pembayaran massal atau berkala dari pihak asuransi kepada rekening rumah sakit rekanan untuk melunasi tagihan penjaminan non-tunai (cashless).
+f. Penerima Pembayaran yang Berhak (Payment Recipient): Individu atau badan hukum yang secara sah berhak menerima dana klaim (yaitu pemegang polis, peserta tertanggung dewasa, wali sah dari peserta anak, atau rumah sakit rekanan).
+g. Verifikasi Data Pembayaran (Payment Verification): Pemeriksaan kesesuaian antara nama pemilik rekening, nomor rekening bank, dan nama bank dengan data identitas sah pada berkas kepesertaan guna mencegah salah transfer.
+h. Bukti Transaksi Pembayaran (Payment Proof): Dokumen konfirmasi transfer resmi yang diterbitkan oleh pihak bank (resi transfer, nomor referensi RTGS/SKN/BI-FAST) yang membuktikan bahwa pemindahan dana telah berhasil dilaksanakan.
+i. Pembayaran Gagal (Failed Payment): Kondisi di mana transaksi transfer dana ditolak atau dikembalikan oleh sistem kliring perbankan akibat rekening tujuan pasif (dormant), nomor rekening tidak terdaftar, atau perbedaan nama pemilik rekening.
+j. Penutupan Berkas Klaim (Claim Closure): Status akhir operasional yang menandakan bahwa seluruh kewajiban keputusan, audit, pembayaran dana, dan pembukuan administrasi telah selesai sempurna.
+5. KETENTUAN
+Kebijakan dan aturan yang mendasari proses persetujuan akhir dan pembayaran klaim meliputi:
+a. Ketergantungan pada Hasil Verifikasi Sebelumnya: Keputusan persetujuan akhir di N_4 hanya dapat diterbitkan setelah proses verifikasi terkait selesai dilakukan secara lengkap dan terdokumentasi.
+b. Rujukan Kepesertaan dan Polis: Keabsahan kontrak, status keaktifan polis, dan kepatuhan masa tunggu wajib mengacu pada ketentuan SOP_02.
+c. Rujukan Bukti Medis: Kewajaran tindakan medis, keabsahan kuitansi, dan rincian biaya wajib mengacu pada hasil verifikasi SOP_03.
+d. Rujukan Klausul Pengecualian: Penapisan tindakan non-medis dan pemisahan biaya yang tidak ditanggung wajib mengacu pada ketentuan SOP_05.
+e. Rujukan Audit Kepatuhan dan Fraud: Hasil investigasi fraud wajib mengacu pada evaluasi objektif SOP_06. Indikator risiko awal (red flags) saja tidak boleh langsung dianggap sebagai bukti mutlak kecurangan tanpa adanya pembuktian tertulis yang otentik.
+f. Rujukan Perhitungan Manfaat: Nilai nominal yang disetujui wajib dihitung berdasarkan rumus dan ketentuan perhitungan manfaat pada SOP_07.
+g. Rujukan Hasil Banding: Apabila klaim merupakan hasil pengajuan keberatan yang dikabulkan oleh Komite Peninjau, nilai persetujuan disesuaikan berdasarkan penetapan keputusan banding pada SOP_08.
+h. Rujukan Tagihan Akhir Cashless: Untuk klaim rawat inap cashless, tagihan akhir rumah sakit wajib disinkronkan dengan Surat Jaminan Akhir (Final Guarantee Letter) sesuai ketentuan SOP_09.
+i. Variasi Keputusan Akhir: Keputusan pada tahap N_4 terdiri atas empat kemungkinan: Disetujui Penuh (Approved), Disetujui Sebagian (Partially Approved), Ditolak (Rejected), atau Ditunda (Pending) apabila informasi pendukung penting belum memadai.
+j. Larangan Pembayaran ke Pihak yang Tidak Berhak: Pembayaran klaim reimbursement wajib ditransfer ke rekening bank atas nama pemegang polis atau tertanggung dewasa yang terdaftar. Transfer ke rekening pihak ketiga dilarang, kecuali dilengkapi Surat Kuasa Khusus Bermaterai sah dan dokumen identitas pendukung perwakilan.
+k. Kewajiban Dokumentasi Bukti Transaksi: Setiap pelaksanaan pencairan dana wajib memiliki nomor referensi perbankan dan bukti transfer yang tersimpan rapi dalam arsip digital sistem klaim.
+l. Penanganan Pembayaran Gagal: Jika terjadi pembayaran gagal (failed payment), berkas klaim tidak boleh dianggap selesai atau ditutup. Sistem wajib mencatat alasan kegagalan transaksi dan mempertahankan status berkas dalam pemantauan hingga rekonsiliasi data rekening selesai diperbaiki.
+m. Perlindungan Kerahasiaan Data: Seluruh data nomor rekening nasabah, nilai transaksi finansial, dan resume medis terkait wajib dilindungi kerahasiaannya sesuai ketentuan undang-undang perlindungan data pribadi.
+n. Parameter Model Simulasi Akademik: Khusus untuk simulasi proyek kelompok ini dirancang parameter operasional:
+1) Penetapan keputusan akhir persetujuan klaim di N_4 dimodelkan maksimal 1x24 jam kerja sejak seluruh hasil verifikasi dinyatakan lengkap.
+2) Eksekusi pencairan dana di N_5 dimodelkan selesai dalam batas waktu maksimal 3 hari kerja sejak tanggal otorisasi persetujuan diterbitkan.
+Catatan penting: Batas waktu dan nominal dalam prosedur ini merupakan PARAMETER SIMULASI AKADEMIK untuk pembelajaran proyek, bukan ketentuan resmi yang berlaku mutlak di seluruh perusahaan asuransi.
+6. PROSEDUR
+Urutan langkah operasional persetujuan akhir (Tahap A pada simpul N_4) dan pembayaran dana (Tahap B pada simpul N_5) dilaksanakan secara berurutan dan terperinci sebagai berikut:
+--- TAHAP A: PERSETUJUAN AKHIR KLAIM (SIMPUL UCS: N_4) ---
+- Langkah 1 (Penerimaan Berkas Terverifikasi): Pejabat penilai klaim di tahap N_4 menerima berkas yang memuat nomor registrasi Claim ID beserta seluruh lembar kerja verifikasi dari simpul N_1 (Cek Polis), N_2 (Verifikasi Medis RS), dan N_3 (Audit Fraud).
+- Langkah 2 (Pemeriksaan Ulang Kelengkapan Hasil Verifikasi): Memeriksa keselarasan data:
+1) Memastikan status polis aktif pada tanggal rawat dan masa tunggu telah terpenuhi (SOP_02).
+2) Memastikan resume medis, kuitansi asli, dan rincian biaya (itemized bill) sinkron (SOP_03).
+3) Memastikan pos-pos biaya yang termasuk pengecualian telah dipisahkan (SOP_05).
+4) Memastikan tidak ada catatan penolakan atau temuan kecurangan yang terbukti dari hasil audit fraud (SOP_06).
+5) Memeriksa putusan peninjauan ulang apabila berkas berasal dari alur keberatan (SOP_08).
+- Langkah 3 (Penilaian Kecukupan Informasi): Menilai apakah seluruh informasi pendukung telah lengkap untuk mengambil keputusan. Apabila masih terdapat keraguan data medis atau konfirmasi billing yang tertunda, berkas diberikan status "Pending" dan petugas mengirimkan permintaan klarifikasi kepada pihak terkait.
+- Langkah 4 (Perhitungan Nilai Klaim yang Disetujui): Mengkalkulasi nilai hak klaim secara matematis mengacu pada prinsip dan rumus bertingkat SOP_07:
+1) Menghitung Eligible Amount = Total Billed Amount - Ineligible Expenses.
+2) Menerapkan pengurangan Deductible jika ada pada polis nasabah.
+3) Memperhitungkan porsi pembagian Co-payment jika ada.
+4) Memastikan nilai akhir tidak melampaui sisa Benefit Limit nasabah.
+- Langkah 5 (Penetapan Keputusan Akhir Otorisasi): Pejabat pemutus menetapkan status keputusan resmi:
+a. Disetujui Penuh (Approved): Seluruh nilai klaim yang diajukan memenuhi ketentuan dan disetujui 100%.
+b. Disetujui Sebagian (Partially Approved): Klaim disetujui dengan pemotongan pos biaya yang tidak dijamin atau batasan limit polis.
+c. Ditolak (Rejected): Klaim tidak memenuhi ketentuan polis atau termasuk dalam pengecualian absolut.
+d. Ditunda (Pending): Masih menunggu kelengkapan informasi tambahan.
+- Langkah 6 (Pencatatan Alasan Keputusan dan Otorisasi): Petugas mencatat rincian dasar pertimbangan keputusan dan nilai nominal Approved Claim Amount pada sistem basis data, serta menandatangani Lembar Persetujuan Klaim (Claim Approval Voucher).
+- Langkah 7 (Penyampaian Informasi Keputusan kepada Pemohon): Sistem menerbitkan dokumen resmi Explanation of Benefits (EoB) atau Surat Pemberitahuan Penolakan yang dikirimkan kepada peserta tertanggung atau rumah sakit rekanan dengan bahasa yang mudah dipahami. Berkas yang disetujui dialirkan ke tahap N_5 – Pencairan Dana.
+--- TAHAP B: PEMBAYARAN KLAIM (SIMPUL UCS: N_5) ---
+- Langkah 8 (Pemeriksaan Identitas dan Hak Penerima Pembayaran): Petugas bagian keuangan (Treasury/Disbursement Officer) memeriksa kecocokan identitas pemohon dengan data kepesertaan polis untuk memastikan pembayaran ditujukan kepada pihak yang sah.
+- Langkah 9 (Verifikasi Data Rekening Bank Penerima): Memeriksa data rekening perbankan penerima (nama pemilik rekening, nomor rekening, nama bank, dan kantor cabang). Memastikan nama pada buku rekening bank cocok secara tepat dengan nama pemegang polis atau tertanggung dewasa pada data registrasi N_0.
+- Langkah 10 (Penerbitan Instruksi Pembayaran): Petugas keuangan menerbitkan Surat Perintah Bayar (Payment Voucher / Disbursement Order) yang memuat Claim ID, nama penerima, nomor rekening tujuan, dan nominal Approved Claim Amount yang disahkan di tahap N_4.
+- Langkah 11 (Pelaksanaan Eksekusi Transfer Bank): Petugas mengeksekusi transfer dana melalui jaringan perbankan resmi (BI-FAST, Sistem Kliring Nasional/SKN, Real-Time Gross Settlement/RTGS, atau transfer mitra perbankan). Sistem mencatat status transaksi menjadi "Payment Processing".
+- Langkah 12 (Pemeriksaan dan Konfirmasi Status Transaksi Perbankan): Petugas treasury memantau laporan mutasi sistem perbankan untuk memastikan status transaksi: apakah transaksi dinyatakan berhasil (settled) atau mengalami penolakan (failed).
+- Langkah 13 (Penyimpanan Bukti dan Pembaruan Status Berhasil): Apabila transfer dinyatakan sukses:
+1) Petugas mengunggah dan menyimpan tanda bukti transfer resmi (Payment Proof) yang memuat nomor referensi bank ke dalam sistem arsip klaim.
+2) Mengirimkan notifikasi SMS/email bukti transfer kepada nasabah atau notifikasi settlement ke rumah sakit.
+3) Memperbarui status klaim pada sistem menjadi "Paid".
+- Langkah 14 (Penanganan Kendala Pembayaran Gagal): Apabila transfer ditolak oleh sistem perbankan:
+1) Status klaim diubah menjadi "Payment Failed" (tidak boleh ditutup).
+2) Petugas mencatat penyebab kegagalan (misal: nomor rekening salah digit, rekening tutup, atau nama berbeda).
+3) Petugas menghubungi nasabah untuk meminta lembar konfirmasi rekening yang benar (salinan buku tabungan).
+4) Setelah data rekening baru diverifikasi ulang, proses transfer di Langkah 10 dan 11 dieksekusi kembali.
+- Langkah 15 (Penutupan Berkas Klaim / Claim Closure): Setelah pembayaran terbukti berhasil (berstatus Paid), seluruh perhitungan tercatat pada buku besar akuntansi, dan seluruh dokumen tersimpan lengkap, petugas memperbarui status klaim menjadi "Closed" (Selesai).
+Rangkuman Pembedaan Status Klaim:
+- Pending: Berkas masih menunggu kelengkapan dokumen atau klarifikasi medis/billing.
+- Approved: Klaim telah disetujui penuh secara administratif dan medis di N_4.
+- Partially Approved: Klaim telah disetujui sebagian dengan rincian potongan di N_4.
+- Rejected: Klaim ditolak secara resmi di N_4 karena tidak memenuhi ketentuan polis.
+- Payment Processing: Instruksi pembayaran telah dikirim ke sistem perbankan dan sedang diproses di N_5.
+- Paid: Dana telah berhasil terkirim dan diterima di rekening penerima sah pada tahap N_5.
+- Payment Failed: Terjadi kendala teknis/data pada sistem transfer perbankan yang memerlukan perbaikan rekening.
+- Closed: Seluruh proses klaim, pencairan dana, dan pembukuan telah tuntas sempurna.
+7. DOKUMEN PENDUKUNG
+Dokumen yang dikelola dan diarsipkan dalam prosedur persetujuan akhir dan pembayaran klaim meliputi:
+a. Formulir Registrasi Pengajuan Klaim ber-Claim ID dari tahap N_0.
+b. Catatan verifikasi data kepesertaan dan keaktifan polis dari tahap N_1.
+c. Berkas resume medis, kuitansi asli pembayaran, dan perincian tagihan (itemized bill) dari tahap N_2.
+d. Laporan audit kepatuhan atau catatan evaluasi deteksi fraud dari tahap N_3.
+e. Lembar hasil perhitungan manfaat dan limit pertanggungan sesuai formula SOP_07.
+f. Surat Keputusan Otorisasi Klaim (Claim Approval Sheet) bertandatangan pejabat pemutus N_4.
+g. Salinan putusan peninjauan ulang sengketa dari Komite Banding jika ada (SOP_08).
+h. Salinan lembar Explanation of Benefits (EoB) atau Surat Pemberitahuan Penolakan resmi.
+i. Salinan buku tabungan atau dokumen rekening bank penerima pembayaran yang terverifikasi.
+j. Surat Perintah Pembayaran (Payment Voucher / Disbursement Order).
+k. Bukti transfer bank resmi (Payment Proof) yang memuat nomor referensi transaksi keuangan.
+l. Berita acara kegagalan transaksi perbankan (Failed Payment Log) apabila terjadi retur transfer.
+8. CONTOH KASUS
+Kasus 1 – Klaim Reimbursement Disetujui Penuh (Full Approval & Successful Disbursement):
+- Latar Belakang: Bapak Hendra mengajukan klaim reimbursement pengobatan rawat inap demam berdarah sebesar Rp8.000.000,-.
+- Proses Persetujuan Akhir (N_4):
+1) Seluruh tahapan N_1, N_2, dan N_3 menyatakan berkas lengkap, polis aktif, medis wajar, dan bebas dari anomali fraud.
+2) Perhitungan SOP_07: Seluruh pos biaya memenuhi syarat (Eligible Expenses = Rp8.000.000,-), polis tanpa klausul deductible/co-pay, dan limit tahunan mencukupi.
+3) Keputusan N_4: Approved (Disetujui Penuh) dengan Approved Claim Amount sebesar Rp8.000.000,-.
+4) Sistem menerbitkan dokumen Explanation of Benefits (EoB) kepada Bapak Hendra dan meneruskan voucher ke bagian keuangan.
+- Proses Pembayaran (N_5):
+1) Petugas treasury memverifikasi nomor rekening atas nama Hendra pada Bank Mandiri: data rekening cocok 100% dengan data kepesertaan.
+2) Petugas menerbitkan instruksi pembayaran dan mengeksekusi transfer BI-FAST sebesar Rp8.000.000,- (status menjadi Payment Processing).
+3) Sistem perbankan mengonfirmasi transfer berhasil dengan nomor referensi transfer `TRX-BM-20260611-0081`.
+4) Petugas mengunggah resi bukti transfer ke sistem, memperbarui status menjadi Paid, mengirim notifikasi SMS/email bukti transfer kepada Bapak Hendra, lalu menutup berkas klaim menjadi Closed.
+Kasus 2 – Klaim Disetujui Sebagian (Partial Approval & Successful Settlement):
+- Latar Belakang: Ibu Maya mengajukan klaim reimbursement rawat inap dengan total kuitansi rumah sakit sebesar Rp10.000.000,-.
+- Proses Persetujuan Akhir (N_4):
+1) Pemeriksaan berkas menemukan bahwa dari total Rp10.000.000,-, terdapat pos biaya vitamin kulit non-medis dan biaya perlengkapan mandi sebesar Rp1.000.000,- yang termasuk biaya tidak layak (ineligible expenses) berdasarkan klausul pengecualian SOP_05.
+2) Perhitungan SOP_07: Eligible Amount = Rp10.000.000 - Rp1.000.000 = Rp9.000.000,-. Polis tanpa deductible dan limit tahunan mencukupi.
+3) Keputusan N_4: Partially Approved (Disetujui Sebagian) dengan Approved Claim Amount sebesar Rp9.000.000,-.
+4) Petugas menerbitkan lembar Explanation of Benefits (EoB) yang menjelaskan pemotongan pos ineligible Rp1.000.000,- secara transparan kepada Ibu Maya.
+- Proses Pembayaran (N_5):
+1) Petugas treasury memeriksa data rekening Bank BCA atas nama Maya: nama dan nomor rekening valid.
+2) Bagian keuangan mentransfer dana bersih persetujuan sebesar Rp9.000.000,- melalui transfer antarbank.
+3) Transaksi sukses dengan nomor referensi perbankan resmi `TRX-BCA-20260714-0492`.
+4) Sistem mencatat bukti transfer, memperbarui status berkas menjadi Paid, dan setelah seluruh pencatatan buku besar kliring tuntas, memperbarui status menjadi Closed.
+Kasus 3 – Pembayaran Gagal Akibat Rekening Tidak Valid (Failed Payment & Re-Disbursement):
+- Latar Belakang: Klaim rawat jalan Bapak Doni sebesar Rp5.000.000,- telah disetujui penuh pada tahap N_4 dengan status Approved dan Approved Claim Amount Rp5.000.000,-.
+- Kendala pada Tahap Pembayaran (N_5):
+1) Petugas treasury memproses instruksi transfer bank ke nomor rekening yang dicantumkan pada formulir pengajuan awal.
+2) Sistem kliring perbankan menolak transaksi dan mengembalikan status gagal (Return Code: Invalid Account Number / Rekening Tidak Terdaftar).
+3) Tindakan Penanganan: Status klaim pada sistem diubah menjadi "Payment Failed" (berkas tidak ditutup).
+4) Petugas menghubungi Bapak Doni untuk melakukan konfirmasi klarifikasi data rekening. Ditemukan bahwa terjadi salah penulisan satu digit angka pada nomor rekening formulir pendaftaran klaim awal.
+5) Bapak Doni mengirimkan foto halaman depan buku tabungan yang memperlihatkan nomor rekening yang benar dan valid atas namanya.
+6) Petugas treasury memverifikasi ulang rekening baru, memperbarui master pembayaran, dan mengeksekusi transfer ulang sebesar Rp5.000.000,-.
+7) Transaksi kedua berhasil terkonfirmasi dengan nomor referensi `TRX-BRI-20260820-0914`.
+8) Bukti transfer tersimpan, status diperbarui menjadi Paid, dan setelah seluruh administrasi selesai, status diperbarui menjadi Closed.
+Catatan Penting: Seluruh angka nominal uang, durasi hari kerja, dan skenario kasus di atas merupakan PARAMETER SIMULASI AKADEMIK untuk pembelajaran alur sistem AI, bukan ketentuan resmi yang berlaku mutlak di seluruh entitas asuransi.
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Batasan otorisasi persetujuan pejabat klaim, Service Level Agreement (SLA) pencairan dana, serta integrasi host-to-host perbankan pada industri asuransi nyata sepenuhnya merujuk pada standar operasional internal dan buku polis masing-masing penanggung.
+- Rujukan Regulasi Resmi dan Konsistensi Korpus:
+1) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+2) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 69/POJK.05/2016 tentang Penyelenggaraan Usaha Perusahaan Asuransi, Perusahaan Asuransi Syariah, Perusahaan Reasuransi, dan Perusahaan Reasuransi Syariah, sebagaimana telah diubah dengan POJK Nomor 36 Tahun 2024.
+3) Standar Pengelolaan dan Tata Kelola Pembayaran Klaim Asuransi Kesehatan Asosiasi Asuransi Jiwa Indonesia (AAJI).
+4) Keterkaitan Korpus Proyek Terpadu:
+- SOP_02: Pemeriksaan Status Polis dan Masa Tunggu (N_1).
+- SOP_03: Verifikasi Dokumen Medis dan Tagihan Rumah Sakit (N_2).
+- SOP_05: Kebijakan Pengecualian Pertanggungan Asuransi Kesehatan.
+- SOP_06: Prosedur Deteksi dan Investigasi Kecurangan Klaim (N_3).
+- SOP_07: Prosedur Perhitungan Manfaat dan Nilai Klaim Asuransi Kesehatan.
+- SOP_08: Prosedur Pengajuan Keberatan atas Penolakan Klaim (Banding N_4).
+- SOP_09: Prosedur Penjaminan dan Persetujuan Awal Rawat Inap (Cashless Provider Settlement).
+================================================================================

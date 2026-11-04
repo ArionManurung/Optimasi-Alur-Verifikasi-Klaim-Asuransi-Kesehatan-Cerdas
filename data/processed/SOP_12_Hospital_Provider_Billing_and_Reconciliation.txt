@@ -1,0 +1,199 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_12
+- Judul Dokumen: Prosedur Rekonsiliasi Tagihan dan Pembayaran Rumah Sakit Rekanan (Hospital Provider Billing and Reconciliation)
+- Tahapan UCS Terkait: N_2 – Verifikasi Dokumen Medis dan Tagihan Rumah Sakit serta N_5 – Pencairan Dana
+- Klasifikasi: Dokumen Operasional Standar Rekonsiliasi Tagihan Rekanan dan Pembayaran Finansial Fasilitas Kesehatan
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Mengatur tata cara pencocokan, audit silang, pemeriksaan kesesuaian, dan rekonsiliasi tagihan massal maupun individual yang diajukan oleh fasilitas rumah sakit rekanan (network provider hospital) dengan pelayanan medis nyata yang telah diverifikasi dan disetujui.
+b. Memastikan bahwa setiap rincian tindakan medis, obat-obatan, pemakaian kamar, dan prosedur diagnostik yang ditagihkan oleh rumah sakit benar-benar telah diberikan kepada peserta tertanggung (medically substantiated).
+c. Memastikan seluruh pos biaya yang disetujui untuk dibayarkan mematuhi ketentuan tabel manfaat, batasan plafon polis, serta klausul pengecualian kontrak asuransi.
+d. Mencegah terjadinya kesalahan finansial, penagihan ganda (duplicate billing), penggelembungan biaya, atau ketidaksesuaian nominal tagihan sebelum pembayaran dieksekusi.
+e. Mengatur mekanisme penyelesaian selisih perhitungan biaya (discrepancy resolution) secara transparan dan terdokumentasi antara pihak penanggung dan pihak rumah sakit rekanan.
+f. Memastikan pelaksanaan pembayaran pada simpul N_5 – Pencairan Dana dilakukan secara tepat waktu dan ditransfer langsung kepada rekening bank resmi fasilitas kesehatan yang berhak.
+g. Menyediakan jejak audit (audit trail) dan tanda bukti transaksi yang lengkap untuk kepentingan rekonsiliasi akuntansi, evaluasi efektivitas jaringan faskes, serta audit kepatuhan regulator.
+h. Membedakan secara tegas lima fungsi operasional pokok dalam tata kelola tagihan rekanan:
+1) Pemeriksaan Kesesuaian Tagihan: Audit administratif dan medis antara rincian tagihan (itemized bill) dengan resume medis pada simpul N_2.
+2) Penetapan Nilai Tagihan yang Dapat Dibayarkan: Kalkulasi hak bayar penanggung mengacu pada formula manfaat SOP_07.
+3) Penyelesaian Selisih Tagihan: Proses klarifikasi dan rekonsiliasi selisih angka antara tagihan faskes dengan hasil verifikasi penanggung.
+4) Pelaksanaan Pembayaran: Eksekusi pemindahan dana nyata dari kas penanggung ke rekening giro rumah sakit rekanan pada simpul N_5.
+5) Pencatatan Bukti Pembayaran: Pengarsipan bukti transfer bank (payment proof) dan penutupan status buku besar klaim.
+3. RUANG LINGKUP
+Prosedur ini mencakup seluruh siklus penanganan penagihan klaim dari fasilitas kesehatan rekanan sejak berkas tagihan masuk hingga penyelesaian pembayaran akhir, meliputi:
+a. Penerimaan berkas invoice dan tagihan kolektif maupun individual dari rumah sakit rekanan.
+b. Pemeriksaan keabsahan data identitas peserta, nomor polis, nomor registrasi klaim (Claim ID), dan nomor Surat Jaminan (Guarantee Letter - GL).
+c. Pemeriksaan baris per baris atas lembar perincian biaya pelayanan (itemized hospital bill).
+d. Pencocokan tagihan dengan resume medis, catatan keperawatan, laporan pembedahan, dan hasil pemeriksaan penunjang.
+e. Pemisahan pos biaya yang dijamin (eligible expenses) dengan biaya yang tidak dijamin atau menjadi beban mandiri pasien (ineligible expenses).
+f. Pencocokan tagihan yang memenuhi syarat dengan nilai persetujuan klaim yang telah dihitung berdasarkan SOP_07 dan disahkan pada tahap N_4 (SOP_10).
+g. Penanganan dan penyelesaian perbedaan nominal (discrepancy) atau ketidaksesuaian tagihan melalui proses klarifikasi resmi.
+h. Rekonsiliasi bersama antara tim penilai keuangan penanggung dengan bagian keuangan rumah sakit rekanan.
+i. Penerbitan otorisasi pembayaran (payment voucher) bagi tagihan yang telah bersih (clean claims).
+j. Pelaksanaan transfer pencairan dana pada simpul N_5 dan pencatatan tanda bukti konfirmasi transaksi.
+Penegasan Skema Pembayaran:
+- Prosedur SOP_12 ini KHUSUS mengatur mekanisme penagihan dan pembayaran langsung kepada rumah sakit rekanan atas pelayanan non-tunai (Cashless Provider Settlement) yang diawali dengan penerbitan Surat Jaminan (SOP_09).
+- Untuk klaim dengan skema penggantian mandiri (Reimbursement), pembayaran dilakukan langsung kepada rekening bank pemegang polis atau peserta tertanggung sesuai ketentuan SOP_10, bukan kepada pihak rumah sakit rekanan, kecuali terdapat surat kuasa pengalihan hak bayar yang sah secara hukum.
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Rumah Sakit Rekanan (Hospital Provider): Fasilitas pelayanan kesehatan (rumah sakit, klinik spesialis, atau laboratorium) yang telah menandatangani Perjanjian Kerja Sama (PKS) resmi dengan perusahaan asuransi untuk melayani peserta secara non-tunai (cashless).
+b. Tagihan Rumah Sakit (Provider Billing): Dokumen invoice atau surat penagihan resmi yang diterbitkan oleh manajemen keuangan rumah sakit kepada perusahaan asuransi atas seluruh biaya pengobatan peserta yang telah dijaminkan.
+c. Rincian Tagihan (Itemized Bill): Lembaran rincian resmi yang memuat uraian terperinci setiap komponen biaya perawatan, seperti tarif sewa kamar per hari, jasa visit dokter umum/spesialis, obat farmasi, biaya kamar operasi, alat kesehatan habis pakai, dan tes laboratorium.
+d. Rekonsiliasi Tagihan (Billing Reconciliation): Proses audit silang dan pencocokan komparatif antara total nominal yang ditagihkan oleh rumah sakit dengan nilai nominal yang disetujui penanggung berdasarkan verifikasi medis dan batasan polis.
+e. Biaya yang Memenuhi Ketentuan (Eligible Expenses): Pos biaya pengobatan yang secara sah tercakup dalam perlindungan polis dan terbukti secara medis diperlukan untuk menyembuhkan pasien.
+f. Biaya yang Tidak Ditanggung (Ineligible Expenses): Pos pengeluaran yang tidak dijamin asuransi (seperti obat kosmetik, perlengkapan mandi, telepon kamar, makanan ekstra keluarga, atau kenaikan kelas kamar) yang wajib dilunasi sendiri oleh pasien di kasir rumah sakit.
+g. Nilai Klaim yang Disetujui (Approved Claim Amount): Nominal tagihan bersih yang disahkan oleh pihak asuransi untuk dibayarkan kepada rumah sakit rekanan setelah dikurangi biaya ineligible, deductible, dan co-payment.
+h. Selisih atau Ketidaksesuaian Tagihan (Billing Discrepancy): Perbedaan angka antara jumlah tagihan yang diajukan rumah sakit dengan jumlah perhitungan yang disetujui oleh asuransi, baik disebabkan oleh kesalahan administratif, perbedaan tarif perjanjian, atau ketiadaan bukti tindakan medis.
+i. Penagihan Ganda (Duplicate Billing): Kondisi di mana satu pos tindakan medis, pemeriksaan laboratorium, atau obat yang sama ditagihkan lebih dari satu kali dalam rincian tagihan yang diserahkan.
+j. Pembayaran kepada Rumah Sakit Rekanan (Provider Payment): Pemindahan dana dari kas perusahaan asuransi ke rekening bank resmi rumah sakit rekanan untuk melunasi tagihan pelayanan pasien yang telah disetujui.
+k. Bukti / Otorisasi Pembayaran (Payment Voucher): Dokumen akuntansi internal yang mengesahkan pelepasan dana dari penanggung kepada rumah sakit rekanan berdasarkan hasil rekonsiliasi yang disetujui.
+l. Konfirmasi Pembayaran (Payment Confirmation): Laporan pemberitahuan tertulis dan bukti transfer perbankan yang dikirimkan kepada bagian keuangan rumah sakit rekanan sebagai bukti bahwa kewajiban tagihan telah dilunasi.
+5. KETENTUAN
+Kebijakan dan aturan operasional yang mendasari rekonsiliasi tagihan rumah sakit rekanan meliputi:
+A. Pemeriksaan Tagihan dan Bukti Medis (Simpul UCS: N_2):
+1. Setiap lembar tagihan rumah sakit wajib mencantumkan identitas lengkap peserta, nomor polis aktif, nomor Claim ID, nomor Surat Jaminan (Guarantee Letter), dan stempel resmi keuangan fasilitas kesehatan.
+2. Setiap komponen biaya pada rincian tagihan (itemized bill) harus dapat ditelusuri kebenarannya pada lembar resume medis, catatan perkembangan harian perawat, atau laporan tindakan operasi dokter.
+3. Pos biaya tindakan diagnostik canggih (seperti CT-Scan, MRI, atau biopsi) dan tindakan pembedahan wajib disertai salinan ekspertise hasil pemeriksaan objektif.
+4. Pos tagihan yang tidak memiliki dokumen pembuktian medis memadai tidak dapat langsung disetujui dan wajib diklarifikasi terlebih dahulu kepada rumah sakit.
+B. Kesesuaian Manfaat Polis dan Perhitungan Nilai Hak (Rujukan SOP_05 & SOP_07):
+1. Nilai pembayaran kepada rumah sakit wajib mengikuti batasan plafon kamar, limit tahunan, dan ketentuan inner-limit yang tercantum dalam kontrak polis peserta.
+2. Biaya yang masuk dalam daftar pengecualian polis (SOP_05) tidak boleh dimasukkan ke dalam porsi tagihan yang dibayar oleh penanggung.
+3. Perhitungan nilai bersih yang disetujui wajib merujuk secara konsisten pada formula matematis bertingkat SOP_07 (Total Billed - Ineligible - Deductible - Co-pay).
+4. Dilarang keras melakukan pengurangan biaya dua kali (double deduction) terhadap komponen biaya yang telah diperhitungkan atau telah dilunasi oleh peserta secara mandiri saat keluar dari rumah sakit.
+C. Pencegahan Kesalahan Pembayaran dan Duplikasi:
+1. Sistem wajib melakukan audit silang otomatis untuk memeriksa apakah nomor kuitansi, nomor billing, atau nomor resep obat pernah ditagihkan pada invoice periode sebelumnya guna mencegah penagihan ganda (duplicate billing).
+2. Verifikasi rekening penerima wajib memastikan bahwa rekening tujuan transfer terdaftar resmi atas nama yayasan atau badan hukum pengelola rumah sakit rekanan yang tertera pada dokumen Perjanjian Kerja Sama (PKS).
+3. Satu tagihan penjaminan hanya boleh dibayarkan tepat satu kali (one-time settlement).
+4. Petugas treasury wajib memastikan kesesuaian angka antara nilai hasil rekonsiliasi tagihan, lembar otorisasi persetujuan di N_4, dan angka nominal transfer pada voucher pembayaran di N_5.
+D. Penanganan Selisih Tagihan (Billing Discrepancy):
+1. Apabila timbul selisih perhitungan, petugas rekonsiliasi wajib melakukan telaah ulang baris per baris dan mencatat rincian penyebab perbedaan.
+2. Penanggung melayangkan surat klarifikasi resmi kepada rumah sakit rekanan dengan menyertakan rincian pos yang disanggah.
+3. Bagian tagihan yang masih dalam sengketa atau belum dapat diverifikasi ditahan sementara (disputed pending) dan tidak boleh dibayarkan sebelum tercapai kesepakatan tertulis. Pos tagihan yang telah bersih (clean items) dapat diproses pembayarannya terlebih dahulu.
+4. Apabila selisih tagihan memperlihatkan pola sistematis pemalsuan dokumen atau tagihan fiktif berulang, kasus dieskalasi ke Unit Investigasi Fraud sesuai prosedur SOP_06. Namun demikian, selisih tagihan biasa atau kesalahan input kasir rumah sakit tidak boleh serta-merta dianggap sebagai tindakan fraud tanpa bukti otentik.
+E. Persetujuan dan Eksekusi Pencairan Dana (Simpul UCS: N_5):
+1. Pembayaran hanya dapat dilaksanakan setelah proses verifikasi teknis di N_2 selesai dan otorisasi persetujuan di N_4 diterbitkan sesuai ketentuan SOP_10.
+2. Akumulasi pembayaran kepada faskes tidak boleh melampaui nilai nominal persetujuan dan batas plafon yang sah.
+3. Tanda bukti transfer perbankan resmi (payment proof) wajib disimpan dalam basis data digital sebagai dokumen audit akuntansi.
+4. Jika transaksi pembayaran tertunda atau ditolak oleh sistem perbankan (failed payment), status klaim wajib dipertahankan aktif dan dilakukan penanganan perbaikan data rekening sesuai tata laksana SOP_10.
+F. Status Model Simulasi Akademik:
+Seluruh ketentuan hari kalender penagihan, batas waktu rekonsiliasi, persentase diskon rekanan, dan nominal angka yang digunakan dalam dokumen ini merupakan PARAMETER SIMULASI AKADEMIK untuk pembelajaran proyek kecerdasan buatan, bukan ketentuan seragam yang berlaku universal di seluruh rumah sakit atau seluruh perusahaan asuransi.
+6. PROSEDUR
+Rangkaian tahapan operasional rekonsiliasi tagihan rumah sakit rekanan dan pelaksanaan pembayaran dilaksanakan melalui 15 langkah terperinci dalam 4 tahap berikut:
+--- TAHAP A: PENERIMAAN TAGIHAN RUMAH SAKIT ---
+- Langkah 1 (Penerimaan Berkas Invoice Provider): Petugas penagihan faskes (Provider Claims Intake) menerima dokumen invoice tagihan berkala atau tagihan individual dari rumah sakit rekanan beserta lampiran kuitansi asli, itemized bill, resume medis, dan salinan Guarantee Letter (GL).
+- Langkah 2 (Pencocokan Identitas Kepesertaan dan Fasilitas): Petugas mencocokkan identitas pasien (nama, tanggal lahir, NIK), nomor polis, Claim ID, dan data fasilitas kesehatan penerbit tagihan pada sistem basis data kepesertaan.
+- Langkah 3 (Pemeriksaan Kelengkapan Berkas Tagihan): Petugas memeriksa kelengkapan fisik berkas: kuitansi bertandatangan bagian keuangan rumah sakit, rincian biaya baris demi baris, laporan operasi (jika bedah), resep obat, dan lembar hasil pemeriksaan penunjang. Berkas yang lengkap diberi status "Under Billing Verification" pada simpul N_2.
+--- TAHAP B: PEMERIKSAAN DAN REKONSILIASI (SIMPUL UCS: N_2) ---
+- Langkah 4 (Pencocokan Rincian Tagihan dengan Dokumen Medis): Verifikator medis di tahap N_2 memeriksa setiap pos pengeluaran pada itemized bill: memastikan bahwa tindakan medis yang ditagihkan benar-benar tercatat pada resume medis dokter dan catatan perawat (sesuai prinsip SOP_03).
+- Langkah 5 (Pemisahan Biaya Eligible dan Ineligible): Petugas memisahkan biaya yang dijamin polis dari pos biaya yang dikecualikan (SOP_05). Pos biaya kenyamanan pribadi (seperti telepon kamar, perlengkapan mandi, atau makanan ekstra) dan kelebihan tarif kamar akibat upgrade dipisahkan sebagai ineligible expenses yang menjadi beban peserta.
+- Langkah 6 (Pencocokan dengan Hasil Perhitungan Manfaat SOP_07): Petugas membandingkan nilai tagihan yang memenuhi syarat (Eligible Amount) terhadap hak plafon kamar dan sisa batas tahunan polis nasabah. Menghitung nilai hak klaim yang disetujui (Approved Claim Amount) sesuai formula SOP_07.
+- Langkah 7 (Identifikasi dan Analisis Selisih Tagihan): Petugas membandingkan angka total invoice rumah sakit dengan hasil perhitungan penanggung:
+1) Apabila angka cocok 100%, berkas berstatus "Reconciliation Cleared" dan dialirkan ke Langkah 9.
+2) Apabila terdapat perbedaan angka (Billing Discrepancy), petugas mengidentifikasi penyebabnya (apakah akibat salah hitung kasir RS, penagihan pos yang tidak terbukti pada resume medis, pos pengecualian yang belum dipotong, atau penagihan ganda).
+- Langkah 8 (Klarifikasi dan Rekonsiliasi dengan Rumah Sakit): Petugas rekonsiliasi mengirimkan Lembar Rincian Sanggahan (Discrepancy Notice) kepada bagian keuangan rumah sakit rekanan. Pihak rumah sakit diberikan tenggat waktu simulasi 14 hari kerja untuk memberikan klarifikasi tertulis atau mengirimkan dokumen bukti penunjang tambahan.
+- Langkah 9 (Penetapan Hasil Rekonsiliasi Akhir): Berdasarkan dokumen klarifikasi resmi dari rumah sakit:
+- Selisih yang terbukti salah input oleh rumah sakit dikeluarkan dari tagihan.
+- Selisih yang berhasil dibuktikan keabsahan medisnya dimasukkan kembali ke pos yang disetujui.
+- Petugas menetapkan nilai final tagihan yang sah untuk dibayarkan (Reconciled Settlement Amount).
+--- TAHAP C: PERSETUJUAN PEMBAYARAN (SIMPUL UCS: N_4) ---
+- Langkah 10 (Penyusunan Berita Acara Rekonsiliasi Tagihan): Petugas menyusun formulir resmi Berita Acara Rekonsiliasi Tagihan yang merinci: Total Tagihan Awal Rumah Sakit, Total Biaya Ineligible, Total Tagihan yang Disetujui, Rincian Selisih Tagihan, dan Nilai Bersih Pembayaran Rekanan.
+- Langkah 11 (Otorisasi Persetujuan Pembayaran): Berita acara rekonsiliasi diteruskan kepada Pejabat Otorisasi Klaim di tahap N_4 untuk ditandatangani dan disahkan statusnya menjadi "Approved for Provider Payment" mengacu pada tata laksana SOP_10.
+--- TAHAP D: PENCAIRAN DANA DAN PENUTUPAN (SIMPUL UCS: N_5) ---
+- Langkah 12 (Penerbitan Instruksi Pembayaran / Payment Voucher): Bagian keuangan (Treasury) menerbitkan formulir Payment Voucher resmi yang memuat nomor rekening giro rumah sakit rekanan, nama bank mitra, dan nominal dana yang telah disahkan.
+- Langkah 13 (Pelaksanaan Eksekusi Transfer Dana): Petugas treasury mengeksekusi transfer pemindahan dana ke rekening bank resmi rumah sakit rekanan melalui sistem kliring perbankan antarbank (RTGS / SKN / BI-FAST / transfer kemitraan host-to-host). Status transaksi dicatat sebagai "Payment Processing".
+- Langkah 14 (Konfirmasi Pembayaran dan Pengiriman Bukti): Petugas treasury memantau mutasi rekening perbankan untuk memastikan transfer berhasil (settled). Setelah terkonfirmasi sukses, sistem menerbitkan Surat Konfirmasi Pembayaran (Payment Confirmation Letter) beserta salinan bukti transfer resmi (Payment Proof) yang dikirimkan secara elektronik kepada bagian keuangan rumah sakit rekanan. Status berkas diperbarui menjadi "Paid".
+- Langkah 15 (Pencatatan Buku Besar dan Penutupan Transaksi): Petugas membukukan bukti transaksi ke dalam sistem akuntansi perusahaan, memutakhirkan saldo sisa plafon pertanggungan peserta, dan mengubah status akhir berkas klaim menjadi "Closed" (Tuntas Sempurna).
+Penanganan Kondisi Khusus:
+a. Tagihan Belum Lengkap: Berkas diberikan status "Pending Document" dan rumah sakit diminta melengkapi dokumen administrasi dalam batas waktu simulasi 14 hari kalender.
+b. Tagihan Tidak Sesuai Dokumen Medis: Pos tagihan yang tidak memiliki catatan tindakan pada resume medis ditahan (disputed) dan dikeluarkan dari persetujuan bayar sementara.
+c. Terdapat Selisih Nominal yang Belum Disepakati: Nilai yang disepakati (clean batch) dapat dibayarkan terlebih dahulu, sedangkan nilai selisih yang dipersengketakan ditahan hingga rekonsiliasi tuntas.
+d. Indikasi Penagihan Ganda (Duplicate Billing): Item yang tertagih ganda dibatalkan salah satunya setelah diverifikasi pada lembar catatan pemberian obat perawat.
+e. Rumah Sakit Tidak Memberikan Klarifikasi: Jika melewati batas waktu klarifikasi tanpa respons tertulis, pos tagihan yang bermasalah ditolak permanen dari invoice pembayaran.
+f. Pembayaran Gagal di Perbankan: Status diubah menjadi "Payment Failed" (berkas tidak ditutup); petugas menghubungi bagian keuangan rumah sakit untuk memvalidasi nomor rekening giro yang aktif, lalu dilakukan transfer ulang.
+g. Indikasi Kecurangan Sistematis (Fraud): Jika ditemukan manipulasi faktur palsu atau tindakan fiktif berulang, berkas langsung dibekukan dan dieskalasi ke Unit Investigasi Anti-Fraud sesuai alur SOP_06.
+7. DOKUMEN PENDUKUNG
+Dokumen yang dikelola dan diarsipkan dalam prosedur rekonsiliasi tagihan rumah sakit meliputi:
+a. Salinan Kartu Identitas Peserta dan Kartu Asuransi: Bukti keabsahan data peserta tertanggung.
+b. Dokumen Polis dan Data Kepesertaan: Dokumen acuan hak manfaat, batasan kamar, dan limit tahunan (SOP_02).
+c. Surat Jaminan Rumah Sakit (Initial & Final Guarantee Letter): Bukti persetujuan penjaminan non-tunai awal dan akhir (SOP_09).
+d. Invoice Tagihan Rumah Sakit (Provider Invoice): Surat pengantar tagihan resmi yang diterbitkan bagian keuangan rumah sakit.
+e. Lembar Rincian Tagihan (Itemized Hospital Bill): Rincian baris per baris biaya kamar, tindakan medis, jasa dokter, dan obat farmasi.
+f. Resume Medis Pasien: Ringkasan riwayat penyakit, diagnosis ICD-10, dan tindakan dokter pemeriksa.
+g. Laporan Pembedahan dan Anestesi: Bukti otentik pelaksanaan tindakan operasi bedah.
+h. Catatan Keperawatan Harian (Nursing Notes): Catatan harian pemberian obat dan pemakaian alat kesehatan habis pakai di ruang perawatan.
+i. Salinan Laporan Hasil Tes Diagnostik Penunjang: Lembar hasil laboratorium darah, rontgen radiologi, atau CT-Scan.
+j. Lembar Verifikasi Medis Fasilitas Kesehatan (SOP_03): Catatan audit kewajaran tindakan dari dokter pemeriksa penanggung.
+k. Lembar Pemeriksaan Pengecualian Polis (SOP_05): Catatan pos-pos biaya tidak layak (ineligible expenses).
+l. Lembar Kalkulasi Manfaat Klaim (SOP_07): Lembar kerja perhitungan matematis hak bayar asuransi.
+m. Berita Acara Rekonsiliasi Tagihan (Billing Reconciliation Statement): Dokumen formal pencatatan hasil pencocokan angka tagihan antara penanggung dan rumah sakit.
+n. Formulir Klarifikasi Selisih Tagihan (Discrepancy Inquiry Form): Lembar komunikasi konfirmasi selisih tagihan ke rumah sakit.
+o. Surat Keputusan Otorisasi Pembayaran (Payment Voucher): Lembar persetujuan pelepasan dana di tahap N_4 menuju N_5 (SOP_10).
+p. Bukti Transfer Bank Resmi (Payment Proof / Confirmation): Resi transaksi kliring perbankan resmi yang memuat nomor referensi pemindahan dana ke rekening rumah sakit.
+8. CONTOH KASUS
+Kasus 1 – Tagihan Sesuai dengan Hasil Persetujuan (Clean Reconciliation & Full Payment):
+- Permasalahan: Rumah Sakit Sehat Sentosa mengajukan invoice tagihan perawatan rawat inap demam berdarah untuk peserta bernama Bapak Andi dengan total tagihan sebesar Rp8.000.000,-.
+- Pemeriksaan dan Rekonsiliasi (Simpul N_2):
+1) Petugas memeriksa identitas Bapak Andi, nomor polis, dan surat jaminan (GL) rawat inap: data valid dan cocok 100%.
+2) Verifikator medis di N_2 mencocokkan itemized bill dengan resume medis: seluruh pos rawat inap, cairan infus, jasa visit dokter spesialis, dan obat farmasi terbukti tercatat dalam lembar keperawatan dan sesuai dengan diagnosis DBD (ICD-10: A91).
+3) Pemeriksaan Pengecualian (SOP_05): Ditemukan pos suplemen vitamin kulit dan biaya perlengkapan mandi pribadi pasien sebesar Rp500.000,- yang tergolong biaya tidak ditanggung (ineligible expenses).
+4) Pencocokan dengan Perhitungan Manfaat (SOP_07):
+* Total Billed Amount = Rp8.000.000,-
+* Ineligible Expenses = Rp500.000,- (telah diselesaikan langsung oleh Bapak Andi di kasir RS saat discharge sebagai biaya mandiri/ekses).
+* Tagihan yang Menjadi Beban Asuransi (Eligible Amount) = Rp8.000.000 - Rp500.000 = Rp7.500.000,-.
+* Polis Bapak Andi tanpa deductible/co-pay dan limit tahunan mencukupi.
+* Approved Claim Amount = Rp7.500.000,-.
+5) Hasil Rekonsiliasi: Angka tagihan yang disetujui penanggung pas sebesar Rp7.500.000,- tanpa ada selisih sengketa. Berita acara rekonsiliasi diterbitkan.
+- Persetujuan dan Pembayaran (Simpul N_4 & N_5):
+1) Otorisasi N_4: Pejabat klaim menandatangani persetujuan pembayaran provider sebesar Rp7.500.000,-.
+2) Pencairan N_5: Petugas treasury mentransfer dana sebesar Rp7.500.000,- ke rekening giro resmi RS Sehat Sentosa pada Bank Mandiri dengan nomor referensi transfer `TRX-HOSP-20260910-001`.
+- Status Akhir: Status diperbarui menjadi "Paid", konfirmasi pembayaran dikirim ke rumah sakit, dan transaksi ditutup menjadi "Closed".
+Kasus 2 – Terdapat Selisih Tagihan Rumah Sakit (Billing Discrepancy & Resolution):
+- Permasalahan: Rumah Sakit Harapan mengajukan tagihan rawat inap pasca-cedera fraktur tungkai untuk Pasien Tn. Budi dengan total tagihan invoice sebesar Rp12.000.000,-.
+- Pemeriksaan dan Rekonsiliasi (Simpul N_2):
+1) Verifikator menelaah rincian biaya:
+* Biaya tindakan bedah ortopedi, kamar, dan obat yang memenuhi syarat dan terbukti pada resume medis = Rp9.000.000,- (eligible).
+* Biaya tidak ditanggung (makanan ekstra keluarga dan sewa tempat tidur lipat) = Rp1.000.000,- (ineligible, dilunasi pasien).
+* Terdapat pos biaya tindakan "Paket Sesi Terapi Fisioterapi Lanjutan dan Latihan Berjalan" sebesar Rp2.000.000,- yang tercantum pada rincian tagihan.
+2) Identifikasi Masalah: Verifikator memeriksa lembar catatan keperawatan dan lembar instruksi dokter penanggung jawab (DPJP). Tidak ditemukan adanya catatan rekam medis bahwa tindakan fisioterapi tersebut telah dilaksanakan selama pasien dirawat (unsubstantiated charge). Timbul selisih tagihan (discrepancy) sebesar Rp2.000.000,-.
+3) Klarifikasi ke Rumah Sakit: Petugas mengirim formulir Discrepancy Notice meminta lembar absensi tindakan fisioterapi berparaf fisioterapis dan pasien.
+4) Hasil Klarifikasi Rumah Sakit: Bagian penagihan RS Harapan membalas secara tertulis bahwa terjadi kesalahan entri billing otomatis (billing system error) di mana paket fisioterapi rawat jalan terinput ke tagihan rawat inap sebelum tindakan dilaksanakan. RS membatalkan pos tagihan tersebut dan menerbitkan invoice revisi resmi sebesar Rp10.000.000,- (di mana Rp9.000.000,- ditanggung asuransi dan Rp1.000.000,- dibayar pasien).
+- Persetujuan dan Pembayaran (Simpul N_4 & N_5):
+1) Nilai rekonsiliasi yang sah ditetapkan sebesar Rp9.000.000,-.
+2) Pejabat N_4 mengesahkan persetujuan bayar Rp9.000.000,-.
+3) Petugas N_5 mengeksekusi transfer dana Rp9.000.000,- ke rekening giro RS Harapan melalui transfer perbankan dengan nomor referensi `TRX-HOSP-20260918-042`.
+- Status Akhir: Status pembayaran tercatat "Paid", selisih Rp2.000.000,- tercatat dibatalkan secara sah dalam berita acara rekonsiliasi, dan berkas diperbarui menjadi "Closed".
+Kasus 3 – Terdapat Indikasi Penagihan Ganda (Duplicate Billing):
+- Permasalahan: Rumah Sakit Medika mengajukan tagihan rawat inap infeksi paru pasien Ny. Clara dengan total nominal Rp10.000.000,-.
+- Pemeriksaan dan Rekonsiliasi (Simpul N_2):
+1) Sistem audit penapisan biaya mendeteksi indikasi kejanggalan: terdapat satu komponen obat antibiotik injeksi paten seharga Rp1.500.000,- tercatat sebanyak 2 (dua) baris penagihan pada hari dan jam yang sama dengan nomor kode obat yang identik (total penagihan obat tersebut menjadi Rp3.000.000,-).
+2) Pemeriksaan Bukti Rekam Medis: Dokter verifikator memeriksa lembar catatan harian perawat (nursing notes) dan lembar kartu kendali obat farmasi. Catatan klinis mencatat bahwa perawat hanya mengambil dan menyuntikkan obat tersebut sebanyak 1 (satu) kali sesuai instruksi resep dokter. Terdapat indikasi penagihan ganda (duplicate billing) senilai Rp1.500.000,-.
+3) Klarifikasi ke Rumah Sakit: Petugas melayangkan permintaan klarifikasi mengenai duplikasi baris obat tersebut kepada instalasi farmasi dan kasir RS Medika.
+4) Hasil Pemeriksaan dan Tanggapan RS: Bagian keuangan rumah sakit membalas bahwa terjadi kesalahan teknis pemindaian barcode kasir ganda (double barcode scanning) saat staf farmasi menginput resep ke sistem billing rumah sakit. Tidak ditemukan unsur rekayasa atau kesengajaan sistematis penipuan, melainkan murni kekeliruan administrasi kasir.
+5) Koreksi Tagihan: Rumah sakit menerbitkan rincian tagihan revisi dengan menghapus satu baris obat duplikat tersebut. Total tagihan rumah sakit terkoreksi menjadi Rp8.500.000,- (seluruhnya memenuhi syarat / eligible).
+6) Catatan Evaluasi Fraud (SOP_06): Kasus ini diselesaikan secara administratif rekonsiliasi dan tidak perlu dieskalasi ke penyelidikan fraud tingkat lanjut SOP_06 karena rumah sakit kooperatif, kesalahan terbukti murni teknis barcode, dan segera diralat resmi. (Eskalasi ke SOP_06 baru diwajibkan apabila rumah sakit bersikeras menagihkan tindakan fiktif tanpa bukti medis atau ditemukan pola duplikasi berulang secara massal pada banyak pasien).
+- Persetujuan dan Pembayaran (Simpul N_4 & N_5):
+1) Berita acara rekonsiliasi menetapkan nilai pembayaran bersih sebesar Rp8.500.000,-.
+2) Pejabat N_4 menyetujui pembayaran provider sebesar Rp8.500.000,-.
+3) Petugas treasury di N_5 mentransfer dana Rp8.500.000,- ke rekening giro resmi RS Medika dengan nomor referensi `TRX-HOSP-20260925-099`.
+- Status Akhir: Transaksi terkonfirmasi berhasil ("Paid"), bukti transfer diarsipkan, dan berkas klaim ditutup resmi menjadi "Closed".
+Catatan Penting: Seluruh angka nominal uang, durasi hari kalender, dan skenario kasus di atas merupakan PARAMETER SIMULASI AKADEMIK untuk pembelajaran sistem AI, bukan ketentuan mutlak yang berlaku pada seluruh entitas asuransi atau rumah sakit.
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Tata cara kerja sama jaringan rumah sakit rekanan, siklus penagihan berkala (bulk billing), serta termin pembayaran (payment terms) pada industri asuransi nyata sepenuhnya merujuk pada dokumen Perjanjian Kerja Sama (PKS) antara penanggung dan masing-masing fasilitas kesehatan.
+- Rujukan Regulasi Resmi Sektor Jasa Keuangan & Kesehatan:
+1) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+2) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 69/POJK.05/2016 tentang Penyelenggaraan Usaha Perusahaan Asuransi, Perusahaan Asuransi Syariah, Perusahaan Reasuransi, dan Perusahaan Reasuransi Syariah, sebagaimana telah diubah dengan POJK Nomor 36 Tahun 2024.
+3) Undang-Undang Republik Indonesia Nomor 17 Tahun 2023 tentang Kesehatan (khususnya ketentuan mengenai standar rekam medis dan pertanggungjawaban penagihan fasilitas pelayanan kesehatan).
+4) Pedoman Standar Operasional Pengelolaan Hubungan Fasilitas Kesehatan Rekanan dan Klaim Non-Tunai (Provider Relations & Cashless Settlement) Asosiasi Asuransi Jiwa Indonesia (AAJI).
+5) Keterkaitan Harmonis Korpus Proyek Terpadu:
+- SOP_03: Prosedur Verifikasi Dokumen Medis dan Tagihan Rumah Sakit (N_2 - Telaah Medis).
+- SOP_05: Kebijakan Pengecualian Pertanggungan Asuransi Kesehatan (Pemotongan Ineligible).
+- SOP_06: Prosedur Deteksi dan Investigasi Kecurangan Klaim (N_3 - Penanganan Kasus Fraud).
+- SOP_07: Prosedur Perhitungan Manfaat dan Nilai Klaim Asuransi Kesehatan (Kalkulasi Hak Klaim).
+- SOP_10: Prosedur Persetujuan Akhir dan Pembayaran Klaim (Otorisasi N_4 & Pencairan N_5).
+- SOP_11: Kebijakan Batas Waktu Pengajuan dan Kelengkapan Dokumen Klaim (Penapisan Berkas N_0/N_1).
+================================================================================

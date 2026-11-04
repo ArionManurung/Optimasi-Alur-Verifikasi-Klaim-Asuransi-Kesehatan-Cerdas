@@ -1,0 +1,68 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_01
+- Judul Dokumen: Prosedur Pengajuan Klaim Asuransi Kesehatan (Health Insurance Claim Submission)
+- Tahapan UCS Terkait: N_0 – Pengajuan Klaim (Titik Awal Alur Verifikasi Pencarian Jalur Optimal)
+- Klasifikasi: Dokumen Operasional Standar Registrasi dan Penerimaan Berkas (Intake)
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Memberikan panduan terstruktur dan mudah dipahami bagi pemegang polis, peserta tertanggung, maupun agen pendamping dalam proses pengajuan klaim reimbursement (penggantian biaya pengobatan).
+b. Menstandarisasi tata kelola penerimaan berkas klaim, verifikasi kelengkapan administratif awal, serta pencatatan identitas klaim ke dalam basis data operasional.
+c. Memastikan setiap permohonan klaim yang masuk memperoleh nomor identifikasi unik (Claim ID) sebelum dialirkan ke tahap evaluasi keabsahan polis pada tahap N_1 – Cek Polis.
+3. RUANG LINGKUP
+Prosedur ini mengatur alur penerimaan berkas klaim penggantian mandiri (reimbursement) untuk seluruh layanan kesehatan, baik perawatan rawat jalan (outpatient care), rawat inap (inpatient hospital care), maupun perawatan kegawatdaruratan medis. Ruang lingkup prosedur mencakup interaksi antara pemohon klaim, kanal penerimaan berkas (digital maupun layanan fisik), petugas intake administrasi, hingga penyerahan status berkas ke tim pemeriksa polis. Prosedur ini tidak mengatur klaim non-reimbursement seperti penjaminan langsung rumah sakit rekanan yang memiliki SOP tersendiri.
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Klaim Reimbursement (Klaim Penggantian Biaya Mandiri): Skema pengajuan klaim di mana nasabah membayar seluruh tagihan rumah sakit atau klinik menggunakan dana pribadi terlebih dahulu, kemudian menagihkan kembali penggantian pengeluaran medis tersebut kepada pihak asuransi sesuai manfaat polis.
+b. Pemegang Polis (Policyholder): Orang pribadi atau pihak institusi yang membeli dan memiliki kontrak polis asuransi serta bertanggung jawab atas pembayaran premi.
+c. Peserta Tertanggung (Insured): Individu atau anggota keluarga yang didaftarkan dalam polis untuk mendapatkan perlindungan biaya kesehatan saat sakit atau mengalami kecelakaan.
+d. Resume Medis / Surat Keterangan Dokter (Medical Summary): Formulir resmi yang diisi dan ditandatangani oleh dokter pemeriksa yang memuat keluhan awal pasien, hasil pemeriksaan fisik, diagnosis penyakit, dan daftar tindakan medis atau obat yang diberikan.
+e. Kode ICD-10 (International Classification of Diseases, 10th Revision): Standar sistem penamaan dan pengodean penyakit yang diakui secara internasional oleh WHO untuk memastikan diagnosis dokter tercatat secara seragam.
+f. Kuitansi Asli dan Rincian Biaya (Itemized Bill): Bukti pembayaran resmi dari fasilitas kesehatan yang memuat rincian nominal per komponen biaya (biaya kunjungan dokter, obat farmasi, tes laboratorium, atau tindakan medis).
+g. Nomor Registrasi Klaim (Claim ID): Nomor seri unik yang dibuat oleh sistem komputer untuk melacak dan membedakan setiap pengajuan klaim yang sedang diproses.
+5. KETENTUAN
+Kebijakan dan aturan yang berlaku dalam proses pengajuan klaim meliputi:
+a. Keabsahan Berkas Finansial: Dokumen bukti bayar (kuitansi pembayaran) wajib berupa dokumen asli yang memuat identitas jelas fasilitas kesehatan penerbit, cap lunas, dan tanda tangan kasir. Ketentuan meterai mengikuti aturan perundang-undangan perpajakan yang berlaku di Indonesia pada saat kuitansi diterbitkan.
+b. Kanal Pengajuan Dokumen: Pemohon dapat memilih salah satu kanal penyerahan berkas berikut:
+1) Kanal Digital: Mengunggah foto atau hasil pemindaian (scan) berkas melalui portal web atau aplikasi seluler nasabah. Berkas digital wajib memiliki pencahayaan cukup, tidak buram, seluruh teks terbaca utuh, dan tidak terpotong pada bagian tepi dokumen.
+2) Kanal Konvensional: Menyerahkan berkas fisik asli secara langsung ke loket kantor pelayanan atau mengirimkannya melalui jasa kurir/ekspedisi tercatat ke unit pengolahan klaim.
+c. Klausul Kuasa Medis (Medical Authorization): Setiap pengajuan klaim wajib mencantumkan persetujuan tertulis dari peserta tertanggung yang memberi wewenang hukum kepada pihak asuransi untuk mengakses, meneliti, dan meminta riwayat medis peserta dari fasilitas kesehatan atau dokter yang bersangkutan.
+d. Ketergantungan pada Polis Masing-Masing: Kelayakan jenis penyakit, besaran penggantian biaya, ada tidaknya pengurangan biaya mandiri (deductible/co-pay), dan ketersediaan santunan rawat jalan sepenuhnya terikat pada buku polis yang dimiliki nasabah.
+e. Parameter Aturan Simulasi Akademik: Khusus dalam model simulasi proyek kelompok ini, target waktu verifikasi awal berkas ditetapkan 1x24 jam kerja, dan tenggat waktu pemenuhan dokumen susulan ditetapkan 30 hari kalender. Dalam operasional asuransi nyata, parameter waktu ini mengacu pada Service Level Agreement (SLA) resmi dan ketentuan polis masing-masing.
+6. PROSEDUR
+Rangkaian tahapan penerimaan klaim dilaksanakan melalui urutan kerja berikut:
+- Tahap 1 (Pengisian Formulir): Pemegang polis mengisi Formulir Pengajuan Klaim secara lengkap dan benar, meliputi identitas nasabah, nomor polis aktif, kronologi singkat terjadinya sakit/cedera, dan nomor rekening bank atas nama pemegang polis atau tertanggung.
+- Tahap 2 (Kelengkapan dari Dokter dan Fasilitas Kesehatan): Pemohon meminta dokter pemeriksa untuk melengkapi resume medis dengan menyebutkan diagnosis penyakit yang jelas (disertai kode ICD-10 jika ada), serta mengumpulkan seluruh kuitansi asli, perincian tagihan, resep obat, dan lembar hasil pemeriksaan penunjang.
+- Tahap 3 (Pengiriman Berkas): Pemohon mengunggah seluruh berkas persyaratan melalui kanal aplikasi digital atau mengirimkan berkas fisik lengkap ke alamat kantor layanan administrasi klaim.
+- Tahap 4 (Pemeriksaan Awal oleh Petugas Intake): Petugas penerima berkas memeriksa kelengkapan administratif. Petugas memverifikasi kecocokan nomor polis, kelengkapan tanda tangan pada formulir dan resume dokter, kejelasan foto kuitansi, serta ketersediaan rincian biaya.
+- Tahap 5 (Penerbitan Claim ID dan Penerusan Berkas):
+- Apabila berkas lengkap, sistem menerbitkan Nomor Registrasi Klaim (Claim ID) resmi, mengirim notifikasi tanda terima kepada pemohon, dan mengarahkan berkas ke tahap N_1 – Cek Polis.
+- Apabila berkas belum lengkap (misalnya resume medis belum ditandatangani dokter atau kuitansi buram), sistem menerbitkan surat pemberitahuan dokumen kurang (Pending Document Notice) kepada pemohon untuk dilengkapi sebelum berkas dapat diproses lebih lanjut.
+7. DOKUMEN PENDUKUNG
+Dokumen yang dipersyaratkan dalam pengajuan klaim adalah:
+a. Formulir Pengajuan Klaim Asuransi Kesehatan yang telah diisi lengkap dan ditandatangani.
+b. Surat keterangan dokter atau resume medis yang mencantumkan diagnosis penyakit.
+c. Kuitansi asli pembayaran dan rincian biaya pengobatan resmi dari rumah sakit atau klinik.
+d. Salinan resep obat yang sesuai dengan rincian biaya pembelian obat.
+e. Salinan hasil tes diagnostik (hasil laboratorium darah, radiologi rontgen, atau tes penunjang lainnya) bila pengobatan menyertakan tindakan diagnostik.
+f. Fotokopi identitas diri yang masih berlaku (KTP pemegang polis/tertanggung, atau akta lahir/KIA untuk anak-anak).
+g. Salinan halaman depan buku tabungan atau informasi rekening bank resmi pemohon untuk keperluan transfer pembayaran klaim jika disetujui.
+8. CONTOH KASUS
+Skenario Simulasi:
+Bapak Hendra (pemegang polis dengan tertanggung dirinya sendiri) berobat jalan ke Klinik Sehat Utama akibat demam tinggi dan radang tenggorokan akut (Pharyngitis, kode ICD-10: J02.9). Total biaya pemeriksaan dokter dan obat yang dibayarkan di kasir klinik adalah sebesar Rp650.000,-.
+Penerapan Prosedur Berdasarkan Dokumen:
+1. Bapak Hendra mengunduh formulir klaim reimbursement melalui aplikasi nasabah, mengisi data diri, nomor polis, dan nomor rekening bank miliknya.
+2. Dokter klinik mengisi lembar resume medis dengan diagnosis radang tenggorokan akut dan memberikan resep obat antipiretik serta antibiotik.
+3. Kasir klinik memberikan kuitansi lunas beserta rincian biaya konsultasi dan rincian obat.
+4. Bapak Hendra memindai dokumen formulir, resume medis berstempel klinik, kuitansi lunas, dan salinan resep, lalu mengunggahnya ke menu klaim aplikasi nasabah.
+5. Petugas intake administrasi memverifikasi berkas digital tersebut: seluruh teks terbaca jelas, tanda tangan dokter dan cap klinik valid, rincian obat cocok dengan resep, dan identitas sesuai data kepesertaan.
+6. Sistem menerbitkan Claim ID dengan format simulasi `CLM-2026-0142` dan mengirim bukti penerimaan berkas ke akun Bapak Hendra. Berkas berhasil didaftarkan pada tahap N_0 dan dialirkan ke tahap N_1 – Cek Polis.
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun sebagai materi korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Kecerdasan Buatan (10S3001) Program Studi Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN dokumen resmi PT Asuransi Allianz Life Indonesia dan tidak mewakili kebijakan internal resmi perusahaan tersebut.
+- Rujukan Prinsip Umum: Tata alur penerimaan klaim diadaptasi dari prinsip dasar operasional asuransi kesehatan yang diatur dalam POJK Nomor 69/POJK.05/2016 tentang Penyelenggaraan Usaha Perusahaan Asuransi serta pedoman edukasi perlindungan konsumen Otoritas Jasa Keuangan (OJK). Segala hak dan kewajiban hakiki pemegang polis wajib merujuk secara langsung pada polis asuransi yang bersangkutan.
+================================================================================

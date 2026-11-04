@@ -1,0 +1,131 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_07
+- Judul Dokumen: Prosedur Perhitungan Manfaat dan Nilai Klaim Asuransi Kesehatan (Claim Benefit Calculation)
+- Tahapan UCS Terkait: N_4 – Persetujuan Klaim (Perhitungan Finansial Manfaat dan Otorisasi Pembayaran Menuju N_5)
+- Klasifikasi: Dokumen Operasional Standar Perhitungan Manfaat dan Persetujuan Finansial
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Memberikan panduan baku yang sistematis, transparan, dan akurat bagi penilai klaim (Claims Assessor) dan pejabat pemutus klaim dalam menghitung nilai nominal manfaat asuransi kesehatan yang berhak diterima peserta tertanggung.
+b. Menjelaskan komponen-komponen pembentuk perhitungan klaim, mulai dari total tagihan fasilitas kesehatan, pemisahan pos biaya yang dikecualikan, pengurangan biaya mandiri nasabah, hingga penerapan batas maksimum plafon polis.
+c. Menghindari kesalahan matematis, pemotongan ganda (double deduction), atau kelebihan pembayaran (over-settlement) dalam penetapan nilai klaim.
+d. Memastikan hasil perhitungan tertuang secara rinci dalam dokumen penjelasan manfaat (Explanation of Benefits - EoB) sehingga nasabah memahami hak pembayaran yang disetujui dan kewajiban biaya pribadi yang timbul.
+e. Menghubungkan keputusan persetujuan klaim pada tahap N_4 dengan tahap pencairan dana pada N_5 – Pencairan Dana.
+3. RUANG LINGKUP
+Prosedur ini berlaku untuk seluruh berkas klaim reimbursement kesehatan yang telah dinyatakan memenuhi syarat keaktifan polis pada tahap N_1 – Cek Polis, telah diverifikasi kewajaran medis dan bukti kuitansinya pada tahap N_2 – Verifikasi RS, serta telah dinyatakan bersih dari indikasi manipulasi pada tahap N_3 – Audit Fraud. Ruang lingkup prosedur ini mencakup audit perhitungan matematis pada simpul N_4 – Persetujuan Klaim hingga penyerahan Surat Perintah Pembayaran (Payment Voucher / Disbursement Order) ke bagian keuangan pada simpul N_5 – Pencairan Dana.
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Manfaat Pertanggungan (Policy Benefit): Hak perlindungan finansial yang dijanjikan oleh penanggung dalam kontrak polis untuk menanggung pengeluaran medis peserta sesuai jenis perawatan yang diambil.
+b. Batas Maksimum Manfaat (Benefit Limit / Annual Limit): Batas tertinggi nilai uang yang dapat dibayarkan oleh perusahaan asuransi untuk suatu periode waktu tertentu (misal plafon tahunan) atau untuk satu episode perawatan penyakit tertentu.
+c. Total Biaya Diajukan (Total Billed Amount): Seluruh akumulasi angka rupiah yang tercantum pada kuitansi pembayaran resmi atau tagihan rumah sakit yang diajukan oleh pemohon klaim.
+d. Biaya yang Memenuhi Ketentuan (Eligible Expenses): Pos-pos biaya pengobatan, tindakan, kamar, atau obat yang secara sah dijamin oleh polis dan terbukti secara medis diperlukan untuk proses penyembuhan pasien.
+e. Biaya Tidak Layak / Tidak Ditanggung (Ineligible Expenses): Pos pengeluaran yang tidak dijamin polis karena tergolong dalam daftar pengecualian (seperti vitamin non-terapeutik, perlengkapan mandi, telepon kamar, atau biaya administrasi non-medis).
+f. Biaya Pengurang Mandiri Awal (Deductible): Sejumlah nominal tertentu yang wajib dibayar terlebih dahulu oleh peserta tertanggung dari kantong pribadi sebelum pihak asuransi mulai menanggung sisa biaya yang memenuhi syarat.
+g. Pembagian Biaya Persentase (Co-payment / Co-insurance): Persentase tertentu dari biaya pengobatan yang memenuhi syarat (misal 10% atau 20%) yang disepakati menjadi kewajiban peserta, sedangkan sisanya ditanggung oleh perusahaan asuransi.
+h. Nilai Klaim yang Disetujui (Approved Claim): Nominal bersih akhir yang disahkan oleh pejabat persetujuan klaim pada tahap N_4 untuk dibayarkan kepada nasabah melalui proses pencairan dana di tahap N_5.
+5. KETENTUAN
+Aturan operasional yang menjadi dasar perhitungan manfaat klaim adalah:
+a. Berbasis Klausul Buku Polis Masing-Masing Peserta: Setiap perhitungan klaim wajib tunduk pada tabel manfaat polis yang dimiliki peserta. Tidak semua polis asuransi membebankan ketentuan deductible atau co-payment. Ada polis yang menanggung 100% biaya sesuai tagihan (as-charged) hingga limit tahunan, dan ada polis yang menerapkan batasan per pos perawatan (inner limit).
+b. Pencegahan Pengurangan Ganda: Penilai klaim wajib memastikan bahwa pos pengeluaran yang sudah dikeluarkan pada tahap pemisahan ineligible expenses tidak boleh dikurangkan kembali pada pos deductible atau co-payment.
+c. Batasan Sisa Plafon Tahunan: Nilai klaim yang dibayarkan oleh asuransi tidak boleh melampaui sisa limit tahunan polis yang masih aktif pada saat tanggal kejadian rawat. Jika nilai kewajiban asuransi melebihi sisa limit, maka selisih kelebihan tersebut (excess benefit limit) menjadi tanggungan peserta.
+d. Kewajiban Penerbitan Explanation of Benefits (EoB): Setiap keputusan persetujuan klaim wajib menerbitkan lembar rincian EoB yang memuat seluruh proses hitungan secara transparan agar tidak menimbulkan kesalahpahaman nasabah.
+e. Parameter Model Simulasi Akademik: Khusus untuk kebutuhan pembelajaran simulasi proyek kelompok ini, dirancang model rumus hitung baku bertingkat:
+1) Eligible Amount = Total Billed Amount - Ineligible Expenses
+2) Amount After Deductible = Eligible Amount - Deductible (jika klausul deductible berlaku pada polis)
+3) Insurer Share = Amount After Deductible × (1 - Co-payment Percentage) (jika klausul co-payment berlaku)
+4) Approved Claim = Nilai terendah antara Insurer Share dan Sisa Benefit Limit
+Catatan penting: Rumus bertingkat ini merupakan model penyederhanaan komputasi untuk simulasi akademik. Pada industri asuransi nyata, urutan penerapan klausul dan variasi skema manfaat mengikuti aturan kontrak polis masing-masing produk.
+6. PROSEDUR
+Urutan langkah pelaksanaan perhitungan manfaat klaim pada tahap N_4 menuju N_5 dilaksanakan sebagai berikut:
+- Langkah 1 (Penerimaan Berkas Rekomendasi): Petugas penilai klaim di tahap N_4 menerima berkas yang telah tervalidasi dari tahap N_1 (status in-force), N_2 (medis wajar), dan N_3 (rekomendasi audit fraud bersih/lolos).
+- Langkah 2 (Pemeriksaan Tabel Manfaat Polis): Mengakses basis data polis untuk memeriksa tabel manfaat nasabah: besaran plafon tahunan, sisa limit manfaat saat ini, ada tidaknya ketentuan deductible, persentase co-payment, dan inner limit kamar.
+- Langkah 3 (Identifikasi Total Tagihan Kuitansi): Mencatat angka Total Billed Amount dari kuitansi pembayaran asli yang diajukan pemohon.
+- Langkah 4 (Pemisahan Biaya Ineligible): Memeriksa rincian tagihan (itemized bill) dan memisahkan pos-pos biaya yang dikecualikan (misal barang non-medis atau suplemen bebas). Menghitung nilai Eligible Expenses = Total Billed Amount - Ineligible Expenses.
+- Langkah 5 (Penerapan Deductible): Apabila polis memuat ketentuan deductible, mengurangkan nilai deductible dari Eligible Expenses untuk menghasilkan Amount After Deductible. Jika nilai Eligible Expenses lebih kecil dari deductible, maka nilai klaim asuransi adalah Rp0,- dan seluruh biaya menjadi tanggungan peserta.
+- Langkah 6 (Penerapan Co-payment): Apabila polis memuat ketentuan co-payment, menghitung bagian persentase kewajiban peserta dan bagian kewajiban penanggung (Insurer Share).
+- Langkah 7 (Pemeriksaan Batas Plafon dan Sisa Limit): Membandingkan nilai Insurer Share dengan sisa Benefit Limit nasabah.
+- Langkah 8 (Penetapan Nilai Approved Claim): Menetapkan nilai Approved Claim sebagai nilai terendah antara Insurer Share dan sisa Benefit Limit. Menghitung total kewajiban yang ditanggung nasabah (Patient Out-of-Pocket Share).
+- Langkah 9 (Penyusunan Rincian Explanation of Benefits / EoB): Mencatat seluruh tahapan hitungan ke dalam formulir EoB resmi dengan mencantumkan nomor Claim ID, tanggal perawatan, rincian potongan, dan nilai bersih persetujuan.
+- Langkah 10 (Eskalasi ke Tahap N_5 – Pencairan Dana): Menandatangani berkas persetujuan finansial dan meneruskan instruksi pembayaran secara elektronik ke bagian kasir/treasury pada tahap N_5 – Pencairan Dana untuk dilakukan transfer ke rekening bank nasabah.
+7. DOKUMEN PENDUKUNG
+Dokumen yang digunakan dalam prosedur perhitungan manfaat klaim meliputi:
+a. Berkas klaim lengkap ber-Claim ID dari tahap N_0, N_1, N_2, dan N_3.
+b. Lembar rincian tagihan rumah sakit (itemized bill) yang telah diaudit verifikator medis.
+c. Catatan sisa plafon pertanggungan (benefit ledger card) dari sistem basis data polis.
+d. Dokumen ikhtisar polis nasabah yang memuat ketentuan deductible, co-payment, dan limit manfaat.
+e. Lembar draft Explanation of Benefits (EoB) yang siap diterbitkan.
+f. Formulir otorisasi persetujuan klaim (Claim Approval Sheet).
+8. CONTOH KASUS
+Kasus 1 – Klaim Tanpa Deductible dan Co-payment (Skema Standar Penuh):
+- Profil Kasus: Bapak Johan mengajukan klaim penggantian rawat jalan akibat infeksi saluran pernapasan. Polis Bapak Johan merupakan polis standar murni tanpa klausul deductible dan tanpa co-payment.
+- Data Finansial:
+* Total Billed Amount (Tagihan Kuitansi): Rp8.000.000,-
+* Ineligible Expenses (Vitamin kulit non-medis & biaya admin ekstra): Rp500.000,-
+* Deductible: Rp0,-
+* Co-payment: 0%
+* Sisa Benefit Limit: Rp10.000.000,-
+- Langkah Perhitungan Matematis:
+1) Eligible Amount = Total Billed Amount - Ineligible Expenses
+Eligible Amount = Rp8.000.000 - Rp500.000 = Rp7.500.000,-
+2) Amount After Deductible = Rp7.500.000 - Rp0 = Rp7.500.000,-
+3) Insurer Share = Rp7.500.000 × (1 - 0) = Rp7.500.000,-
+4) Approved Claim = min(Insurer Share, Sisa Limit) = min(Rp7.500.000, Rp10.000.000) = Rp7.500.000,-
+- Hasil Akhir:
+* Dibayarkan oleh Asuransi (Approved Claim di N_4 menuju N_5): Rp7.500.000,-
+* Beban Mandiri Peserta (Ineligible): Rp500.000,-
+Kasus 2 – Klaim dengan Ketentuan Deductible:
+- Profil Kasus: Ibu Diana menjalani rawat inap selama 2 hari karena demam gastroenteritis. Polis asuransi Ibu Diana memiliki klausul deductible tahunan per rawat inap sebesar Rp500.000,- dan tanpa co-payment.
+- Data Finansial:
+* Total Billed Amount: Rp10.000.000,-
+* Ineligible Expenses (Perlengkapan mandi & makanan pendamping pasien): Rp1.000.000,-
+* Deductible: Rp500.000,-
+* Co-payment: 0%
+* Sisa Benefit Limit: Rp15.000.000,-
+- Langkah Perhitungan Matematis:
+1) Eligible Amount = Total Billed Amount - Ineligible Expenses
+Eligible Amount = Rp10.000.000 - Rp1.000.000 = Rp9.000.000,-
+2) Amount After Deductible = Eligible Amount - Deductible
+Amount After Deductible = Rp9.000.000 - Rp500.000 = Rp8.500.000,-
+3) Insurer Share = Rp8.500.000 × (1 - 0) = Rp8.500.000,-
+4) Approved Claim = min(Insurer Share, Sisa Limit) = min(Rp8.500.000, Rp15.000.000) = Rp8.500.000,-
+- Hasil Akhir:
+* Dibayarkan oleh Asuransi (Approved Claim di N_4 menuju N_5): Rp8.500.000,-
+* Beban Mandiri Peserta: Rp1.000.000 (ineligible) + Rp500.000 (deductible) = Rp1.500.000,-
+Kasus 3 – Klaim dengan Co-payment dan Batasan Limit Manfaat:
+- Profil Kasus: Bapak Bambang menjalani tindakan operasi pembedahan kolesistektomi di rumah sakit. Polis asuransi memuat klausul deductible Rp1.000.000,-, klausul co-payment sebesar 20%, dan sisa limit manfaat tahunan tersisa Rp10.000.000,-.
+- Data Finansial:
+* Total Billed Amount: Rp20.000.000,-
+* Ineligible Expenses (Upgrade kamar di luar plafon & obat bebas): Rp2.000.000,-
+* Deductible: Rp1.000.000,-
+* Co-payment Percentage: 20%
+* Sisa Benefit Limit: Rp10.000.000,-
+- Langkah Perhitungan Matematis:
+1) Eligible Amount = Total Billed Amount - Ineligible Expenses
+Eligible Amount = Rp20.000.000 - Rp2.000.000 = Rp18.000.000,-
+2) Amount After Deductible = Eligible Amount - Deductible
+Amount After Deductible = Rp18.000.000 - Rp1.000.000 = Rp17.000.000,-
+3) Perhitungan Porsi Pembagian Biaya (Co-payment):
+Porsi Beban Peserta (20%) = 20% × Rp17.000.000 = Rp3.400.000,-
+Insurer Share (80%) = Rp17.000.000 × (1 - 0,20) = Rp13.600.000,-
+4) Evaluasi Batas Maksimum (Benefit Limit):
+Insurer Share dihitung sebesar Rp13.600.000,-, namun sisa plafon pertanggungan hanya Rp10.000.000,-.
+Approved Claim = min(Rp13.600.000, Rp10.000.000) = Rp10.000.000,-
+Kelebihan di atas limit (Excess Limit) = Rp13.600.000 - Rp10.000.000 = Rp3.600.000,-
+- Hasil Akhir:
+* Dibayarkan oleh Asuransi (Approved Claim di N_4 menuju N_5): Rp10.000.000,- (tepat batas plafon)
+* Beban Mandiri Peserta (Total Out-of-Pocket):
+- Biaya Ineligible: Rp2.000.000,-
+- Biaya Deductible: Rp1.000.000,-
+- Porsi Co-payment (20%): Rp3.400.000,-
+- Kelebihan Melebihi Plafon (Excess Limit): Rp3.600.000,-
+- Total Ditanggung Peserta: Rp2.000.000 + Rp1.000.000 + Rp3.400.000 + Rp3.600.000 = Rp10.000.000,-
+(Catatan verifikasi matematis: Rp10.000.000 asuransi + Rp10.000.000 peserta = Rp20.000.000 total tagihan kuitansi awal).
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Tata rumus perhitungan manfaat, persentase deductible, co-payment, dan matriks batas limit pada operasional asuransi nyata sepenuhnya merujuk pada buku polis masing-masing produk penanggung.
+- Rujukan Prinsip Umum: Diadaptasi dari prinsip tata kelola transparansi produk asuransi kesehatan yang diatur dalam Peraturan Otoritas Jasa Keuangan (POJK) Nomor 69/POJK.05/2016 tentang Penyelenggaraan Usaha Perusahaan Asuransi, materi literasi keuangan OJK mengenai Prinsip Ganti Rugi (Indemnity) Asuransi Kesehatan, serta pedoman teknis penagihan klaim asuransi kesehatan Asosiasi Asuransi Jiwa Indonesia (AAJI).
+================================================================================

@@ -1,0 +1,96 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_05
+- Judul Dokumen: Kebijakan Pengecualian Pertanggungan Asuransi Kesehatan (Health Insurance Policy Exclusions)
+- Tahapan UCS Terkait: N_1 – Cek Polis / N_4 – Persetujuan Klaim (Penyaringan Klausul Pengecualian dan Pemotongan Biaya Tidak Layak)
+- Klasifikasi: Dokumen Operasional Standar Evaluasi Klausul Pengecualian dan Penentuan Kelayakan Manfaat
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+2. TUJUAN
+Tujuan dari kebijakan dan prosedur ini adalah:
+a. Memberikan panduan baku dan transparan bagi verifikator polis (pada tahap N_1) dan pejabat pemutus persetujuan klaim (pada tahap N_4) dalam mengidentifikasi kondisi medis, tindakan, atau pos pengeluaran yang tidak dijamin dalam polis asuransi kesehatan.
+b. Membedakan secara tegas antara pengecualian umum (general exclusions) yang berlaku standar pada polis dan pengecualian khusus (specific exclusions) yang dilekatkan pada nasabah tertentu.
+c. Membedakan secara adil antara pos tagihan yang dikecualikan penuh, pos tagihan yang disetujui sebagian (partial approval), dan pos pengeluaran yang memerlukan konfirmasi medis lanjutan.
+d. Memastikan pemotongan pos biaya yang tidak dijamin (ineligible expenses) dilakukan secara terperinci, akurat, dan memiliki dasar pasal yang tertulis di buku polis.
+e. Menjelaskan rincian pemotongan biaya kepada pemegang polis melalui lembar rincian penjelasan manfaat klaim (Explanation of Benefits).
+3. RUANG LINGKUP
+Kebijakan ini berlaku untuk seluruh pengajuan klaim asuransi kesehatan yang sedang diproses dalam alur verifikasi. Kebijakan ini terhubung erat dengan dua simpul keputusan pada graf optimasi alur verifikasi:
+- Tahap N_1 – Cek Polis: Memeriksa apakah diagnosis utama klaim secara mutlak termasuk dalam daftar pengecualian umum atau klausul pengecualian khusus nasabah. Jika seluruh pengajuan semata-mata untuk tindakan yang dikecualikan (misalnya operasi kosmetik murni), berkas dapat langsung dihentikan pada tahap N_1 untuk mencegah inefisiensi alur.
+- Tahap N_4 – Persetujuan Klaim: Meneliti rincian tagihan (itemized bill) dari tahap verifikasi medis (N_2) untuk memisahkan antara biaya tindakan medis yang disetujui dengan biaya perlengkapan/layanan yang dikecualikan polis (misal vitamin non-terapeutik, biaya kenyamanan non-medis, atau alat bantu pribadi), sehingga dihasilkan nilai nominal pembayaran bersih yang disetujui sebelum pencairan dana di N_5.
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam kebijakan ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Pengecualian Polis (Policy Exclusions): Kondisi sakit, cedera, tindakan medis, pemeriksaan laboratorium, atau pengeluaran finansial tertentu yang secara tegas dicantumkan dalam kontrak polis sebagai hal yang tidak ditanggung oleh pihak asuransi.
+b. Pengecualian Umum (General Exclusions): Daftar kondisi baku yang berlaku untuk seluruh pemegang produk asuransi sejenis (contoh umum: bedah plastik kecantikan, perawatan infertilitas, terapi eksperimental tanpa izin edar resmi, atau cedera akibat perbuatan melanggar hukum).
+c. Pengecualian Khusus (Specific Exclusion / Endorsement): Pengecualian tambahan yang disepakati saat pendaftaran polis untuk mengecualikan organ atau penyakit tertentu milik nasabah tertentu berdasarkan penilaian risiko medis masa lalu (underwriting).
+d. Biaya Tidak Layak / Tidak Ditanggung (Ineligible Expenses): Pos pengeluaran pada rincian tagihan rumah sakit yang tidak dapat diganti oleh asuransi karena tergolong barang non-medis, layanan kenyamanan pribadi, atau obat tanpa indikasi kuratif penyakit akut.
+e. Bedah Kosmetik vs Bedah Rekonstruksi (Cosmetic vs Reconstructive Surgery): Bedah kosmetik bertujuan semata-mata memperbaiki penampilan estetika tanpa adanya kelainan fungsi (dikecualikan); sedangkan bedah rekonstruksi bertujuan memulihkan fungsi organ tubuh yang rusak akibat kecelakaan mendadak atau cacat anatomi tertentu (dapat dijamin jika memenuhi kriteria polis).
+f. Persetujuan Pembayaran Sebagian (Partial Approval): Keputusan klaim di mana tindakan pengobatan utama pasien disetujui untuk dibayarkan, namun sejumlah pos tagihan periferal yang dikecualikan dipotong dari total klaim.
+g. Rincian Penjelasan Manfaat (Explanation of Benefits - EoB): Lembaran keterangan resmi dari penanggung yang menjelaskan perhitungan nominal klaim yang diajukan, daftar pos biaya yang dipotong beserta pasalnya, dan nominal bersih yang akan dibayarkan kepada nasabah.
+5. KETENTUAN
+Aturan operasional terkait kebijakan pengecualian pertanggungan meliputi:
+a. Dasar Penolakan Tertulis: Pihak asuransi dilarang mengecualikan suatu tindakan pengobatan secara sepihak tanpa dasar klausul tertulis yang sah pada buku polis peserta.
+b. Pemeriksaan Berkas Berdasarkan Indikasi Medis Nyata: Tindakan medis yang menyerupai tindakan estetika (misalnya bedah perbaikan septum hidung) tidak boleh langsung dikecualikan apabila dokter spesialis membuktikan adanya indikasi medis mutlak (misalnya sumbatan jalan napas berat pasca-cedera fraktur tulang hidung).
+c. Pemisahan Biaya Non-Medis (Ineligible Expenses): Biaya non-medis yang lazim ditagihkan rumah sakit—seperti biaya telepon kamar, biaya perlengkapan mandi/keperluan higienis pasien, biaya sewa tempat tidur pendamping ekstra, biaya fotokopi berkas, dan makanan ekstra di luar menu pasien—secara umum masuk dalam pos biaya yang tidak dapat diganti.
+d. Obat Bebas dan Suplemen Diet: Vitamin, suplemen makanan, susu formula nutrisi, dan tonik herbal dikecualikan dari pertanggungan, kecuali terbukti secara medis merupakan bagian integral dari terapi penyelamatan nyawa pada penyakit akut tertentu atas rekomendasi tertulis dokter.
+e. Ketergantungan pada Buku Polis Masing-Masing Peserta: Daftar lengkap kondisi yang dikecualikan, ketersediaan manfaat tambahan (rider dental untuk gigi, rider kacamata/optik, atau rider persalinan), serta batasan pemotongan biaya sepenuhnya tunduk pada klausul produk dan buku polis masing-masing peserta.
+f. Parameter Model Simulasi Akademik: Khusus untuk simulasi proyek kelompok ini dirancang model aturan:
+1) Jika seluruh diagnosis utama klaim terbukti masuk pengecualian absolut pada tahap N_1, berkas langsung ditolak di N_1.
+2) Jika klaim disetujui secara umum namun mengandung pos ineligible expenses, perhitungan pemotongan biaya dilakukan di tahap N_4 dengan menerbitkan lembar rincian Explanation of Benefits (EoB).
+3) Batas waktu klarifikasi keraguan medis terkait indikasi bedah rekonstruksi dimodelkan maksimal 14 hari kalender.
+Catatan penting: Angka dan kategori di atas dirancang khusus untuk pembelajaran simulasi akademik dan dapat bervariasi pada praktik industri asuransi riil.
+6. PROSEDUR
+Urutan langkah evaluasi klausul pengecualian pada tahap N_1 dan N_4 dilaksanakan sebagai berikut:
+- Langkah 1 (Penapisan Awal Pengecualian Utama pada Tahap N_1 – Cek Polis):
+Petugas verifikator memeriksa diagnosis awal dari formulir klaim dan resume medis:
+1) Mencocokkan diagnosis dengan daftar pengecualian umum polis (misal: bedah pembesaran payudara estetika, perawatan jerawat murni, pemeriksaan program kehamilan/bayi tabung, atau sedot lemak).
+2) Mencocokkan nama organ/penyakit dengan klausul pengecualian khusus (endorsement) pada data kepesertaan polis nasabah.
+3) Jika diagnosis terbukti 100% masuk dalam klausul pengecualian, berkas dihentikan di tahap N_1 dan diterbitkan Surat Penolakan Klaim resmi dengan merujuk pasal pengecualian buku polis.
+4) Jika diagnosis utama lolos (bukan pengecualian), berkas diteruskan ke tahap N_2 – Verifikasi RS.
+- Langkah 2 (Pemeriksaan Pos Tagihan Medis pada Tahap N_2):
+Dokter verifikator menandai (flagging) pos-pos tagihan pada rincian rumah sakit (itemized bill) yang tidak memiliki kaitan klinis langsung dengan diagnosis pengobatan utama (misal peresepan obat kosmetik atau vitamin bebas).
+- Langkah 3 (Perhitungan dan Pemotongan Biaya pada Tahap N_4 – Persetujuan Klaim):
+Setelah berkas lolos verifikasi medis dan penapisan audit fraud, petugas persetujuan klaim di N_4 melakukan perhitungan finansial:
+1) Menghitung total tagihan kuitansi asli yang diajukan nasabah.
+2) Mengidentifikasi dan mengurangkan seluruh pos biaya tidak layak (ineligible expenses).
+3) Memotong biaya pengurang mandiri nasabah (deductible/co-payment) jika ada klausul tersebut pada polis.
+4) Memastikan total nominal akhir tidak melampaui plafon tahunan atau limit santunan kamar yang menjadi hak nasabah.
+- Langkah 4 (Pengambilan Keputusan Persetujuan dan Penerbitan EoB):
+- Keputusan Disetujui Penuh: Seluruh tindakan dan obat memenuhi syarat tanpa adanya pos biaya yang dikecualikan.
+- Keputusan Disetujui Sebagian (Partial Approval): Tindakan utama disetujui, namun sejumlah pos non-medis dikurangi. Sistem menerbitkan lembar Explanation of Benefits (EoB) yang menjelaskan selisih pemotongan kepada nasabah, lalu berkas dialirkan ke tahap N_5 – Pencairan Dana.
+- Keputusan Ditolak di N_4: Ditemukan bukti bahwa seluruh tindakan perawatan melanggar klausul pengecualian polis yang baru terkonfirmasi dari rincian catatan medis.
+7. DOKUMEN PENDUKUNG
+Dokumen yang digunakan dalam evaluasi kebijakan ini meliputi:
+a. Buku polis dan dokumen ringkasan pertanggungan nasabah yang memuat daftar pasal pengecualian.
+b. Catatan endorsement pengecualian khusus nasabah pada basis data polis.
+c. Rincian tagihan rumah sakit lengkap (itemized bill) yang membedah biaya obat, alat kesehatan, kamar, dan jasa penunjang.
+d. Salinan resep obat dan lembar catatan pemakaian obat dari instalasi farmasi.
+e. Surat keterangan dokter atau laporan kronologis tindakan (misal untuk membedakan antara bedah estetika murni vs rekonstruksi luka robek pasca-trauma fisik).
+8. CONTOH KASUS
+Skenario Kasus 1 (Penolakan Penuh pada Tahap N_1 karena Pengecualian Umum):
+Ibu Melinda mengajukan klaim reimbursement sebesar Rp18.500.000,- untuk prosedur sedot lemak (liposuction) dan tindakan bedah kosmetik kelopak mata (blepharoplasty) di Klinik Kecantikan Estetika Indah. Berkas registrasi masuk dengan Claim ID: CLM-2026-0319.
+Penerapan Prosedur:
+1. Pada tahap N_1 – Cek Polis, verifikator memeriksa diagnosis dan jenis tindakan pada resume medis.
+2. Tindakan yang dimohonkan adalah prosedur estetika kosmetik murni tanpa adanya riwayat penyakit patologis atau cedera trauma fisik.
+3. Buku polis secara tegas mencantumkan pasal pengecualian umum: "Perawatan kecantikan, bedah kosmetik, dan segala tindakan yang bertujuan memperbaiki penampilan fisik tanpa indikasi medis dikecualikan dari pertanggungan".
+4. Keputusan: Klaim ditolak penuh secara administratif pada tahap N_1. Sistem menerbitkan Surat Penolakan Klaim resmi dengan mengutip pasal pengecualian kosmetik buku polis. Berkas tidak dialirkan ke N_2 maupun N_4, sehingga menghemat sumber daya verifikasi operasional.
+Skenario Kasus 2 (Persetujuan Sebagian / Partial Approval pada Tahap N_4):
+Bapak Rudi dirawat inap selama 3 hari karena demam tifoid akut (Typhoid Fever, ICD-10: A01.0) di Rumah Sakit Graha Husada dengan total tagihan kuitansi sebesar Rp6.500.000,-. Berkas telah dinyatakan lolos uji kepesertaan di N_1 dan lolos uji indikasi medis di N_2.
+Penerapan Prosedur pada Tahap N_4:
+1. Petugas persetujuan memeriksa rincian tagihan (itemized bill) secara seksama:
+- Biaya kamar 3 hari x Rp500.000,- = Rp1.500.000,- (sesuai plafon kamar polis).
+- Jasa visit dokter spesialis penyakit dalam = Rp900.000,- (disetujui).
+- Biaya infus, uji laboratorium darah, dan obat antibiotik tifoid = Rp3.600.000,- (disetujui).
+- Biaya suplemen vitamin kecantikan kulit (permintaan pasien) = Rp250.000,- (masuk kategori ineligible expenses karena tidak relevan dengan terapi tifoid).
+- Biaya perlengkapan mandi pribadi pasien dan biaya telepon kamar = Rp250.000,- (ineligible expenses / non-medis).
+2. Perhitungan Nominal Persetujuan Bersih:
+Total klaim diajukan: Rp6.500.000,-
+Total pos pengecualian/ineligible: Rp500.000,-
+Nominal klaim bersih disetujui: Rp6.000.000,-
+3. Keputusan: Klaim diberikan status "Disetujui Sebagian (Partial Approval)". Petugas N_4 menerbitkan dokumen Explanation of Benefits (EoB) yang menjelaskan pemotongan Rp500.000,- untuk pos suplemen non-medis dan perlengkapan mandi. Berkas dengan nilai persetujuan Rp6.000.000,- dialirkan ke tahap N_5 – Pencairan Dana untuk transfer bank.
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai materi korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Ketentuan klausul pengecualian umum, pengecualian khusus, dan pos biaya yang tidak ditanggung pada operasional asuransi nyata sepenuhnya mengacu pada buku polis resmi masing-masing perusahaan asuransi.
+- Rujukan Prinsip Umum: Diadaptasi dari prinsip batasan pertanggungan hukum asuransi menurut Kitab Undang-Undang Hukum Dagang (KUHD) Pasal 246 dan 256 tentang Syarat Pertanggungan, POJK No. 69/POJK.05/2016, serta ketentuan polis standar asuransi kesehatan Asosiasi Asuransi Jiwa Indonesia (AAJI).
+================================================================================
