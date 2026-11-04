@@ -1,0 +1,106 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_06
+- Judul Dokumen: Prosedur Deteksi dan Investigasi Kecurangan Klaim Asuransi Kesehatan (Fraud Detection and Investigation)
+- Tahapan UCS Terkait: N_3 – Audit Fraud (Audit Khusus Deteksi Anomali dan Integritas Klaim)
+- Klasifikasi: Dokumen Operasional Standar Pengawasan Kepatuhan dan Penyelidikan Klaim
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Memberikan panduan sistematis, objektif, dan terukur bagi staf pemeriksa (Fraud Analyst) dan verifikator klaim dalam mendeteksi serta memeriksa indikasi kecurangan (fraud) pada pengajuan klaim asuransi kesehatan.
+b. Menjaga integritas dana nasabah dan stabilitas keuangan penanggung dari beban kerugian pembayaran klaim yang tidak sah atau direkayasa.
+c. Membedakan secara adil dan teliti antara kesalahan administratif biasa (human error) tanpa niat jahat dengan tindakan kecurangan yang disengaja.
+d. Menegaskan prinsip bahwa deteksi tanda bahaya awal (red flags) bertujuan untuk menemukan ketidaksesuaian berkas yang memerlukan penelusuran lebih lanjut, bukan serta-merta menuduh nasabah atau fasilitas kesehatan telah melakukan penipuan.
+e. Menyusun rekomendasi hasil pemeriksaan fraud berbasis bukti yang valid untuk menjadi pertimbangan utama pada tahap N_4 – Persetujuan Klaim.
+
+3. RUANG LINGKUP
+Prosedur ini mencakup seluruh kegiatan penapisan anomali, audit forensik dokumen, verifikasi silang ke fasilitas kesehatan, dan konfirmasi klarifikasi pihak terkait terhadap berkas klaim yang diteruskan ke tahap N_3 – Audit Fraud. Alur kerja ini menghubungkan tahapan:
+- Tahap Masukan (Input): Menerima berkas klaim yang telah melewati tahap N_0 – Pengajuan Klaim, N_1 – Cek Polis, dan N_2 – Verifikasi Dokumen Medis & Tagihan RS, khususnya klaim yang memicu indikator risiko tertentu atau dipilih secara acak (random sampling) dalam sistem pengendalian internal.
+- Tahap Keluaran (Output): Menerbitkan laporan hasil audit fraud (berupa rekomendasi Lolos Bersih, Rekomendasi Klarifikasi Tambahan, atau Rekomendasi Penolakan Berbasis Bukti Otentik) yang diserahkan ke tahap N_4 – Persetujuan Klaim.
+Prosedur ini menjaga kerahasiaan data medis peserta sesuai ketentuan perlindungan data pribadi dan asas praduga tak bersalah.
+
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Kecurangan Klaim (Claim Fraud): Suatu perbuatan yang dilakukan secara sengaja, sadar, dan terencana untuk memanipulasi, memalsukan, atau menyembunyikan informasi pengobatan guna memperoleh keuntungan finansial atau pembayaran klaim yang tidak berhak.
+b. Indikator Tanda Bahaya Awal (Red Flags): Sekumpulan pola, tanda peringatan, atau ketidaksesuaian data yang mengindikasikan adanya kejanggalan pada berkas klaim yang memerlukan pemeriksaan lebih mendalam, namun belum menjadi bukti mutlak terjadinya kecurangan.
+c. Klaim Ganda (Duplicate Claim): Pengajuan penggantian biaya pengobatan untuk kuitansi, tanggal perawatan, dan rincian biaya yang sama secara berulang kali, baik ke penanggung yang sama maupun ke beberapa perusahaan asuransi tanpa melalui mekanisme koordinasi manfaat (COB) yang sah.
+d. Penggelembungan Biaya (Upcoding / Inflated Billing): Praktik manipulatif di mana kode diagnosis atau prosedur medis sengaja dicatat pada tingkat keparahan yang lebih tinggi dari kondisi sebenarnya, atau mencantumkan obat/tindakan yang lebih mahal agar nilai klaim meningkat.
+e. Tagihan Fiktif (Phantom Billing): Penagihan biaya perawatan, kamar rumah sakit, tindakan operasi, atau obat farmasi yang pada kenyataannya tidak pernah diberikan atau tidak pernah dijalani oleh pasien.
+f. Jejak Audit (Audit Trail): Catatan kronologis digital yang merekam seluruh riwayat aktivitas pemrosesan dokumen, perubahan data, waktu unggah, dan identitas petugas pemeriksa dalam sistem sistematis klaim.
+g. Investigasi Lapangan (Field Investigation): Pemeriksaan fisik langsung yang dilakukan verifikator ke rumah sakit, klinik, atau apotek untuk memverifikasi keaslian catatan rekam medis buku besar dan mengonfirmasi kebenaran perawatan pasien.
+
+5. KETENTUAN
+Aturan operasional dan prinsip penanganan audit fraud meliputi:
+a. Asas Praduga Tak Bersalah dan Klarifikasi: Dilarang membuat kesimpulan penolakan klaim hanya berdasarkan asumsi atau kecurigaan awal. Setiap ketidaksesuaian informasi wajib dikonfirmasi terlebih dahulu melalui klarifikasi tertulis kepada peserta atau pihak fasilitas kesehatan.
+b. Pembedaan Kesalahan Administratif vs Fraud Sengaja:
+   1) Kesalahan Administratif (Administrative Error): Kesalahan pengetikan nomor kuitansi, tanggal kuitansi tertukar tanpa sengaja, atau kesalahan input nama oleh staf klinik yang dapat diperbaiki dengan surat ralat resmi dari fasilitas kesehatan.
+   2) Indikasi Kecurangan (Fraud): Perubahan fisik dokumen yang disengaja (rekayasa digital, stempel buatan, tanda tangan dokter palsu, atau klaim perawatan fiktif).
+c. Perlindungan Data dan Kerahasiaan Medis: Seluruh dokumen rekam medis yang dikumpulkan dalam proses audit fraud wajib dijaga kerahasiaannya dan hanya dapat diakses oleh tim investigasi yang berwenang.
+d. Ketergantungan Ketentuan Polis: Sanksi pembatalan polis atau penolakan klaim atas dasar kecurangan wajib merujuk secara tegas pada klausul pelanggaran itikad baik (fraudulent claims clause) pada buku polis masing-masing peserta.
+e. Parameter Model Simulasi Akademik: Khusus untuk kebutuhan model simulasi proyek kelompok ini:
+   1) Pemeriksaan penapisan red flags awal pada tahap N_3 ditargetkan selesai dalam waktu maksimal 2x24 jam kerja.
+   2) Apabila diperlukan penelusuran atau klarifikasi tambahan ke fasilitas kesehatan, masa penundaan sementara (pending) dimodelkan maksimal 14 hari kalender.
+   Catatan penting: Angka batas waktu ini merupakan parameter simulasi pembelajaran dan dapat bervariasi pada operasional riil penanggung asuransi.
+
+6. PROSEDUR
+Urutan langkah operasional deteksi dan investigasi kecurangan pada tahap N_3 dilaksanakan sebagai berikut:
+- Langkah 1 (Penerimaan Berkas pada Tahap N_3): Petugas analis fraud menerima berkas klaim yang dialirkan dari tahap N_2 – Verifikasi RS. Berkas memuat Claim ID, data polis, kuitansi asli, resume medis, perincian tagihan (itemized bill), dan bukti lab/resep.
+- Langkah 2 (Penapisan Red Flags Otomatis dan Manual): Petugas dan modul penapisan memeriksa indikator kejanggalan:
+  1) Memeriksa kesamaan data historis (audit silang nomor kuitansi, tanggal perawatan, dan nomor resep obat pada basis data klaim masa lalu untuk mencegah klaim ganda).
+  2) Memeriksa integritas visual dokumen (mendeteksi tanda-tanda editan digital, ketebalan font tidak wajar pada kuitansi, atau tanda tangan dokter yang tidak sesuai spesimen).
+  3) Memeriksa korelasi logis antara diagnosis, durasi rawat, dan tindakan (misal penagihan tindakan operasi tanpa adanya laporan operasi dan tanpa catatan waktu anestesi).
+- Langkah 3 (Penelusuran Data Pendukung dan Jejak Audit): Apabila ditemukan indikasi red flags:
+  1) Petugas memeriksa jejak audit (audit trail) pengunggahan dokumen nasabah.
+  2) Mengakses riwayat klaim masa lalu peserta untuk melihat apakah terdapat pola frekuensi klaim yang tidak wajar menjelang akhir masa pertanggungan.
+- Langkah 4 (Proses Klarifikasi Pihak Terkait):
+  - Petugas menerbitkan formulir klarifikasi resmi ke fasilitas kesehatan terkait (bagian rekam medis atau instalasi farmasi) untuk mencocokkan nomor registrasi pasien pada buku register rumah sakit.
+  - Meminta surat konfirmasi langsung dari dokter penanggung jawab pelayanan (DPJP) mengenai kebenaran tindakan medis yang ditagihkan.
+- Langkah 5 (Pemeriksaan Lebih Lanjut / Investigasi Lanjutan): Apabila klarifikasi fasilitas kesehatan menunjukkan adanya perbedaan fatal (misal rumah sakit menyatakan tidak pernah menerbitkan kuitansi tersebut), analis fraud menyusun berkas bukti forensik berupa berita acara pemeriksaan tertulis.
+- Langkah 6 (Penyusunan Hasil Pemeriksaan dan Rekomendasi ke Tahap N_4):
+  - Kategori 1 (Bersih / Tidak Ada Indikasi Fraud): Tidak ditemukan indikasi kejanggalan, berkas disetujui lolos tahap N_3 dan diteruskan ke tahap N_4 – Persetujuan Klaim untuk perhitungan nominal pembayaran.
+  - Kategori 2 (Ketidaksesuaian Administratif Terselesaikan): Terjadi salah ketik tanggal yang telah diralat resmi oleh rumah sakit; berkas dipulihkan statusnya dan dialirkan ke tahap N_4.
+  - Kategori 3 (Ditunda Sementara / Pending): Masih menunggu surat jawaban konfirmasi dari fasilitas kesehatan (dalam batas waktu simulasi 14 hari).
+  - Kategori 4 (Terbukti Fraud Berdasarkan Bukti Otentik): Bukti pemalsuan atau manipulasi tagihan terkonfirmasi secara tertulis dari fasilitas kesehatan. Analis fraud menerbitkan Laporan Temuan Fraud dan meneruskannya ke tahap N_4 dengan rekomendasi mutlak penolakan klaim (repudiation) sesuai ketentuan polis.
+
+7. DOKUMEN PENDUKUNG
+Dokumen yang dikelola dan dianalisis dalam proses audit fraud meliputi:
+a. Berkas klaim lengkap dari tahap N_0, N_1, dan N_2 (kuitansi, resume dokter, rincian biaya, resep obat).
+b. Laporan histori penapisan red flags dari sistem verifikasi.
+c. Laporan jejak audit digital (digital audit trail logs).
+d. Catatan pendaftaran buku besar pasien (hospital admission registry) dari pihak fasilitas kesehatan.
+e. Surat konfirmasi atau pernyataan resmi dari bagian administrasi keuangan dan dokter penanggung jawab rumah sakit.
+f. Berkas rekam medis pembanding masa lalu (past medical records).
+
+8. CONTOH KASUS
+
+Kasus 1 – Pengajuan Klaim Ganda (Duplicate Claim):
+- Permasalahan: Peserta Bapak Anwar mengajukan klaim reimbursement rawat jalan sebesar Rp1.250.000,- di Klinik Sehat Farma untuk pengobatan maag akut pada tanggal 10 Maret 2026. Berkas lolos tahap N_0 dan N_1.
+- Indikasi Fraud: Saat memasuki tahap N_3, modul audit mendeteksi bahwa nomor kuitansi resmi `KW-09821` dan tanggal perawatan 10 Maret 2026 persis sama dengan berkas klaim yang pernah diajukan dan telah dibayarkan oleh penanggung pada tanggal 25 Maret 2026.
+- Langkah Pemeriksaan: Analis fraud membuka berkas klaim lama pada arsip sistem. Ditemukan bahwa lembar kuitansi yang diunggah adalah kuitansi fisik yang sama persis. Analis menghubungi Bapak Anwar untuk meminta klarifikasi.
+- Hasil Pemeriksaan: Bapak Anwar mengakui terjadi kekeliruan pengunggahan berkas oleh asisten pribadinya (salah memilih berkas kuitansi lama yang sudah terbayar saat mengajukan klaim baru). Tidak ditemukan bukti pemalsuan fisik dokumen.
+- Keputusan / Rekomendasi ke N_4: Berkas dinyatakan sebagai duplikasi klaim (duplicate submission). Analis N_3 menerbitkan rekomendasi penutupan berkas ke tahap N_4 karena biaya pengobatan tersebut telah lunas dibayarkan pada klaim sebelumnya.
+
+Kasus 2 – Ketidaksesuaian Tagihan dan Tindakan Medis (Unperformed Service):
+- Permasalahan: Rumah Sakit Ananda menagihkan klaim rawat inap atas nama Pasien Ny. Citra untuk pengobatan radang usus dengan total tagihan Rp14.000.000,-. Pada rincian tagihan (itemized bill), tercantum pos biaya "Tindakan Kolonoskopi Diagnostik dan Biopsi" sebesar Rp4.500.000,-.
+- Indikasi Fraud: Dokter verifikator medis di N_2 mencatat bahwa pada lembar resume medis dokter dan catatan keperawatan harian, tidak ditemukan catatan prosedur kolonoskopi maupun lembar laporan patologi anatomi hasil biopsi.
+- Langkah Pemeriksaan: Pada tahap N_3, analis fraud mengirim surat klarifikasi konfirmasi kepada Kepala Bagian Keuangan dan Dokter Penanggung Jawab RS Ananda untuk meminta lembar laporan tindakan kolonoskopi.
+- Hasil Pemeriksaan: Bagian keuangan rumah sakit membalas secara tertulis bahwa terjadi kesalahan input sistem billing rumah sakit (billing entry error) di mana tindakan kolonoskopi milik pasien lain tidak sengaja terinput ke dalam rincian tagihan Ny. Citra. Rumah sakit menerbitkan rincian tagihan revisi resmi tanpa pos kolonoskopi sebesar Rp9.500.000,-.
+- Keputusan / Rekomendasi ke N_4: Ketidaksesuaian terbukti merupakan kesalahan administratif rumah sakit yang telah diralat resmi (bukan fraud sengaja oleh pasien). Analis N_3 meneruskan rincian tagihan revisi Rp9.500.000,- ke tahap N_4 – Persetujuan Klaim untuk disetujui pembayarannya.
+
+Kasus 3 – Dokumen Medis dan Tanggal Perawatan Mencurigakan (Manipulasi Dokumen):
+- Permasalahan: Bapak Deni mengajukan klaim reimbursement rawat inap penyakit tifoid di Klinik Pratama Mandiri sebesar Rp5.200.000,- dengan tanggal rawat tercatat 12-15 Mei 2026.
+- Indikasi Fraud: Pada tahap N_3, analis memperhatikan font teks pada tanggal kuitansi berbeda ketebalannya dan terdapat bekas tindasan garis koreksi digital. Selain itu, tanggal mulai aktif polis Bapak Deni adalah 10 Mei 2026 (hanya berjarak 2 hari sebelum tanggal klaim yang tertera).
+- Langkah Pemeriksaan: Analis fraud melakukan konfirmasi resmi ke bagian rekam medis Klinik Pratama Mandiri dengan membawa fotokopi kuitansi dan resume medis tersebut untuk mencocokkan dengan buku register induk pasien klinik.
+- Hasil Pemeriksaan: Pihak manajemen klinik memberikan surat pernyataan resmi bahwa Pasien Bapak Deni sebenarnya dirawat pada tanggal 2-5 Mei 2026 (sebelum polis asuransi aktif), dan tanggal pada kuitansi asli klinik telah diubah secara sengaja pada dokumen yang diserahkan ke asuransi agar masuk ke dalam periode aktif polis.
+- Keputusan / Rekomendasi ke N_4: Ditemukan bukti otentik terjadinya pemalsuan dokumen secara sengaja untuk mencairkan klaim sebelum masa aktif polis. Analis N_3 menerbitkan Laporan Temuan Fraud Resmi dengan bukti surat klarifikasi klinik dan menyerahkannya ke tahap N_4 dengan rekomendasi tegas: Penolakan Klaim Penuh (Repudiated) atas dasar itikad buruk dan pelanggaran klausul integritas polis.
+
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai materi korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia dan tidak mencerminkan sistem scoring deteksi internal resmi perusahaan tersebut.
+- Rujukan Prinsip Umum: Diadaptasi dari ketentuan pencegahan kecurangan sektor keuangan dalam Peraturan Otoritas Jasa Keuangan (POJK) Nomor 39/POJK.03/2019 tentang Penerapan Strategi Anti Fraud bagi Lembaga Jasa Keuangan, pedoman Kode Etik Asosiasi Asuransi Jiwa Indonesia (AAJI) mengenai Penanganan Klaim, serta kerangka kerja klasifikasi kecurangan dari Association of Certified Fraud Examiners (ACFE) Fraud Tree Framework.
+================================================================================

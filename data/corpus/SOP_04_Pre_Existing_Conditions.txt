@@ -1,0 +1,105 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_04
+- Judul Dokumen: Kebijakan Kondisi Medis yang Sudah Ada Sebelumnya (Pre-Existing Conditions Policy)
+- Tahapan UCS Terkait: N_1 – Cek Polis / N_2 – Verifikasi RS (Pemeriksaan Lintas Tahap Kepesertaan dan Rekam Medis)
+- Klasifikasi: Dokumen Operasional Standar Evaluasi Riwayat Medis Masa Lalu dan Ketentuan Polis
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+
+2. TUJUAN
+Tujuan dari kebijakan dan prosedur ini adalah:
+a. Memberikan panduan terstruktur bagi verifikator polis (pada tahap N_1) dan dokter pemeriksa medis (pada tahap N_2) dalam mengidentifikasi serta mengevaluasi klaim yang berkaitan dengan riwayat penyakit masa lalu.
+b. Membedakan secara adil, objektif, dan berbasis bukti medis antara kondisi medis yang telah ada sebelum berlakunya polis (pre-existing conditions) dengan penyakit akut baru yang muncul setelah polis aktif.
+c. Memeriksa kesesuaian antara deklarasi riwayat kesehatan yang dicantumkan nasabah saat pendaftaran asuransi dengan temuan riwayat medis dokter pada berkas klaim.
+d. Memastikan keputusan klaim tidak didasarkan pada asumsi atau prasangka sepihak, melainkan didasarkan pada bukti catatan rekam medis resmi dari fasilitas kesehatan yang berwenang.
+e. Menetapkan prosedur klarifikasi berimbang apabila ditemukan ketidaksesuaian informasi riwayat kesehatan sebelum menerbitkan keputusan kelayakan klaim.
+
+3. RUANG LINGKUP
+Prosedur ini berlaku untuk seluruh pengajuan klaim asuransi kesehatan yang memiliki indikasi keterkaitan dengan penyakit kronis, riwayat pengobatan berulang, atau keluhan yang dicurigai telah berlangsung sebelum tanggal mulai berlakunya polis. Kebijakan ini menghubungkan dua tahapan utama pada alur verifikasi klaim:
+- Tahap N_1 – Cek Polis: Memeriksa klausul polis, catatan formulir permohonan asuransi awal (SPAJ), ada tidaknya klausul pengecualian khusus (endorsement), serta masa berlaku polis.
+- Tahap N_2 – Verifikasi RS: Meneliti anamnesis riwayat perjalanan penyakit pada resume medis, rekam jejak fasilitas kesehatan sebelumnya, hasil laboratorium patologis, dan konfirmasi langsung kepada dokter yang merawat.
+
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam kebijakan ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Kondisi Medis yang Sudah Ada Sebelumnya (Pre-Existing Condition): Suatu penyakit, cedera, cacat fisik, atau kondisi kelainan kesehatan yang tanda-tandanya telah dirasakan, telah dikonsultasikan ke dokter, telah didiagnosis, atau telah mendapatkan pengobatan sebelum tanggal polis mulai berlaku aktif.
+b. Penyakit Baru (Newly Contracted Illness): Gangguan kesehatan atau penyakit akut yang sama sekali baru terjadi dan baru didiagnosis setelah tanggal polis aktif serta telah melewati masa tunggu yang dipersyaratkan.
+c. Formulir Surat Permintaan Asuransi Jiwa/Kesehatan (SPAJ): Formulir pendaftaran awal di mana calon peserta tertanggung wajib menyatakan seluruh riwayat penyakit, operasi, rawat inap, atau riwayat keluarga secara jujur dan transparan.
+d. Prinsip Itikad Baik Tertinggi (Utmost Good Faith): Asas fundamental hukum asuransi yang mewajibkan calon peserta dan penanggung saling memberikan informasi material yang benar, akurat, dan tidak menyembunyikan riwayat kesehatan yang diketahui.
+e. Ketidakjujuran Informasi / Penyembunyian Fakta (Non-Disclosure): Keadaan di mana peserta dengan sengaja tidak memberitahukan riwayat penyakit kronis masa lalu saat mendaftar asuransi, padahal riwayat tersebut dapat mempengaruhi keputusan persetujuan polis oleh penanggung.
+f. Masa Uji Kontrak / Masa Sanggah Polis (Incontestability Period): Batas waktu tertentu sejak tanggal polis diterbitkan di mana penanggung memiliki hak meninjau ulang keabsahan polis jika ditemukan fakta ketidakjujuran informasi.
+g. Klausul Pengecualian Khusus (Specific Endorsement Exclusion): Catatan resmi pada ikhtisar polis yang menyatakan bahwa suatu penyakit tertentu milik peserta dikecualikan dari perlindungan sejak awal penerbitan polis atas dasar riwayat medis yang telah dideklarasikan saat mendaftar.
+
+5. KETENTUAN
+Kebijakan umum yang mengatur penanganan kondisi medis sebelum polis adalah:
+a. Pembuktian Berbasis Bukti Medis Nyata: Penanggung dilarang menolak klaim hanya berdasarkan dugaan atau perkiraan semata bahwa peserta pernah menderita penyakit serupa di masa lalu. Penolakan atas dasar pre-existing condition wajib didukung bukti catatan rekam medis tertulis, hasil pemeriksaan diagnostik lama, atau surat keterangan tertulis dokter yang merawat.
+b. Perbedaan Penyakit Lama yang Sudah Sembuh Sempurna: Memiliki riwayat penyakit infeksi akut di masa lalu yang telah sembuh tuntas (misalnya riwayat tipus atau bronkitis ringan beberapa tahun sebelum mendaftar) tidak dapat dijadikan alasan untuk menolak klaim penyakit baru saat ini, kecuali penyakit tersebut terbukti secara medis bersifat kronis berulang atau menjadi penyebab langsung komplikasi sekarang.
+c. Diagnosis Serupa Bukan Selalu Pre-Existing: Kesamaan diagnosis medis saat ini dengan riwayat lama tidak otomatis membuktikan kondisi pre-existing. Sebagai contoh, episode radang tenggorokan akut yang terjadi setahun setelah polis aktif adalah peristiwa infeksi baru yang independen dari radang tenggorokan ringan di masa lalu.
+d. Hak Klarifikasi dan Penyelidikan Berimbang: Jika ditemukan catatan pada resume medis yang menyatakan bahwa keluhan sudah berlangsung lama sebelum polis aktif, penanggung wajib memberikan kesempatan bagi peserta dan dokter yang merawat untuk memberikan penjelasan kronologis medis tambahan (Medical Clarification Letter).
+e. Ketergantungan pada Polis Masing-Masing: Definisi baku pre-existing, daftar penyakit khusus yang dikecualikan, keberadaan rider penghapusan pre-existing, serta batas waktu masa sanggah polis sepenuhnya tunduk pada isi buku polis masing-masing nasabah.
+f. Parameter Model Simulasi Akademik: Khusus untuk kebutuhan simulasi proyek kelompok ini:
+   1) Masa sanggah polis (incontestability period) dimodelkan selama 24 bulan sejak polis aktif tanpa riwayat sengketa.
+   2) Batas waktu pemberian klarifikasi dokumen medis tambahan dimodelkan 14 hari kalender sejak surat pemberitahuan pending diterbitkan.
+   Catatan penting: Parameter ini dirancang khusus untuk lingkungan simulasi akademik dan dapat berbeda dengan klausul polis nyata pada industri asuransi.
+
+6. PROSEDUR
+Urutan langkah pemeriksaan kondisi medis yang sudah ada sebelumnya pada tahap N_1 dan N_2 adalah:
+- Langkah 1 (Pemeriksaan Dokumen Polis pada Tahap N_1):
+  Petugas verifikator memeriksa data SPAJ awal dan ikhtisar polis peserta. Memeriksa apakah polis memiliki klausul pengecualian khusus (endorsement) terkait penyakit yang saat ini diklaim.
+  - Jika polis memuat endorsement pengecualian khusus untuk diagnosis tersebut, berkas langsung dihentikan pada tahap N_1 dengan rekomendasi penolakan berdasarkan klausul polis tertulis.
+  - Jika tidak ada catatan pengecualian khusus, berkas diteruskan ke tahap N_2 untuk ditelaah riwayat medisnya secara klinis.
+- Langkah 2 (Pemeriksaan Resume Medis dan Anamnesis pada Tahap N_2):
+  Dokter pemeriksa klaim membaca lembar resume medis dari fasilitas kesehatan. Memeriksa kolom:
+  1) Tanggal pertama kali timbulnya gejala (onset date).
+  2) Catatan riwayat penyakit terdahulu (past medical history).
+  3) Riwayat penggunaan obat rutin sebelum masuk rumah sakit.
+- Langkah 3 (Evaluasi Hubungan Kronologis Gejala):
+  Dokter pemeriksa membandingkan tanggal timbulnya keluhan pertama dengan tanggal mulai berlaku aktifnya polis (inception date).
+  - Jika timbulnya gejala pertama terbukti terjadi sebelum tanggal polis aktif, maka terindikasi kondisi pre-existing.
+  - Jika gejala pertama baru muncul jauh setelah polis aktif dan melewati masa tunggu, klaim dikategorikan sebagai penyakit baru (new illness).
+- Langkah 4 (Proses Klarifikasi Apabila Terdapat Perbedaan Informasi):
+  Apabila catatan dokter menuliskan kalimat ambigu (seperti "riwayat sesak sejak 2 tahun lalu" pada polis yang baru berusia 6 bulan):
+  - Sistem tidak langsung menolak klaim.
+  - Berkas diberikan status "Pending Klarifikasi Medis" pada tahap N_2.
+  - Penanggung mengirimkan formulir pertanyaan medis tertulis kepada dokter yang merawat untuk meminta kejelasan: apakah sesak napas tersebut keluhan kambuhan kronis yang sama atau baru pertama kali terdiagnosis saat ini.
+- Langkah 5 (Pengambilan Keputusan Kelayakan Klaim):
+  Berdasarkan hasil klarifikasi dan bukti rekam medis:
+  - Keputusan Lolos: Tidak terbukti adanya kondisi pre-existing, atau penyakit merupakan episode baru yang sah. Berkas disetujui lolos N_2 dan dialirkan ke tahap berikutnya (N_3 – Audit Fraud atau N_4 – Persetujuan Klaim sesuai alur jalur optimal UCS).
+  - Keputusan Ditunda (Pending): Masih menunggu konfirmasi dokumen rekam medis dari rumah sakit atau peserta (dalam batas waktu simulasi 14 hari).
+  - Keputusan Ditolak Berdasarkan Polis (Repudiated): Berkas rekam medis membuktikan secara otentik bahwa pasien telah menjalani pengobatan rutin atau diagnosis pasti untuk penyakit kronis tersebut sebelum polis diterbitkan tanpa dideklarasikan pada SPAJ. Sistem menerbitkan Surat Penolakan Klaim resmi dengan merujuk bukti medis dan pasal ketentuan pre-existing pada buku polis.
+
+7. DOKUMEN PENDUKUNG
+Dokumen yang diperlukan untuk evaluasi kebijakan ini meliputi:
+a. Berkas pendaftaran awal polis dan lembar pernyataan kesehatan pada SPAJ peserta.
+b. Lembar ikhtisar polis dan lampiran endorsement (jika terdapat klausul pengecualian khusus).
+c. Resume medis asli dari dokter yang merawat pada saat klaim diajukan.
+d. Salinan catatan rekam medis masa lalu (past medical records) dari klinik/rumah sakit jika dilakukan klarifikasi lanjutan.
+e. Surat penjelasan medis tambahan dari dokter penanggung jawab pelayanan (DPJP).
+f. Hasil pemeriksaan laboratorium penunjang historis yang membuktikan kronologi penyakit (misalnya tes HbA1c historis untuk diabetes melitus).
+
+8. CONTOH KASUS
+Skenario Kasus 1 (Klaim Penyakit Baru - Lolos Pemeriksaan N_1 dan N_2):
+Bapak Suryo memiliki polis asuransi kesehatan yang mulai aktif tanggal 1 Oktober 2025. Pada SPAJ awal, Bapak Suryo menyatakan riwayat kesehatan bersih tanpa penyakit kronis. Pada tanggal 15 April 2026 (6 bulan setelah polis aktif), Bapak Suryo dirawat inap karena usus buntu akut (Acute Appendicitis, kode ICD-10: K35) dan menjalani operasi apendektomi.
+Penerapan Prosedur:
+1. Tahap N_1 (Cek Polis): Polis aktif, masa tunggu penyakit umum (30 hari) telah lewat, dan tidak ada endorsement pengecualian pada polis. Berkas diteruskan ke N_2.
+2. Tahap N_2 (Verifikasi RS): Dokter pemeriksa menelaah resume medis dan laporan operasi. Anamnesis menunjukkan nyeri perut kanan bawah timbul mendadak 1 hari sebelum masuk rumah sakit (bukan penyakit kronis menahun).
+3. Hasil Evaluasi: Radang usus buntu akut merupakan penyakit baru yang terjadi setelah polis aktif, bukan kondisi pre-existing.
+4. Keputusan: Berkas dinyatakan memenuhi ketentuan dan diteruskan ke tahap berikutnya untuk perhitungan manfaat.
+
+Skenario Kasus 2 (Klaim Pre-Existing Terbukti Berdasarkan Rekam Medis - Penolakan di N_2):
+Ibu Lestari membeli polis asuransi kesehatan pada tanggal 10 Februari 2026 dan menyatakan dalam SPAJ bahwa ia tidak pernah menderita penyakit kardiovaskular. Pada tanggal 25 April 2026 (sekitar 2,5 bulan setelah polis aktif), Ibu Lestari mengajukan klaim reimbursement untuk biaya perawatan penyakit jantung koroner sebesar Rp45.000.000,-.
+Penerapan Prosedur:
+1. Tahap N_1 (Cek Polis): Polis aktif dan masa tunggu penyakit umum telah lewat. Berkas diteruskan ke N_2 untuk ditelaah dokter verifikator.
+2. Tahap N_2 (Verifikasi RS): Dokter pemeriksa membaca resume medis rawat inap. Dokter penanggung jawab mencatat bahwa pasien adalah pasien kontrol rutin dengan riwayat konsumsi obat jantung harian selama 3 tahun terakhir dan pernah melakukan tes kateterisasi jantung pada tahun 2024.
+3. Proses Klarifikasi: Verifikator meminta salinan rekam medis masa lalu dari rumah sakit yang bersangkutan dengan izin kuasa medis peserta. Berkas rekam medis tahun 2024 terkonfirmasi asli dan membuktikan adanya diagnosis jantung koroner sebelum polis dibeli.
+4. Hasil Evaluasi: Klaim terbukti memenuhi batasan pre-existing condition dan terjadi penyembunyian riwayat kesehatan material (non-disclosure) pada SPAJ.
+5. Keputusan: Berkas tidak memenuhi ketentuan polis pada tahap N_2. Penanggung menerbitkan Surat Penolakan Klaim resmi disertai kutipan bukti rekam medis tahun 2024 dan rujukan pasal pre-existing condition pada buku polis.
+
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Kebijakan mengenai kondisi pre-existing dan masa sanggah pada industri asuransi sesungguhnya sepenuhnya tunduk pada klausul baku buku polis resmi masing-masing perusahaan.
+- Rujukan Prinsip Umum: Diadaptasi dari prinsip keterbukaan informasi (duty of disclosure) dan asas itikad baik (utmost good faith) yang diatur dalam Kitab Undang-Undang Hukum Dagang (KUHD) Pasal 251 tentang Pemberitahuan Keadaan Objek Pertanggungan, POJK No. 69/POJK.05/2016, serta pedoman underwriting asuransi kesehatan Asosiasi Asuransi Jiwa Indonesia (AAJI).
+================================================================================

@@ -1,0 +1,22 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/004/2026
+JUDUL: KEBIJAKAN PENANGANAN PENYAKIT YANG SUDAH ADA SEBELUMNYA (PRE-EXISTING CONDITIONS)
+TAHAPAN ALUR: N1 - Cek Polis / N2 - Verifikasi RS
+KLASIFIKASI: Kebijakan Manajemen Risiko Medis & Legal Polis
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. DEFINISI PRE-EXISTING CONDITION
+Kondisi Yang Telah Ada Sebelumnya (Pre-Existing Condition) didefinisikan sebagai kondisi fisik, sakit, cedera, tanda kelainan, atau penyakit yang dialami oleh Tertanggung di mana:
+a. Tertanggung telah mengetahui gejalanya atau telah menerima konsultasi, pengobatan, diagnosis, saran medis, atau perawatan dari dokter berwenang sebelum tanggal efektif berlakunya polis; ATAU
+b. Tanda-tanda atau manifestasi klinis penyakit tersebut telah nyata sedemikian rupa sehingga seorang yang berakal sehat pada umumnya akan mencari nasihat, konsultasi, atau pertolongan medis sebelum tanggal polis terbit.
+
+2. ATURAN PENOLAKAN KLAIM TERKAIT PRE-EXISTING
+Segala bentuk biaya rawat jalan, pembedahan, rawat inap intensif, maupun komplikasi sekunder yang timbul akibat secara langsung atau tidak langsung dari kondisi pre-existing tidak dijamin dalam polis asuransi kesehatan Allianz, KECUALI:
+a. Polis nasabah memiliki klausul tambahan (rider/endorsement) khusus penghapusan masa tunggu pre-existing (Waiver of Pre-Existing Condition Clause) yang disepakati saat penerbitan; ATAU
+b. Polis telah melewati masa kontestabilitas (Incontestability Period) selama 24 (dua puluh empat) bulan berturut-turut tanpa adanya unsur penipuan sengaja (fraudulent concealment).
+
+3. PROSEDUR PENELUSURAN RIWAYAT MEDIS
+Jika terdapat kecurigaan bahwa klaim berkaitan dengan penyakit kronis yang terjadi sebelum polis terbit (contoh: diabetes melitus menahun, hipertensi kronis, gagal ginjal, penyakit jantung koroner):
+a. Tim verifikator berhak meminta rekam medis masa lalu (past medical records) dari rumah sakit tempat nasabah pernah berobat.
+b. Meninjau kembali data pada Surat Permintaan Asuransi Jiwa/Kesehatan (SPAJ) awal mengenai pernyataan jujur riwayat kesehatan (Duty of Disclosure).
+c. Jika terbukti terjadi penyembunyian riwayat penyakit secara sengaja (non-disclosure of material facts), Allianz berhak menolak klaim dan membatalkan status polis secara sepihak.

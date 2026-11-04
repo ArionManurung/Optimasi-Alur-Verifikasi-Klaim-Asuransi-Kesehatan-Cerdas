@@ -1,0 +1,24 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/003/2026
+JUDUL: TATA CARA VERIFIKASI DOKUMEN MEDIS FASILITAS KESEHATAN DAN RESUME DOKTER
+TAHAPAN ALUR: N2 - Verifikasi RS
+KLASIFIKASI: Standard Operating Procedure (SOP) Medis
+VERSI: 3.0 | STATUS: Aktif Simulasi
+
+1. TUJUAN
+Memberikan panduan bagi dokter pemeriksa (Medical Reviewer/Examiner) dalam memverifikasi kewajaran medis (medical necessity), konsistensi diagnosis, dan kesesuaian tindakan klinis yang ditagihkan oleh fasilitas pelayanan kesehatan atau rumah sakit.
+
+2. KEWAJIBAN DOKTER EXAMINER
+Verifikasi tahap N2 wajib dilaksanakan oleh dokter umum atau spesialis yang memiliki sertifikasi Medical Reviewer dan terdaftar resmi di asosiasi profesi dokter. Pemeriksaan mencakup:
+a. Keselarasan Klinis: Keluhan utama pasien, tanda-tanda vital, hasil uji laboratorium/radiologi, dan riwayat perjalanan penyakit harus sinkron dengan diagnosis akhir ICD-10.
+b. Indikasi Medis (Medical Necessity): Tindakan medis, pembedahan, prosedur bedah invasif, atau rawat inap harus didasarkan pada kebutuhan medis mutlak dan bukan atas permintaan pribadi pasien atau alasan non-medis (seperti kenyamanan atau check-up umum).
+c. Kewajaran Resep Terapi: Jenis obat, dosis harian, dan lama terapi obat paten harus sesuai dengan formularium medis dan pedoman tatalaksana klinis yang diakui secara nasional.
+
+3. KELAYAKAN BIAYA DAN KEBIJAKAN TARIF RS
+Dokter examiner membandingkan biaya yang ditagihkan rumah sakit terhadap:
+a. Tarif wajar dan biasa (Customary and Reasonable Charges - UCR) di wilayah geografis tempat fasilitas kesehatan beroperasi.
+b. Kesesuaian kelas kamar rawat inap dengan hak manfaat (benefit limit) plan yang dimiliki nasabah. Apabila terjadi kenaikan kelas kamar (upgrade) atas keinginan pribadi, maka selisih kelebihan biaya (excess claim) menjadi beban mandiri peserta tertanggung.
+
+4. ALUR TINDAK LANJUT MEDIS
+a. Lolos Medis Penuh: Berkas klaim dilanjutkan ke tahap Persetujuan (N4) atau Audit Fraud (N3) sesuai kriteria penapisan risiko.
+b. Keraguan Medis: Apabila ditemukan indikasi rekam medis tidak konsisten, kejanggalan tanggal masuk/keluar RS, atau dugaan tagihan fiktif, berkas dialihkan secara prioritas ke Tim Audit Investigasi Fraud (N3).

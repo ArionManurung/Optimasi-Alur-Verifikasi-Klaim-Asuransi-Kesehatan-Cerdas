@@ -1,0 +1,20 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/011/2026
+JUDUL: KEBIJAKAN BATAS WAKTU KADALUARSA PENGAJUAN KLAIM DAN KELENGKAPAN BERKAS (CLAIM SUBMISSION TIMELINE)
+TAHAPAN ALUR: N0 - Pengajuan Klaim / N1 - Cek Polis
+KLASIFIKASI: Kebijakan Batas Waktu & Kepatuhan Prosedur
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. PRINSIP TENGGAT WAKTU PENGAJUAN (SUBMISSION DEADLINE)
+Untuk memastikan akurasi verifikasi medis dan kepastian pencatatan cadangan klaim (claim reserves), Allianz memberlakukan tenggat waktu kadaluarsa yang tegas terhadap setiap pengajuan klaim biaya pengobatan.
+
+2. BATAS WAKTU PENGAJUAN KLAIM AWAL
+a. Klaim Reimbursement Rawat Jalan & Rawat Inap: Berkas klaim beserta kuitansi asli wajib diserahkan kepada Allianz selambat-lambatnya dalam waktu 30 (tiga puluh) hari kalender sejak tanggal kwitansi pengobatan dikeluarkan atau sejak tanggal pasien keluar dari rumah sakit (discharge date).
+b. Klaim Biaya Perawatan di Luar Negeri: Berkas klaim perawatan di luar negeri wajib diajukan paling lambat 60 (enam puluh) hari kalender sejak tanggal selesai perawatan, disertai bukti cap paspor/tiket perjalanan.
+c. Klaim Melampaui Batas Waktu (Late Submission): Klaim yang diajukan melampaui batas waktu 30 hari kalender dinyatakan kadaluarsa (expired/time-barred) dan ditolak secara otomatis oleh sistem, kecuali dapat dibuktikan adanya keadaan kahar (force majeure) seperti bencana alam atau rawat intensif koma berkepanjangan dengan surat keterangan resmi yang dapat dipertanggungjawabkan.
+
+3. BATAS WAKTU PEMENUHAN KELENGKAPAN DOKUMEN PENDING
+Apabila dalam proses verifikasi awal ditemukan berkas yang belum lengkap:
+a. Allianz menerbitkan surat pemberitahuan dokumen pending (Pending Document Request Letter).
+b. Peserta diberikan tenggat waktu maksimal 30 (tiga puluh) hari kalender terhitung sejak tanggal surat pemberitahuan diterbitkan untuk menyerahkan dokumen susulan yang diminta.
+c. Apabila dalam waktu 30 hari kalender dokumen susulan tidak diserahkan tanpa konfirmasi tertulis, klaim akan ditutup secara administratif (closed without prejudice/gugur berkas).

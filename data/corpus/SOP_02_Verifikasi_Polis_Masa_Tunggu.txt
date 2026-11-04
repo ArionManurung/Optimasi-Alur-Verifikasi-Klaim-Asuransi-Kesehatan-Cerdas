@@ -1,0 +1,25 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/002/2026
+JUDUL: KETENTUAN VERIFIKASI KEABSAHAN STATUS POLIS DAN MASA TUNGGU (WAITING PERIOD)
+TAHAPAN ALUR: N1 - Cek Polis
+KLASIFIKASI: Kebijakan Operasional Underwriting & Klaim
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. TUJUAN DAN PRINSIP DASAR
+Dokumen kebijakan ini mengatur tata cara verifikasi status keaktifan polis asuransi dan kepatuhan terhadap periode masa tunggu (waiting period) sebelum pengajuan klaim dapat diproses ke tahap verifikasi medis. Tahap ini bertujuan memastikan prinsip itikad paling baik (utmost good faith) dan keabsahan kontrak pertanggungan.
+
+2. VERIFIKASI KEAKTIFAN STATUS POLIS (IN-FORCE CHECK)
+Petugas Cek Polis wajib melakukan validasi sistematis atas parameter berikut:
+a. Status Polis: Polis harus berada dalam status aktif (In-Force). Klaim yang terjadi pada saat polis lapse (lewat masa tenggang pembayaran premi) tidak dapat dibayarkan, kecuali pemulihan polis telah disetujui sebelum tanggal kejadian medis.
+b. Masa Tenggang (Grace Period): Apabila klaim diajukan saat premi belum dibayar namun masih dalam masa tenggang 30 hari kalender, klaim dapat diproses bersyarat dengan memotong tunggakan premi dari nilai manfaat klaim yang disetujui.
+c. Validitas Peserta Tertanggung: Nama lengkap, tanggal lahir, dan nomor identitas peserta pada dokumen medis harus cocok 100% dengan data yang terdaftar pada sistem kepesertaan polis Allianz.
+
+3. KETENTUAN MASA TUNGGU (WAITING PERIOD)
+Masa tunggu dihitung sejak tanggal penerbitan polis (inceptions date) atau tanggal pemulihan polis (reinstatement date):
+a. Kecelakaan Darurat: Tidak berlaku masa tunggu (pertanggungan berlaku seketika 24 jam sejak polis berstatus aktif).
+b. Penyakit Umum (Standard Illnesses): Berlaku masa tunggu selama 30 (tiga puluh) hari kalender pertama sejak tanggal polis aktif. Biaya pengobatan penyakit yang muncul dalam 30 hari pertama tidak ditanggung.
+c. Penyakit Khusus (Specified Illnesses): Berlaku masa tunggu selama 12 (dua belas) bulan berturut-turut untuk 17 penyakit tertentu, termasuk tetapi tidak terbatas pada katarak, hernia, kelainan amandel, batu ginjal, tumor/kista jinak, hemoroid, dan penyakit kelenjar tiroid.
+d. Kondisi Kanker dan Penyakit Kritis: Berlaku masa tunggu selama 90 (sembilan puluh) hari kalender sejak polis disetujui.
+
+4. KEPUTUSAN VALIDASI POLIS
+Apabila status polis in-force dan terbukti melewati masa tunggu, berkas dilanjutkan ke tahap Verifikasi Medis RS (N2). Apabila teridentifikasi pelanggaran masa tunggu, berkas langsung diarahkan ke penolakan dengan surat keterangan resmi (Letter of Repudiation).

@@ -1,0 +1,19 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/012/2026
+JUDUL: TATA CARA REKONSILIASI KEUANGAN DAN PENAGIHAN KLAIM RUMAH SAKIT REKANAN (PROVIDER RECONCILIATION)
+TAHAPAN ALUR: N2 - Verifikasi RS / N5 - Pencairan Dana
+KLASIFIKASI: Standard Operating Procedure (SOP) Hubungan Provider & Finansial
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. RUANG LINGKUP DAN KERJA SAMA PROVIDER
+Prosedur ini mengatur tata cara penagihan massal berkala (bulk billing reconciliation) antara fasilitas rumah sakit jaringan rekanan (network provider hospital) dengan PT Asuransi Allianz Life Indonesia untuk klaim rawat inap dan rawat jalan yang menggunakan metode pembayaran jaminan langsung (cashless).
+
+2. SIKLUS PENAGIHAN DAN PENYERAHAN INVOICE
+a. Rumah sakit rekanan wajib merekonsiliasi seluruh Surat Jaminan Akhir (Final Guarantee Letter) yang telah diterbitkan pada bulan berjalan.
+b. Dokumen tagihan massal (invoice rekapitulasi) beserta lampiran kuitansi asli bermaterai, perincian tagihan per pasien (billing statement), salinan surat jaminan, dan resume medis wajib diserahkan ke Departemen Rekonsiliasi Provider Allianz maksimal pada tanggal 10 setiap awal bulan berikutnya.
+c. Penyerahan berkas tagihan wajib disertai berita acara penyerahan dokumen penagihan resmi yang ditandatangani oleh kepala bagian keuangan rumah sakit.
+
+3. AUDIT REKONSILIASI DAN PENYELESAIAN SELISIH (DISPUTE)
+a. Tim verifikator keuangan Allianz melakukan audit silang antara nilai tagihan rumah sakit dengan nilai yang telah disetujui pada Final LoG dalam kurun waktu 14 (empat belas) hari kerja.
+b. Jika terdapat selisih perhitungan biaya (discrepancy), misalnya akibat penagihan ganda (double billing), ketidaksesuaian tarif kamar yang disepakati dalam perjanjian kerja sama (PKS), atau ketidaksesuaian diskon korporasi rumah sakit, pos tagihan yang bermasalah akan ditahan sementara untuk klarifikasi bersama (disputed item).
+c. Seluruh pos tagihan yang sudah lolos kliring rekonsiliasi (clean invoice batch) akan dibayarkan secara langsung melalui transfer rekening giro rumah sakit dalam waktu maksimal 30 (tiga puluh) hari kalender sejak invoice lengkap diterima (Payment Terms 30 Days).

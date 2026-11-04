@@ -1,0 +1,19 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/005/2026
+JUDUL: DAFTAR KLAUSUL PENGECUALIAN PERTANGGUNGAN ASURANSI KESEHATAN (EXCLUSIONS)
+TAHAPAN ALUR: N1 - Cek Polis / N4 - Persetujuan Klaim
+KLASIFIKASI: Kebijakan Polis & Regulasi Klaim
+VERSI: 2.2 | STATUS: Aktif Simulasi
+
+1. PRINSIP DASAR PENGECUALIAN (POLICY EXCLUSIONS)
+Perusahaan asuransi tidak berkewajiban membayar penggantian biaya pengobatan atau santunan klaim untuk kondisi-kondisi yang secara tegas dicantumkan dalam daftar pengecualian umum polis standar asuransi kesehatan Allianz.
+
+2. RINCIAN KONDISI DAN BIAYA YANG TIDAK DITANGGUNG
+Biaya medis yang tidak dijamin mencakup:
+a. Perawatan Estetika dan Bedah Kosmetik: Segala jenis operasi plastik, transplantasi rambut, perawatan jerawat, perbaikan estetika hidung/wajah yang dilakukan bukan semata-mata untuk rekonstruksi akibat kecelakaan kerja/fisik mendadak.
+b. Perawatan Gigi dan Mulut Rutin: Pembersihan karang gigi (scaling), tambal gigi estetika, pemasangan kawat gigi (ortodonti), dan implan gigi buatan, kecuali klaim memiliki rider manfaat perlindungan gigi khusus (Dental Rider).
+c. Kelainan Refraksi Mata dan Lensa: Tindakan bedah refraktif mata (seperti LASIK), pembelian kacamata, pemeriksaan mata rutin, dan lensa kontak, kecuali tercantum dalam klausul manfaat kacamata (Optical Benefit).
+d. Kehamilan, Persalinan, dan Kesuburan: Biaya pemeriksaan kehamilan rutin (antenatal care), persalinan normal maupun caesar tanpa komplikasi gawat darurat, program bayi tabung (IVF), pengobatan infertilitas, serta sterilisasi/kontrasepsi, kecuali memiliki rider persalinan (Maternity Rider).
+e. Gangguan Mental, Kejiwaan, dan Perilaku: Perawatan psikiatri, psikoterapi, depresi, stres, ketergantungan narkotika, alkohol, zat psikotropika, atau usaha bunuh diri dan melukai diri sendiri.
+f. Pengobatan Eksperimental dan Obat Tanpa Izin BPOM: Terapi alternatif, pengobatan herbal non-saintifik, akupunktur tanpa lisensi medis, serta vitamin/suplemen diet tanpa indikasi kuratif penyakit akut.
+g. Cedera Akibat Olahraga Berbahaya dan Tindak Pidana: Cedera akibat balap motor, terjun payung, mendaki gunung ekstrim, atau keterlibatan aktif dalam pelanggaran hukum pidana/huru-hara.
