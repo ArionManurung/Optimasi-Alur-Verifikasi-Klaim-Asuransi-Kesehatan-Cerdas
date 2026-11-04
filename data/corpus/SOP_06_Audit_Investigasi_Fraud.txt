@@ -1,0 +1,25 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/006/2026
+JUDUL: PEDOMAN OPERASIONAL DETEKSI DAN INVESTIGASI KECURANGAN KLAIM (FRAUD INVESTIGATION)
+TAHAPAN ALUR: N3 - Audit Fraud
+KLASIFIKASI: Standard Operating Procedure (SOP) Anti-Fraud Unit (AFU)
+VERSI: 3.1 | STATUS: Aktif Simulasi
+
+1. TUJUAN
+Melindungi integritas dana pertanggungan nasabah dan mencegah kerugian finansial akibat kecurangan klaim asuransi kesehatan (claim fraud) melalui mekanisme penapisan red flag, audit mendalam, dan investigasi lapangan (field investigation).
+
+2. INDIKATOR BAHAYA / RED FLAGS INDIKASI FRAUD
+Berkas klaim wajib dialihkan ke Unit Anti-Fraud apabila terdeteksi minimal 1 (satu) dari pola berikut:
+a. Frekuensi Klaim Anomali: Terjadi pengajuan klaim berulang kali dalam kurun waktu singkat (high claim frequency) mendekati batas tahunan polis (annual limit).
+b. Phantom Billing (Tagihan Fiktif): Tagihan mencantumkan pemeriksaan penunjang canggih (MRI, CT-Scan) atau pembedahan mayor tetapi tidak disertai berkas hasil ekspertise radiologi atau catatan laporan operasi otentik.
+c. Diagnosis Upcoding & Unbundling: Manipulasi kode ICD-10 menjadi penyakit yang lebih parah demi mencairkan plafon manfaat yang lebih tinggi, atau memecah tagihan paket kamar rawat inap menjadi beberapa tagihan terpisah secara ilegal.
+d. Pemalsuan Dokumen: Tanda tangan dokter tidak identik dengan spesimen resmi, stempel rumah sakit kabur/rekayasa digital, atau tanggal perawatan dimajukan agar masuk ke dalam masa aktif polis.
+e. Perawatan Tanpa Rawat Inap Nyata (Paper Hospitalization): Pasien terdaftar rawat inap beberapa hari tetapi pada kenyataannya tidak pernah menempati ranjang fasilitas kesehatan (ghost patient).
+
+3. PROSEDUR INVESTIGASI LAPANGAN
+a. Staf Investigasi Fraud bersertifikat berwenang melakukan konfirmasi langsung ke manajemen rekam medis rumah sakit, apotek terkait, dan laboratorium independen.
+b. Wawancara langsung dengan dokter penanggung jawab pelayanan (DPJP) dan konfirmasi kepada pihak peserta tertanggung.
+c. Batas waktu investigasi standar adalah 14 (empat belas) hari kerja dan dapat diperpanjang hingga 30 hari untuk kasus sindikat kejahatan terorganisir.
+
+4. SANKSI DAN KEPUTUSAN HUKUM
+Apabila bukti fraud terkonfirmasi secara hukum: klaim ditolak seketika (repudiated), polis dibatalkan tanpa pengembalian premi, data pelaku dimasukkan ke dalam basis data blacklist industri asuransi (Asosiasi Asuransi Jiwa Indonesia / AAJI), serta diproses hukum pidana sesuai peraturan perundang-undangan yang berlaku.

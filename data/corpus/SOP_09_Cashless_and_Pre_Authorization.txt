@@ -1,0 +1,150 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_09
+- Judul Dokumen: Prosedur Penjaminan dan Persetujuan Awal Rawat Inap (Cashless and Pre-Authorization Procedure)
+- Tahapan UCS Terkait: N_0 (Pengajuan Penjaminan Awal), N_1 (Cek Polis & Manfaat), N_2 (Verifikasi Dokumen Medis & Kebutuhan Rawat Inap), dan N_4 (Persetujuan Penjaminan Awal / Guarantee Letter)
+- Klasifikasi: Dokumen Operasional Standar Pelayanan Fasilitas Rekanan dan Penjaminan Non-Tunai
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Memberikan panduan baku yang sistematis dan transparan dalam memproses permohonan penjaminan awal rawat inap (cashless admission) dan persetujuan awal tindakan medis (pre-authorization) bagi peserta asuransi kesehatan di jaringan rumah sakit rekanan.
+b. Memastikan bahwa status kepesertaan, keaktifan polis, masa tunggu, ketersediaan manfaat kamar, dan limit plafon diperiksa secara akurat sebelum pasien ditempatkan di ruang perawatan rawat inap.
+c. Memvalidasi bahwa indikasi kebutuhan medis rawat inap (medical necessity) dan rencana terapi klinis telah sesuai dengan standar tatalaksana kedokteran yang diakui.
+d. Mengurangi risiko kesalahan penetapan jaminan, sengketa tagihan di kasir rumah sakit, serta kelebihan biaya tak terduga bagi peserta tertanggung.
+e. Memberikan kepastian tertulis kepada rumah sakit rekanan dan peserta melalui penerbitan Surat Jaminan (Guarantee Letter - GL).
+f. Menegaskan prinsip fundamental bahwa Surat Jaminan Awal (Initial Guarantee Letter) BUKAN merupakan jaminan mutlak bahwa 100% total biaya akhir pasti ditanggung; perhitungan tagihan akhir (final billing) tetap wajib diverifikasi berdasarkan kesesuaian tindakan nyata, ketentuan pos biaya yang dikecualikan, dan batasan manfaat polis saat pasien selesai dirawat.
+
+3. RUANG LINGKUP
+Prosedur ini mengatur alur koordinasi terpadu antara peserta tertanggung, petugas admisi rumah sakit rekanan (provider network), dan unit penjaminan medis perusahaan asuransi / Third-Party Administrator (TPA). Ruang lingkup meliputi tahapan sejak kedatangan pasien di rumah sakit, permohonan pra-admisi, penjaminan awal, pemantauan masa rawat, hingga verifikasi tagihan akhir saat pemulangan pasien (discharge).
+Keterkaitan dengan prosedur dalam korpus pengetahuan:
+- Keterkaitan dengan SOP_01: Menjadi acuan data awal identitas kepesertaan, kartu asuransi, dan dokumen permohonan admisi (simpul N_0).
+- Keterkaitan dengan SOP_02: Menjadi rujukan wajib dalam pemeriksaan keaktifan polis (in-force status), masa tenggang, dan terpenuhinya masa tunggu penyakit umum maupun penyakit khusus (simpul N_1).
+- Keterkaitan dengan SOP_03: Menjadi acuan telaah resume medis awal, indikasi klinis rawat inap, dan pemeriksaan rincian tagihan akhir (simpul N_2).
+- Keterkaitan dengan SOP_05: Menjadi dasar pemeriksaan klausul pengecualian umum dan khusus (memastikan tindakan yang diajukan bukan merupakan prosedur non-medis atau estetika murni).
+- Keterkaitan dengan SOP_06: Menjadi rujukan penapisan indikator bahaya awal (red flags fraud) jika terdeteksi anomali admisi atau pola penagihan yang tidak wajar.
+- Keterkaitan dengan SOP_07: Menjadi landasan perhitungan hak manfaat kamar, batas tahunan, pengurangan biaya mandiri (deductible/co-payment), dan penentuan biaya selisih lebih (excess charges).
+- Keterkaitan dengan SOP_08: Menjadi rujukan saluran pengajuan keberatan apabila peserta menyanggah keputusan penolakan penjaminan awal atau penetapan kelebihan biaya akhir.
+- Batasan dengan Simpul N_5 (Pencairan Dana): Penerbitan Guarantee Letter pada tahap N_4 merupakan persetujuan penjaminan operasional, bukan pencairan dana langsung ke rekening nasabah. Pencairan dana massal ke rekening rumah sakit rekanan diatur secara terpisah pada siklus rekonsiliasi penagihan (SOP_12).
+
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Fasilitas Pembayaran Non-Tunai (Cashless): Layanan di mana peserta tertanggung dapat memperoleh perawatan medis rawat inap di rumah sakit rekanan tanpa perlu membayar uang muka deposit perawatan di awal, di mana tagihan biaya yang memenuhi syarat akan ditagihkan langsung oleh rumah sakit kepada pihak asuransi.
+b. Persetujuan Awal (Pre-Authorization): Proses konfirmasi dan persetujuan formal dari pihak asuransi sebelum pasien menjalani rawat inap atau sebelum dilakukannya tindakan medis berbiaya tinggi, guna memastikan tindakan tersebut dijamin oleh polis.
+c. Surat Jaminan Rumah Sakit (Guarantee Letter - GL): Dokumen penjaminan resmi berkekuatan hukum yang diterbitkan oleh asuransi kepada rumah sakit rekanan, menyatakan batas plafon dan ruang lingkup biaya pengobatan peserta yang disetujui untuk dijamin.
+d. Penerimaan Masuk Rawat Inap (Hospital Admission): Proses pendaftaran administratif dan klinis saat pasien secara resmi mulai menempati ruang rawat inap di fasilitas kesehatan.
+e. Verifikasi Kelayakan (Eligibility Verification): Proses pemeriksaan sistematis terhadap keabsahan status polis, masa aktif, kepatuhan premi, dan jadwal tabel manfaat peserta.
+f. Kebutuhan Medis Mutlak (Medical Necessity): Kriteria klinis yang menyatakan bahwa perawatan rawat inap atau tindakan medis yang diusulkan dokter benar-benar dibutuhkan secara rasional untuk diagnosis atau penyembuhan penyakit, bukan sekadar observasi tanpa terapi aktif atau atas permintaan kenyamanan pribadi.
+g. Biaya Kamar dan Makan (Room and Board): Komponen biaya sewa tempat tidur, makanan pasien, dan fasilitas keperawatan dasar per hari di ruang rawat inap.
+h. Batas Maksimum Manfaat (Benefit Limit): Plafon tertinggi nilai pertanggungan uang yang dapat digunakan peserta sesuai ikhtisar polis.
+i. Penjaminan Tertunda (Pending Authorization): Status permohonan penjaminan yang belum dapat disetujui karena pihak asuransi masih memerlukan dokumen hasil pemeriksaan penunjang atau keterangan medis tambahan dari dokter penanggung jawab.
+j. Rincian Tagihan Akhir (Final Billing): Akumulasi seluruh biaya pelayanan medis, kamar, obat, dan tindakan yang diterbitkan rumah sakit saat pasien diizinkan pulang untuk diverifikasi sebelum penerbitan Surat Jaminan Akhir (Final GL).
+
+5. KETENTUAN
+Aturan operasional dan kebijakan penjaminan rawat inap meliputi:
+a. Kepesertaan yang Terverifikasi: Peserta wajib terdaftar sah dan dapat diverifikasi identitasnya melalui kartu kepesertaan fisik/digital dan kartu tanda pengenal resmi (KTP/Paspor/KIA).
+b. Verifikasi Status Polis Mendahului Penjaminan: Surat Jaminan tidak dapat diterbitkan jika status polis dalam kondisi batal, lapse, atau belum melewati masa tunggu penyakit yang bersangkutan sesuai klausul polis masing-masing.
+c. Kesesuaian Manfaat dan Fasilitas Kamar: Hak kelas kamar rawat inap yang dijamin mengacu pada tarif kamar yang tercantum dalam ikhtisar polis peserta. Apabila peserta memilih kelas kamar di atas haknya (upgrade kamar), selisih kenaikan biaya kamar dan penyesuaian biaya tindakan medis terkait menjadi tanggung jawab pribadi peserta (excess charges).
+d. Kelengkapan Berkas Permohonan: Permintaan pre-authorization wajib dilengkapi dengan data identitas, diagnosis awal dokter berdasarkan kode ICD-10, indikasi perlunya rawat inap, rencana terapi atau pembedahan, dan perkiraan estimasi biaya (cost estimation).
+e. Evaluasi Kebutuhan Medis: Rawat inap semata-mata untuk tujuan pemeriksaan umum (medical check-up), terapi istirahat (convalescence), atau observasi tanpa kelainan klinis nyata tidak dapat disetujui penjaminannya.
+f. Hak Klarifikasi Medis: Penanggung berhak meminta lembar rekam medis, hasil laboratorium, atau hasil radiologi penunjang kepada rumah sakit apabila informasi awal masih belum memadai.
+g. Opsi Keputusan Penjaminan: Berdasarkan evaluasi, penanggung menetapkan keputusan:
+   1) Disetujui Penuh: Diterbitkan Surat Jaminan Awal sesuai hak kelas kamar dan manfaat polis.
+   2) Disetujui dengan Batasan: Penjaminan diberikan dengan batas plafon tertentu atau mengecualikan pos tertentu yang tidak dijamin.
+   3) Ditunda (Pending): Memerlukan kelengkapan data medis tambahan dari rumah sakit.
+   4) Ditolak: Permintaan rawat inap tidak memenuhi syarat polis (misal akibat kondisi pre-existing yang dikecualikan, masa tunggu belum lewat, atau tindakan estetika).
+h. Keabsahan Tagihan Akhir: Persetujuan awal (Initial GL) tidak mencakup biaya barang-barang pribadi non-medis (seperti telepon kamar, perlengkapan mandi, atau makanan ekstra keluarga) yang tetap wajib dilunasi nasabah di kasir rumah sakit sebelum pulang.
+i. Penanganan Kondisi Gawat Darurat Medis (Emergency Care): Dalam situasi resusitasi gawat darurat yang mengancam keselamatan nyawa, tindakan medis penyelamatan wajib diprioritaskan oleh fasilitas kesehatan; prosedur administratif notifikasi kepesertaan dan pengajuan pre-authorization dapat dilakukan menyusul dalam batas waktu yang wajar setelah kondisi pasien stabil.
+j. Kerahasiaan Data Medis: Seluruh informasi riwayat kesehatan, diagnosis, dan laporan tindakan medis wajib dijaga kerahasiaannya sesuai ketentuan undang-undang perlindungan data pribadi dan rahasia kedokteran.
+k. Parameter Model Simulasi Akademik: Khusus untuk simulasi proyek kelompok ini dirancang batas parameter waktu:
+   1) Waktu respons penerbitan keputusan penjaminan awal dimodelkan maksimal 2 jam kerja sejak berkas medis lengkap diterima dari rumah sakit.
+   2) Batas waktu klarifikasi dokumen pending dari rumah sakit dimodelkan 24 jam kalender untuk kasus rawat inap terencana.
+   Catatan penting: Angka batas waktu dan nominal estimasi biaya merupakan PARAMETER SIMULASI AKADEMIK untuk pembelajaran proyek, bukan ketentuan resmi yang berlaku seragam untuk seluruh penanggung asuransi.
+
+6. PROSEDUR
+Urutan tahapan pelaksanaan penjaminan rawat inap dan pre-authorization dilaksanakan melalui langkah-langkah terperinci berikut:
+- Langkah 1 (Kedatangan Peserta di Admisi RS): Peserta atau keluarga mendatangi loket admisi rawat inap rumah sakit rekanan, menunjukkan kartu fisik/digital kepesertaan asuransi dan kartu tanda pengenal sah (KTP/KIA).
+- Langkah 2 (Pemeriksaan Awal oleh Petugas RS): Petugas admisi rumah sakit memeriksa keabsahan kartu, mencocokkan identitas fisik peserta, dan menerima surat rujukan/pengantar rawat inap dari dokter pemeriksa (IGD atau poliklinik spesialis).
+- Langkah 3 (Pengajuan Permintaan Pre-Authorization ke Asuransi): Petugas rumah sakit mengisi Formulir Permintaan Penjaminan Awal dan mengirimkannya secara elektronik kepada tim penjaminan asuransi/TPA bersama salinan diagnosis awal, indikasi rawat inap, rencana terapi, dan estimasi biaya.
+- Langkah 4 (Pemeriksaan Status Polis dan Kepesertaan pada Tahap N_1): Tim penjaminan asuransi mengakses basis data kepesertaan untuk memvalidasi:
+  1) Status polis dalam kondisi aktif (in-force) tanpa tunggakan premi.
+  2) Terpenuhinya masa tunggu penyakit umum atau penyakit khusus yang sesuai dengan diagnosis awal.
+  3) Memeriksa batas limit tahunan yang masih tersedia.
+- Langkah 5 (Verifikasi Kelayakan Medis pada Tahap N_2): Dokter penasihat medis asuransi menelaah:
+  1) Kesesuaian keluhan dan tanda vital dengan indikasi rawat inap (medical necessity).
+  2) Rencana tindakan medis dan rasionalitas estimasi biaya yang diajukan rumah sakit.
+- Langkah 6 (Pemeriksaan Klausul Manfaat dan Pengecualian): Petugas mencocokkan jenis tindakan dengan klausul buku polis:
+  1) Memastikan diagnosis bukan merupakan klausul pengecualian umum (SOP_05, seperti bedah kosmetik murni).
+  2) Memeriksa ada tidaknya batasan endorsement pengecualian riwayat penyakit masa lalu (SOP_04).
+  3) Memeriksa kelas kamar yang diajukan apakah sesuai hak plafon polis atau terjadi kenaikan kelas (upgrade).
+- Langkah 7 (Permintaan Klarifikasi Tambahan jika Belum Lengkap): Jika informasi medis belum memadai (misal diagnosis masih bersifat dugaan umum tanpa hasil lab pendukung), petugas mengubah status menjadi "Pending Authorization" dan melayangkan permintaan tertulis kepada rumah sakit untuk melampirkan hasil tes diagnostik penunjang.
+- Langkah 8 (Penetapan Keputusan Penjaminan pada Tahap N_4): Berdasarkan evaluasi berkas, penanggung menetapkan keputusan formal:
+  a. Disetujui Penuh: Rencana perawatan memenuhi seluruh ketentuan dan dijamin sesuai hak kamar polis.
+  b. Disetujui dengan Batasan: Dijamin dengan plafon biaya tertentu atau dengan pemberitahuan adanya potensi biaya ekses (excess) akibat upgrade kamar.
+  c. Ditunda (Pending): Menunggu hasil penunjang medis dari rumah sakit.
+  d. Ditolak: Permintaan penjaminan ditolak secara administratif/medis dengan menyebutkan dasar pasal polis yang bersangkutan.
+- Langkah 9 (Penerbitan Surat Jaminan / Initial Guarantee Letter): Apabila disetujui, sistem menerbitkan dokumen resmi Surat Jaminan Awal (Initial GL) yang mencantumkan nama pasien, nomor polis, rumah sakit rekanan, diagnosis awal yang dijamin, hak kamar per hari, dan ketentuan pemantauan masa rawat.
+- Langkah 10 (Penyampaian Hasil kepada RS dan Peserta): Surat Jaminan dikirimkan secara elektronik ke bagian admisi rumah sakit. Petugas rumah sakit menginformasikan status penjaminan kepada peserta serta menjelaskan potensi biaya yang tidak ditanggung (misal biaya barang pribadi non-medis atau selisih kamar). Pasien menandatangani Surat Pernyataan Kesediaan Membayar Ekses jika timbul kelebihan biaya.
+- Langkah 11 (Pelaksanaan Perawatan Medis dan Pemantauan Harian): Pasien menjalani rawat inap. Selama perawatan, rumah sakit mengirimkan laporan perkembangan medis berkala kepada asuransi. Apabila terdapat rencana tindakan bedah lanjutan atau perpanjangan hari rawat yang signifikan, rumah sakit mengajukan pembaruan persetujuan awal (extension/update pre-authorization).
+- Langkah 12 (Verifikasi Tagihan Akhir dan Pemulangan Pasien): Saat dokter menyatakan pasien boleh pulang (discharge):
+  1) Rumah sakit menyusun seluruh rincian tagihan akhir (Final Billing) dan resume medis lengkap keluar rumah sakit.
+  2) Tim verifikator asuransi memeriksa tagihan akhir berdasarkan pelayanan yang benar-benar diberikan sesuai prinsip SOP_03 dan SOP_07.
+  3) Asuransi menerbitkan Surat Jaminan Akhir (Final Guarantee Letter) yang merinci total biaya yang dibayar oleh asuransi dan sisa biaya lebih (excess charges) yang wajib dilunasi oleh peserta di kasir rumah sakit sebelum meninggalkan rumah sakit.
+
+7. DOKUMEN PENDUKUNG
+Dokumen yang dikelola dan dipersyaratkan dalam prosedur penjaminan rawat inap meliputi:
+a. Kartu Peserta Asuransi: Kartu fisik atau kartu elektronik (e-Card) nasabah yang memuat nomor kepesertaan sah.
+b. Kartu Identitas Resmi Peserta: KTP, Paspor, atau Kartu Identitas Anak (KIA) yang masih berlaku.
+c. Surat Pengantar Rawat Inap (Admission Request Form): Lembar permohonan rawat inap dari dokter pemeriksa yang memuat keluhan dan alasan klinis perlunya rawat inap.
+d. Lembar Diagnosis Awal dan Resume Medis Admisi: Catatan awal dokter IGD atau poliklinik mengenai riwayat keluhan dan diagnosis sementara berdasarkan kode ICD-10.
+e. Rencana Tindakan Medis dan Estimasi Biaya (Estimated Treatment Plan & Cost): Rincian tindakan yang akan dijalani beserta estimasi rincian biaya yang dikeluarkan pihak rumah sakit.
+f. Lembar Hasil Pemeriksaan Penunjang: Hasil tes laboratorium darah, hasil radiologi foto rontgen, USG, atau rekam jantung EKG yang mendukung indikasi rawat inap.
+g. Surat Jaminan Awal (Initial Guarantee Letter): Dokumen resmi persetujuan jaminan sementara yang diterbitkan pihak asuransi.
+h. Surat Jaminan Akhir (Final Guarantee Letter): Dokumen penetapan pembayaran akhir dari asuransi yang menyatakan nominal tagihan yang ditanggung dan rincian ekses biaya.
+i. Lembar Klarifikasi Medis Tambahan: Formulir korespondensi tertulis antara dokter penasihat asuransi dan dokter penanggung jawab rumah sakit jika terdapat catatan yang meragukan.
+
+8. CONTOH KASUS
+
+Kasus 1 – Penjaminan Rawat Inap Disetujui (Kasus Standar Memenuhi Syarat):
+- Permasalahan: Ibu Rina mendatangi IGD Rumah Sakit Mitra Keluarga dengan keluhan demam tinggi selama 4 hari, mual hebat, dan nyeri otot. Dokter IGD mendiagnosis terduga demam berdarah dengue (Dengue Hemorrhagic Fever, ICD-10: A91) dan merekomendasikan rawat inap segera.
+- Pemeriksaan dan Alur Proses:
+  1) Petugas rumah sakit mengajukan permohonan pre-authorization ke pihak asuransi dengan melampirkan hasil lab darah awal (trombosit 68.000 /uL dan hematokrit meningkat).
+  2) Tahap N_1 (Cek Polis): Sistem memverifikasi polis Ibu Rina aktif (in-force), premi lancar, masa tunggu penyakit umum telah lewat, dan memiliki manfaat rawat inap kelas kamar Rp800.000,- per hari.
+  3) Tahap N_2 (Verifikasi Medis): Dokter penasihat medis asuransi menilai penurunan trombosit signifikan di bawah 100.000 /uL memenuhi kriteria kebutuhan medis mutlak (medical necessity) untuk pemantauan cairan intensif rawat inap.
+  4) Tahap N_4 (Persetujuan Penjaminan): Asuransi menyetujui penjaminan dan menerbitkan Initial Guarantee Letter untuk kelas kamar sesuai hak polis dengan estimasi awal biaya perawatan 3 hari sebesar Rp6.500.000,- (parameter simulasi akademik).
+- Hasil Akhir: Ibu Rina menempati ruang rawat inap tanpa perlu membayar uang muka deposit perawatan.
+
+Kasus 2 – Penjaminan Pending karena Dokumen Pendukung Belum Lengkap:
+- Permasalahan: Bapak Andi direncanakan menjalani rawat inap untuk tindakan operasi elektif pengangkatan batu empedu (Cholelithiasis, ICD-10: K80). Rumah sakit mengirimkan formulir permintaan penjaminan awal ke pihak asuransi.
+- Pemeriksaan dan Alur Proses:
+  1) Tahap N_1: Polis Bapak Andi aktif dan masa tunggu penyakit khusus telah terpenuhi.
+  2) Tahap N_2: Saat dokter verifikator asuransi menelaah dokumen, ditemukan bahwa rumah sakit hanya melampirkan resume singkat dokter tanpa menyertakan lembar hasil pemeriksaan ultrasonografi (USG) abdomen yang mengonfirmasi keberadaan dan ukuran batu empedu.
+  3) Status Pending: Penanggung menetapkan status "Pending Authorization" dan melayangkan surat permintaan kelengkapan lembar ekspertise USG kepada bagian admisi rumah sakit.
+  4) Pemeriksaan Ulang: Dalam kurun waktu 4 jam, rumah sakit mengirimkan hasil pemindaian USG resmi yang memperlihatkan multipel batu empedu berdiameter 1,5 cm disertai radang kantung empedu.
+- Hasil Akhir: Setelah dokumen penunjang objektif diverifikasi lengkap dan memenuhi indikasi medis bedah, status diubah menjadi disetujui dan Initial Guarantee Letter diterbitkan sebelum jadwal operasi dilaksanakan.
+
+Kasus 3 – Penjaminan Ditolak karena Layanan Masuk Pengecualian Polis (Rujukan SOP_05 & SOP_08):
+- Permasalahan: Ibu Sari mendaftar ke admisi rumah sakit bedah untuk rawat inap pelaksanaan tindakan bedah koreksi kelopak mata (blepharoplasty) dan meminta fasilitas penjaminan cashless asuransi.
+- Pemeriksaan dan Alur Proses:
+  1) Tahap N_1: Polis Ibu Sari berstatus aktif.
+  2) Tahap N_2 & Pemeriksaan Pengecualian: Dokter verifikator menelaah pengantar dokter bedah. Tindakan yang diajukan bertujuan murni untuk merapikan lipatan kulit kelopak mata atas tanpa adanya riwayat gangguan fungsi penglihatan atau cedera fisik traumatis.
+  3) Penerapan Klausul SOP_05: Petugas mencocokkan tindakan dengan ketentuan buku polis dan SOP_05 Bagian 5b yang secara tegas mengecualikan bedah kosmetik dan perawatan kecantikan tanpa indikasi medis kelainan fungsi.
+  4) Penetapan Keputusan di Tahap N_4: Permintaan penjaminan non-tunai (cashless pre-authorization) dinyatakan DITOLAK RESMI.
+- Penyampaian Keputusan dan Opsi Nasabah: Pihak asuransi menerbitkan Surat Penolakan Penjaminan yang menjelaskan pasal pengecualian kosmetik dalam buku polis. Petugas RS menginformasikan bahwa Ibu Sari tetap dapat menjalani perawatan sebagai pasien umum dengan pembayaran biaya pribadi. Apabila Ibu Sari merasa memiliki bukti medis tambahan yang membuktikan adanya sumbatan bidang pandang mata secara medis, Ibu Sari diinformasikan mengenai hak mengajukan keberatan resmi sesuai alur SOP_08.
+
+Catatan Penting: Seluruh angka estimasi biaya, limit kamar, dan parameter durasi di atas merupakan SIMULASI AKADEMIK untuk pembelajaran sistem AI, bukan ketentuan mutlak yang berlaku pada seluruh entitas asuransi.
+
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Tata alur operasional Third-Party Administrator (TPA), durasi penerbitan jaminan, dan ketentuan kerja sama rumah sakit rekanan pada industri nyata sepenuhnya merujuk pada Perjanjian Kerja Sama (PKS) dan buku polis masing-masing penanggung.
+- Rujukan Regulasi Resmi Sektor Jasa Keuangan & Kesehatan:
+  1) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+  2) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 69/POJK.05/2016 tentang Penyelenggaraan Usaha Perusahaan Asuransi, Perusahaan Asuransi Syariah, Perusahaan Reasuransi, dan Perusahaan Reasuransi Syariah, sebagaimana telah diubah dengan POJK Nomor 36 Tahun 2024.
+  3) Undang-Undang Republik Indonesia Nomor 17 Tahun 2023 tentang Kesehatan (khususnya ketentuan mengenai pelayanan rawat inap fasilitas kesehatan dan rekam medis).
+  4) Standar Pedoman Layanan Klaim Non-Tunai (Cashless Provider Management) Asosiasi Asuransi Jiwa Indonesia (AAJI).
+  5) Ketentuan Buku Polis Asuransi Kesehatan peserta mengenai manfaat rawat inap, fasilitas cashless, dan klausul persetujuan awal (pre-authorization).
+================================================================================

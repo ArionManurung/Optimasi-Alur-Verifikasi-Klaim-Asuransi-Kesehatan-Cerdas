@@ -1,0 +1,22 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/007/2026
+JUDUL: ATURAN PERHITUNGAN LIMIT PLAFON POLIS DAN KOORDINASI MANFAAT (COORDINATION OF BENEFITS - COB)
+TAHAPAN ALUR: N4 - Persetujuan Klaim
+KLASIFIKASI: Kebijakan Operasional Finansial Klaim
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. PRINSIP DASAR INDEMNITAS
+Asuransi kesehatan Allianz beroperasi berdasarkan prinsip indemnitas (indemnity principle), yaitu mengembalikan posisi keuangan tertanggung ke kondisi sesaat sebelum terjadinya kerugian sakit, dan tidak boleh dijadikan sarana memperoleh keuntungan finansial (no double recovery or unjust enrichment).
+
+2. PENERAPAN LIMIT BATASAN POLIS
+Persetujuan nilai nominal klaim tunduk pada batasan berikut:
+a. Batas Kamar Harian (Daily Room & Board Limit): Nilai maksimum per hari sesuai tabel manfaat polis. Kelebihan biaya kamar menjadi tanggungan nasabah (excess charge).
+b. Batas Maksimum Tahunan (Annual Limit): Total akumulasi penggantian seluruh jenis manfaat pengobatan dalam 1 (satu) tahun polis. Jika limit tahunan habis, klaim berikutnya otomatis berstatus over-limit dan tidak dapat dibayar hingga polis diperpanjang di tahun berikutnya.
+c. Batas Per Kejadian Penyakit (Disability Limit): Batas total biaya yang dialokasikan untuk satu episode diagnosis penyakit yang sama dalam periode 90 hari kalender.
+d. Pengurang Biaya (Deductibles/Co-payment): Persentase atau nominal biaya yang wajib ditanggung sendiri terlebih dahulu oleh peserta sebelum sisa biaya ditanggung oleh Allianz sesuai ketentuan kontrak polis.
+
+3. KOORDINASI MANFAAT DENGAN PIHAK LAIN (COB)
+Dalam situasi nasabah memiliki perlindungan asuransi ganda (misalnya BPJS Kesehatan atau asuransi kantor tempat bekerja lain):
+a. Sebagai Pembayar Sekunder (Secondary Payer): Allianz bersedia menanggung sisa selisih biaya (excess cost) yang belum tercover oleh pembayar utama (Primary Payer/BPJS Kesehatan).
+b. Dokumen Persyaratan COB: Nasabah wajib melampirkan fotokopi kuitansi rumah sakit yang telah dilegalisir basah oleh asuransi pertama, disertai Surat Keterangan Koordinasi Manfaat resmi yang merinci rincian pos biaya yang sudah dibayar oleh pembayar utama dan sisa saldo yang belum terbayar.
+c. Batasan Total Penggantian: Total pembayaran gabungan antara Allianz dan asuransi lain tidak boleh melampaui 100% dari total pengeluaran kuitansi asli rumah sakit.

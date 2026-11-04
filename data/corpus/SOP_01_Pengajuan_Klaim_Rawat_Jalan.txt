@@ -1,0 +1,26 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/001/2026
+JUDUL: PROSEDUR STANDAR PENGAJUAN KLAIM RAWAT JALAN (OUTPATIENT REIMBURSEMENT)
+TAHAPAN ALUR: N0 - Pengajuan Klaim
+KLASIFIKASI: Standard Operating Procedure (SOP) Internal Operasional
+VERSI: 2.1 | STATUS: Aktif Simulasi
+
+1. TUJUAN DAN RUANG LINGKUP
+Prosedur ini menetapkan pedoman baku bagi pemegang polis dan staf administrasi Allianz dalam memproses pengajuan klaim rawat jalan (outpatient claim) dengan skema penggantian biaya (reimbursement). Berlaku untuk seluruh produk asuransi kesehatan individu maupun kumpulan (corporate group health).
+
+2. PERSYARATAN BERKAS PENGAJUAN
+Nasabah wajib melengkapi dokumen persyaratan administratif berikut saat mengajukan klaim:
+a. Formulir Pengajuan Klaim Asuransi Kesehatan Allianz asli yang telah diisi lengkap dan ditandatangani oleh pemegang polis.
+b. Kuitansi pembayaran asli bermaterai cukup dan rincian perincian biaya pengobatan resmi dari fasilitas kesehatan atau klinik.
+c. Surat keterangan dokter atau formulir resume medis rawat jalan yang mencantumkan diagnosis penyakit berdasarkan kode ICD-10, anamnesis, riwayat keluhan, dan tindakan medis yang diberikan.
+d. Salinan resep obat resmi yang ditebus di apotek berlisensi beserta salinan kuitansi pembelian obat.
+e. Bukti hasil pemeriksaan penunjang diagnostik medis (laboratorium, radiologi, USG) apabila tindakan tersebut dilakukan dan ditagihkan dalam klaim.
+f. Fotokopi kartu kepesertaan asuransi kesehatan Allianz dan fotokopi identitas diri (KTP/SIM/Paspor) peserta klaim.
+
+3. KANAL PENGIRIMAN DOKUMEN
+Pengajuan berkas klaim dapat dilakukan melalui:
+a. Kanal Digital: Unggah dokumen digital melalui portal web nasabah atau aplikasi seluler Allianz eAZy Connect dalam format PDF/JPEG beresolusi minimal 300 DPI dengan teks terbaca jelas.
+b. Kanal Fisik: Pengiriman berkas fisik dokumen asli ke Bagian Administrasi Klaim Kantor Pusat Allianz Life Indonesia di Jakarta atau kantor perwakilan layanan resmi terdekat.
+
+4. VALIDASI AWAL DAN REGISTRASI
+Petugas administrasi loket klaim wajib melakukan penapisan kelengkapan administratif awal dalam jangka waktu maksimal 1x24 jam sejak dokumen diterima. Dokumen yang lengkap akan diterbitkan Nomor Registrasi Klaim (Claim ID) resmi untuk dilanjutkan ke tahap Cek Polis (N1). Apabila dokumen belum lengkap, sistem akan menerbitkan pemberitahuan Permintaan Kelengkapan Dokumen (Pending Document Notice) kepada nasabah.

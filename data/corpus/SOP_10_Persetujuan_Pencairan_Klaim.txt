@@ -1,0 +1,25 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/010/2026
+JUDUL: TATA CARA PERSETUJUAN FINAL DAN PENCAIRAN DANA KLAIM ASURANSI (DISBURSEMENT & SETTLEMENT)
+TAHAPAN ALUR: N4 - Persetujuan Klaim / N5 - Pencairan Dana
+KLASIFIKASI: Kebijakan Keuangan & Standar Operasional Pembayaran
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. OTORISASI PERSETUJUAN KLAIM (APPROVAL MATRIX)
+Persetujuan pembayaran klaim reimbursement kesehatan harus mengikuti matriks kewenangan otorisasi berdasarkan nilai nominal klaim:
+a. Nominal klaim sampai dengan Rp10.000.000,- dapat disetujui secara mandiri oleh Senior Claims Assessor / Verifikator Tingkat Madya.
+b. Nominal klaim Rp10.000.001,- sampai dengan Rp50.000.000,- wajib mendapatkan otorisasi dari Claims Team Leader / Manager Operasional Klaim.
+c. Nominal klaim Rp50.000.001,- sampai dengan Rp250.000.000,- wajib disetujui bersama oleh Head of Claims Department dan Medical Director.
+d. Nominal klaim di atas Rp250.000.000,- atau klaim bermasalah khusus memerlukan persetujuan komite Chief Operating Officer (COO) dan Legal Counsel.
+
+2. PENERBITAN PENJELASAN MANFAAT KLAIM (EXPLANATION OF BENEFITS - EOB)
+Setelah klaim disetujui pada tahap N4, sistem secara otomatis menerbitkan dokumen resmi Explanation of Benefits (EoB) yang dikirimkan melalui email terdaftar kepada nasabah. Dokumen ini memuat:
+a. Total tagihan kuitansi rumah sakit yang diajukan.
+b. Rincian pos biaya yang disetujui ditanggung asuransi.
+c. Rincian pos biaya yang tidak dapat ditanggung (ineligible expenses) beserta kode alasan penolakan pos tersebut.
+d. Nilai bersih pembayaran yang akan ditransfer ke rekening nasabah.
+
+3. PROSEDUR PENCAIRAN DAN TRANSFER DANA (TAHAP N5)
+a. Bagian Treasury Finance Allianz akan memproses instruksi transfer bank melalui mekanisme Real-Time Gross Settlement (RTGS), SKN/Kliring BI, atau BI-FAST.
+b. Rekening bank penerima wajib atas nama pemegang polis atau tertanggung dewasa yang sah. Pembayaran ke rekening pihak ketiga dilarang keras, kecuali disertai Surat Kuasa Bermaterai dan persetujuan kepatuhan anti-pencucian uang (Anti-Money Laundering / AML).
+c. Service Level Agreement (SLA) waktu pencairan dana adalah maksimal 7 (tujuh) hari kerja terhitung sejak seluruh dokumen klaim dinyatakan lengkap dan disetujui (clean claim).

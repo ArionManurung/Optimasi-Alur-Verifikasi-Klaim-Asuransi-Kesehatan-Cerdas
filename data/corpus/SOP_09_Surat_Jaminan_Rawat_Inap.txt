@@ -1,0 +1,21 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/009/2026
+JUDUL: MEKANISME SURAT JAMINAN RUMAH SAKIT DAN PERSETUJUAN AWAL RAWAT INAP (CASHLESS GUARANTEE LETTER)
+TAHAPAN ALUR: N0 - Pengajuan / N2 - Verifikasi RS
+KLASIFIKASI: Standard Operating Procedure (SOP) Third-Party Administrator & Provider
+VERSI: 2.1 | STATUS: Aktif Simulasi
+
+1. PENGERTIAN METODE CASHLESS
+Metode cashless adalah fasilitas penerbitan Surat Jaminan Rumah Sakit (Letter of Guarantee - LoG) oleh Allianz melalui pihak pengelola ketiga (Third-Party Administrator / TPA) sehingga peserta dapat dirawat inap di rumah sakit rekanan jaringan (provider network) tanpa perlu membayar tunai uang muka perawatan di awal.
+
+2. PENERBITAN SURAT JAMINAN AWAL (INITIAL GUARANTEE LETTER)
+a. Peserta menunjukkan kartu asuransi digital/fisik Allianz dan KTP ke loket pendaftaran rawat inap rumah sakit rekanan.
+b. Petugas admisi rumah sakit mengirimkan Formulir Permintaan Jaminan Awal ke Allianz/TPA dalam kurun waktu maksimal 2 jam setelah pasien masuk IGD/admisi.
+c. Tim medis TPA melakukan verifikasi kelayakan polis real-time, masa tunggu penyakit, serta indikasi medis rawat inap.
+d. Jika memenuhi kriteria, Surat Jaminan Awal (Initial LoG) akan diterbitkan dengan batas plafon pertanggungan sementara (biasanya jaminan untuk 2x24 jam perawatan).
+
+3. SURAT JAMINAN LANJUTAN DAN AKHIR (FINAL GUARANTEE LETTER)
+a. Selama pasien dirawat inap, rumah sakit wajib mengirimkan laporan perkembangan medis harian (daily medical progress update) kepada tim dokter verifikator Allianz.
+b. Jika pasien membutuhkan tindakan pembedahan khusus, ICU/ICCU, atau terapi penunjang berbiaya tinggi, rumah sakit wajib mengajukan persetujuan awal (pre-authorization approval) minimal 24 jam sebelum tindakan dijadwalkan, kecuali dalam kondisi resusitasi gawat darurat yang mengancam jiwa.
+c. Saat pasien dinyatakan boleh pulang (discharge), rumah sakit mengirimkan rincian tagihan final dan resume medis lengkap.
+d. Allianz akan menerbitkan Surat Jaminan Akhir (Final LoG) dalam waktu maksimal 2 hingga 3 jam, yang menyatakan jumlah biaya yang ditanggung oleh Allianz dan sisa kelebihan biaya (excess charges) yang harus dilunasi langsung oleh peserta di kasir rumah sakit.

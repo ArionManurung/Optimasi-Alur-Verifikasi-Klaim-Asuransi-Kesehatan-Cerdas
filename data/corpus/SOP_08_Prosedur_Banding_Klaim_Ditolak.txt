@@ -1,0 +1,25 @@
+[DOKUMEN SIMULASI AKADEMIK - PT ASURANSI ALLIANZ LIFE INDONESIA]
+NOMOR DOKUMEN: SOP/ALZ-CLM/008/2026
+JUDUL: TATA CARA PENGAJUAN BANDING KLAIM KESEHATAN YANG DITOLAK (CLAIM DISPUTE APPEAL)
+TAHAPAN ALUR: N4 - Persetujuan Klaim / Layanan Nasabah
+KLASIFIKASI: Kebijakan Penyelesaian Sengketa Konsumen
+VERSI: 2.0 | STATUS: Aktif Simulasi
+
+1. HAK BANDING PEMEGANG POLIS
+Allianz menjamin hak setiap pemegang polis untuk mengajukan sanggahan atau permohonan banding (reconsideration/appeal) apabila pengajuan klaim kesehatannya ditolak sebagian atau seluruhnya oleh perusahaan.
+
+2. TENGGAT WAKTU PENGAJUAN BANDING
+Permohonan banding klaim wajib diajukan secara tertulis paling lambat dalam waktu 30 (tiga puluh) hari kalender terhitung sejak tanggal surat penolakan resmi diterbitkan oleh Allianz. Permohonan banding yang diajukan melampaui tenggat waktu tersebut dianggap gugur secara administratif.
+
+3. KELENGKAPAN BERKAS BANDING
+Pemohon banding wajib menyertakan dokumen pendukung substansial baru (new evidence):
+a. Surat Resmi Permohonan Banding bermaterai yang menjelaskan alasan keberatan terhadap keputusan penolakan secara kronologis.
+b. Surat keterangan penjelasan medis tambahan (second opinion / comprehensive medical explanation letter) dari dokter spesialis konsultan yang merawat.
+c. Hasil tes diagnostik objektif terbaru atau berkas rekam medis pembanding yang belum sempat diserahkan pada pengajuan klaim pertama.
+d. Bukti kronologis pendukung kejadian (misal: laporan kepolisian jika terkait penolakan atas dugaan tindak pidana, atau surat keterangan domisili darurat jika terkait penolakan batas waktu).
+
+4. PROSES PENILAIAN OLEH KOMITE MEDIS KLAIM
+a. Berkas banding akan ditinjau secara independen oleh Tim Komite Medis Klaim (Claims Medical Board) yang tidak terlibat dalam keputusan penolakan pertama.
+b. Proses evaluasi banding berlangsung maksimal 14 (empat belas) hari kerja sejak dokumen banding diterima lengkap.
+c. Keputusan komite bersifat final pada tingkat internal perusahaan (dapat berupa pembatalan penolakan dengan persetujuan bayar, pembayaran goodwill gesture, atau penegasan kembali penolakan).
+d. Jika nasabah tetap tidak puas, sengketa dapat diteruskan ke Lembaga Alternatif Penyelesaian Sengketa Sektor Jasa Keuangan (LAPS SJK) atau Otoritas Jasa Keuangan (OJK).

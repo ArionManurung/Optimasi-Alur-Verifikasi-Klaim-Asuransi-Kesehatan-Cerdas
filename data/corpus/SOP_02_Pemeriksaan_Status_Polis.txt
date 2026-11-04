@@ -1,0 +1,95 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_02
+- Judul Dokumen: Prosedur Pemeriksaan Status Polis dan Masa Tunggu (Policy Status and Waiting Period Verification)
+- Tahapan UCS Terkait: N_1 – Cek Polis (Tahap Kedua Alur Verifikasi Pencarian Rute Optimal)
+- Klasifikasi: Dokumen Operasional Standar Verifikasi Kepesertaan dan Ketentuan Kontrak
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+
+2. TUJUAN
+Tujuan dari prosedur ini adalah:
+a. Memastikan keabsahan data kepesertaan dan validitas nomor polis yang tercantum pada berkas klaim yang telah lolos registrasi awal pada tahap N_0 – Pengajuan Klaim.
+b. Memverifikasi status keaktifan polis asuransi serta kepatuhan pembayaran premi nasabah saat tanggal perawatan medis berlangsung.
+c. Memeriksa terpenuhinya periode masa tunggu (waiting period) untuk diagnosis penyakit yang diajukan dalam klaim.
+d. Memastikan jenis klaim yang dimohonkan (rawat inap, rawat jalan, atau tindakan medis) tercakup dalam tabel manfaat polis yang dimiliki peserta sebelum berkas dialirkan ke tahap verifikasi medis di fasilitas kesehatan (N_2 – Verifikasi RS).
+
+3. RUANG LINGKUP
+Prosedur ini berlaku untuk seluruh berkas klaim kesehatan yang telah mendapatkan nomor registrasi resmi (Claim ID). Proses ini mengatur pemeriksaan kepesertaan internal yang dilakukan oleh petugas verifikator polis (Policy Verifier) atau modul otomatis sistem verifikasi polis, meliputi pencocokan data identitas peserta, validasi status premi, evaluasi masa tunggu, dan penentuan kesesuaian manfaat perlindungan. Prosedur ini menjadi pintu penentu apakah berkas klaim berhak dilanjutkan ke tahap verifikasi medis rumah sakit (N_2), ditunda untuk konfirmasi kepesertaan, atau ditolak karena pembatalan polis.
+
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Polis Aktif (In-Force Policy): Status kontrak asuransi yang sah, berlaku, dan tidak sedang mengalami penghentian perlindungan karena seluruh kewajiban premi telah dibayarkan sesuai jadwal.
+b. Polis Tidak Aktif / Batal (Lapse Policy): Kondisi di mana perlindungan asuransi dihentikan sementara atau permanen karena pemegang polis tidak membayar premi hingga melewati batas masa tenggang yang ditentukan.
+c. Masa Tenggang Pembayaran Premi (Grace Period): Jangka waktu kelonggaran yang diberikan kepada pemegang polis untuk melunasi tagihan premi tertunggak tanpa kehilangan hak perlindungan asuransi.
+d. Masa Tunggu (Waiting Period): Periode waktu tertentu yang dihitung sejak tanggal polis mulai berlaku efektif, di mana manfaat pertanggungan asuransi belum dapat digunakan untuk mengklaim biaya perawatan penyakit tertentu.
+e. Tanggal Mulai Berlaku Polis (Inception Date): Tanggal resmi saat perjanjian asuransi disetujui oleh penanggung dan perlindungan pertama kali dinyatakan mulai berjalan.
+f. Manfaat Pertanggungan (Policy Coverage / Benefit Schedule): Rincian hak perlindungan dan batasan biaya medis yang disepakati dalam kontrak polis (contoh: santunan rawat jalan, santunan kamar rawat inap, atau santunan pembedahan).
+g. Asuransi Tambahan (Rider / Endorsement): Ketentuan atau pasal tambahan yang dilekatkan pada polis dasar untuk memperluas cakupan perlindungan (misalnya penambahan rider rawat jalan pada polis dasar rawat inap).
+
+5. KETENTUAN
+Aturan dan kebijakan yang menjadi dasar pemeriksaan status polis meliputi:
+a. Keselarasan Data Identitas (Identity Matching): Nama lengkap, nomor kartu identitas (NIK/KTP/Paspor), dan tanggal lahir pasien yang tertera pada berkas medis wajib cocok dengan basis data peserta tertanggung yang terdaftar di sistem.
+b. Syarat Status Polis Saat Kejadian: Manfaat asuransi hanya dapat diberikan jika status polis berada dalam kondisi aktif (in-force) pada tanggal pelayanan medis (treatment date) berlangsung.
+c. Ketentuan Klaim pada Masa Tenggang: Apabila peristiwa sakit terjadi saat premi belum dibayar namun masih dalam masa tenggang resmi polis, klaim tetap dapat diproses secara bersyarat, dengan catatan nominal premi tertunggak akan diperhitungkan atau diselesaikan terlebih dahulu sesuai kebijakan polis.
+d. Kepatuhan Masa Tunggu: Biaya pengobatan untuk penyakit atau kondisi yang gejalanya muncul atau didiagnosis sebelum masa tunggu berakhir tidak dapat ditanggung oleh penanggung, kecuali klaim diakibatkan oleh kecelakaan darurat.
+e. Ketergantungan pada Polis Masing-Masing Peserta: Lama masa tunggu penyakit umum, daftar penyakit khusus yang memiliki masa tunggu lebih panjang, serta batas masa tenggang premi sepenuhnya mengacu pada isi buku polis masing-masing peserta, bukan angka seragam.
+f. Parameter Model Simulasi Akademik: Khusus untuk kebutuhan model simulasi proyek kelompok ini, dirancang parameter contoh:
+   1) Masa tenggang pembayaran premi dimodelkan 30 hari kalender.
+   2) Masa tunggu penyakit umum dimodelkan 30 hari sejak tanggal aktif polis.
+   3) Masa tunggu penyakit tertentu/khusus (seperti batu ginjal, hernia, katarak) dimodelkan 12 bulan kalender.
+   4) Klaim akibat kecelakaan darurat dimodelkan tanpa masa tunggu (berlaku seketika sejak polis aktif).
+   Catatan penting: Angka-angka di atas merupakan parameter simulasi pembelajaran dan dapat berbeda dengan polis nyata pada industri asuransi.
+
+6. PROSEDUR
+Urutan langkah pemeriksaan status polis dan masa tunggu pada tahap N_1 adalah sebagai berikut:
+- Langkah 1 (Penelusuran Data Polis): Petugas verifikator memasukkan nomor polis atau Claim ID ke dalam sistem basis data kepesertaan untuk memanggil profil kontrak nasabah.
+- Langkah 2 (Pencocokan Identitas Peserta): Memeriksa kesesuaian antara nama pasien pada resume medis dengan daftar tertanggung pada polis. Apabila nama tidak cocok (misalnya klaim diajukan untuk anak tetapi nama anak belum didaftarkan pada polis), berkas dialihkan ke status penolakan kepesertaan.
+- Langkah 3 (Pemeriksaan Status Polis dan Riwayat Premi): Memeriksa status polis pada tanggal perawatan medis.
+  - Jika polis berstatus aktif (in-force), proses dilanjutkan ke Langkah 4.
+  - Jika polis berstatus lapse sebelum tanggal perawatan, klaim langsung ditolak dengan alasan polis tidak aktif saat kejadian.
+  - Jika polis berada dalam masa tenggang pembayaran premi (grace period), petugas mencatat catatan bersyarat (conditional flag) untuk rekonsiliasi premi.
+- Langkah 4 (Evaluasi Masa Tunggu Berdasarkan Diagnosis): Petugas membandingkan tanggal terjadinya sakit pada resume medis terhadap tanggal mulai berlakunya polis (inception date).
+  - Kasus Kecelakaan: Jika klaim disebabkan cedera akibat kecelakaan mendadak, klaim dibebaskan dari syarat masa tunggu.
+  - Kasus Penyakit Biasa: Memastikan perawatan terjadi setelah masa tunggu penyakit umum terpenuhi.
+  - Kasus Penyakit Khusus: Jika diagnosis termasuk dalam daftar penyakit tertentu, memastikan masa tunggu penyakit khusus telah terpenuhi penuh.
+- Langkah 5 (Verifikasi Cakupan Manfaat Perlindungan): Memeriksa apakah jenis perawatan yang diajukan (misalnya pengobatan rawat jalan) tercantum dalam polis nasabah (memiliki rider rawat jalan). Jika polis nasabah hanya menanggung rawat inap, maka tagihan rawat jalan murni tidak dapat diproses.
+- Langkah 6 (Keputusan Kelayakan dan Eskalasi Alur UCS):
+  - Keputusan Lolos (Eligible): Berkas memenuhi seluruh syarat kepesertaan, status polis aktif, masa tunggu terpenuhi, dan manfaat sesuai. Berkas disetujui lolos tahap N_1 dan otomatis dialirkan ke tahap N_2 – Verifikasi RS untuk audit kelayakan medis.
+  - Keputusan Ditunda (Pending): Memerlukan verifikasi tambahan dari pemegang polis (misal penyesuaian ejaan nama pada KTP vs polis).
+  - Keputusan Ditolak (Repudiated): Berkas melanggar ketentuan masa tunggu atau polis telah lapse saat perawatan. Sistem menerbitkan Surat Penolakan Klaim resmi (Letter of Repudiation) yang merujuk pasal polis yang bersangkutan.
+
+7. DOKUMEN PENDUKUNG
+Dokumen dan data yang diperlukan dalam pemeriksaan tahap ini meliputi:
+a. Berkas pengajuan klaim lengkap ber-Claim ID dari tahap N_0.
+b. Catatan basis data polis nasabah (electronic policy master file).
+c. Salinan identitas resmi peserta tertanggung (KTP / Akta Kelahiran / Paspor).
+d. Rekam histori pembayaran premi terakhir pemegang polis.
+e. Surat keterangan dokter atau resume medis yang mencantumkan tanggal timbulnya keluhan/gejala pertama dan diagnosis penyakit.
+
+8. CONTOH KASUS
+Skenario Kasus 1 (Klaim Memenuhi Syarat - Lolos ke N_2):
+Ibu Ratna memiliki polis asuransi kesehatan yang telah aktif sejak 15 Januari 2025 dengan manfaat rawat inap dan rawat jalan. Pada tanggal 2 Mei 2026, anaknya Doni berobat jalan karena demam berdarah dengue dengan Claim ID: CLM-2026-08119.
+Penerapan Prosedur:
+1. Petugas memasukkan nomor polis Ibu Ratna: data kepesertaan Doni tercatat sah sebagai anak tertanggung.
+2. Riwayat premi diperiksa: status polis aktif (in-force) tanpa tunggakan.
+3. Masa tunggu diuji: masa aktif polis telah berjalan lebih dari 15 bulan, sehingga masa tunggu penyakit umum telah terpenuhi penuh.
+4. Manfaat dicek: polis mencakup asuransi tambahan (rider) rawat jalan.
+5. Keputusan: Berkas dinyatakan lolos tahap N_1 dan diteruskan ke tahap N_2 – Verifikasi RS.
+
+Skenario Kasus 2 (Klaim Tidak Memenuhi Syarat - Penolakan di N_1):
+Bapak Joko membeli polis asuransi kesehatan pada tanggal 10 April 2026. Pada tanggal 20 April 2026 (10 hari setelah polis aktif), Bapak Joko mengajukan klaim reimbursement untuk rawat inap penyakit demam tifoid.
+Penerapan Prosedur:
+1. Data identitas Bapak Joko cocok sebagai peserta tertanggung utama.
+2. Status polis aktif.
+3. Pemeriksaan masa tunggu: perawatan terjadi pada hari ke-10 sejak polis aktif, sedangkan ketentuan simulasi masa tunggu penyakit umum mensyaratkan minimal 30 hari kalender sejak tanggal polis aktif. Penyakit tifoid bukan akibat kecelakaan darurat.
+4. Keputusan: Berkas tidak memenuhi ketentuan masa tunggu pada tahap N_1. Sistem menerbitkan surat penolakan klaim resmi tanpa perlu dialirkan ke tahap N_2, sehingga menghemat biaya dan waktu pemrosesan operasional.
+
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini dibuat sebagai materi pembelajaran korpus basis pengetahuan dalam rangka pengerjaan Tugas Besar Kecerdasan Buatan (10S3001), Program Studi Sistem Informasi, Fakultas Informatika dan Teknik Elektro, Institut Teknologi Del.
+- Disclaimer: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Seluruh batasan masa tunggu, prosedur premi, dan klausul manfaat yang nyata wajib mengikuti ketentuan polis asuransi yang diterbitkan oleh penanggung.
+- Rujukan Prinsip Umum: Diadaptasi dari prinsip dasar hukum perjanjian asuransi dan kepatuhan kontrak asuransi jiwa/kesehatan yang diatur dalam Kitab Undang-Undang Hukum Dagang (KUHD) Pasal 255-258 tentang Pertanggungan, POJK Nomor 69/POJK.05/2016, serta standar tata kelola kepesertaan Asosiasi Asuransi Jiwa Indonesia (AAJI).
+================================================================================

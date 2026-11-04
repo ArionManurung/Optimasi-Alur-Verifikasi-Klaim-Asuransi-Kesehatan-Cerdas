@@ -1,0 +1,171 @@
+================================================================================
+KORPUS PENGETAHUAN KLAIM ASURANSI KESEHATAN [SIMULASI AKADEMIK]
+TUGAS BESAR KECERDASAN BUATAN - INSTITUT TEKNOLOGI DEL
+================================================================================
+
+1. KODE DAN JUDUL DOKUMEN
+- Kode Dokumen: SOP_11
+- Judul Dokumen: Kebijakan Batas Waktu Pengajuan dan Kelengkapan Dokumen Klaim Asuransi Kesehatan (Claim Submission Deadline and Document Completion)
+- Tahapan UCS Terkait: N_0 – Pengajuan Klaim dan N_1 – Pemeriksaan Status Polis (Penapisan Berkas Awal dan Verifikasi Tenggat Pengajuan)
+- Klasifikasi: Dokumen Operasional Standar Tata Kelola Tenggat Waktu dan Penapisan Kelengkapan Berkas
+- Status Legalitas: Model Simulasi Akademik untuk Pembelajaran Kecerdasan Buatan
+
+2. TUJUAN
+Tujuan dari kebijakan dan prosedur ini adalah:
+a. Mengatur ketentuan batas waktu pengajuan klaim oleh peserta sesuai ketentuan polis atau parameter simulasi yang berlaku.
+b. Menstandarisasi tata cara penapisan dan pemeriksaan kelengkapan berkas administratif klaim pada titik awal penerimaan berkas (simpul N_0).
+c. Menyediakan mekanisme komunikasi resmi yang cepat dan jelas untuk memberitahukan kekurangan dokumen kepada peserta apabila berkas yang diajukan belum lengkap.
+d. Menetapkan batas waktu pemenuhan dokumen susulan bagi nasabah serta membedakannya dari batas waktu klarifikasi klinis medis.
+e. Mengatur prosedur permintaan klarifikasi tambahan atas dokumen yang ambigu atau memerlukan konfirmasi klinis/administratif lebih lanjut.
+f. Menetapkan prosedur penanganan keterlambatan pengajuan atau pelengkapan dokumen secara adil, proporsional, dan berbasis bukti alasan keterlambatan.
+g. Mencatat riwayat status kelengkapan dokumen secara sistematis guna memastikan alur penelaahan klaim berjalan tertib sebelum dialirkan ke tahap N_1 – Cek Polis.
+h. Menegaskan prinsip penting bahwa status dokumen yang lengkap (Complete) berfungsi memperlancar alur pemeriksaan, namun dokumen lengkap BUKAN merupakan jaminan otomatis bahwa klaim pasti disetujui; keputusan persetujuan akhir tetap wajib melewati pengujian keabsahan polis, kewajaran medis, dan kalkulasi manfaat.
+
+3. RUANG LINGKUP
+Prosedur ini mencakup seluruh rangkaian tata kelola administrasi dokumen klaim reimbursement sejak pertama kali diterima, meliputi:
+a. Penerimaan pengajuan klaim dari peserta melalui kanal resmi (digital maupun fisik).
+b. Pencatatan tanggal dan waktu resmi pengajuan klaim (timestamping).
+c. Pemeriksaan batas waktu pengajuan berdasarkan ketentuan polis masing-masing peserta.
+d. Pemeriksaan kelengkapan dokumen administratif berdasarkan jenis pelayanan medis.
+e. Pemberitahuan kekurangan dokumen kepada peserta secara tertulis.
+f. Penerimaan dokumen tambahan yang diserahkan peserta beserta pencatatan tanggalnya.
+g. Pemeriksaan ulang terhadap dokumen yang telah dilengkapi.
+h. Permintaan klarifikasi tambahan apabila ditemukan ketidakjelasan medis atau administratif.
+i. Penanganan pengajuan atau pemenuhan berkas yang mengalami keterlambatan.
+j. Penerusan dokumen yang telah lengkap (Complete) ke proses pemeriksaan berikutnya pada simpul N_1.
+Keterkaitan dengan prosedur dalam korpus pengetahuan:
+- Keterkaitan dengan SOP_01: Menjadi acuan tata cara pengisian formulir, penyerahan bukti bayar, dan kanal intake pengajuan klaim di tahap N_0.
+- Keterkaitan dengan SOP_02: Menjadi rujukan pemeriksaan status keaktifan polis dan masa tunggu pada simpul N_1 setelah berkas dinyatakan lengkap secara administratif.
+- Keterkaitan dengan SOP_03: Menjadi acuan verifikasi rincian dokumen medis, resep obat, dan tata laksana klarifikasi medis jika ditemukan kejanggalan diagnosis (simpul N_2).
+- Keterkaitan dengan SOP_08: Menjadi landasan hak peserta untuk mengajukan keberatan apabila penolakan klaim disebabkan oleh sengketa batas waktu atau kelengkapan dokumen.
+- Keterkaitan dengan SOP_10: Menjadi fondasi awal data pendukung sebelum klaim disahkan pada tahap persetujuan akhir (N_4) dan dibayarkan pada tahap pencairan dana (N_5).
+
+4. DEFINISI ISTILAH
+Berikut adalah definisi istilah teknis yang digunakan dalam prosedur ini, dijelaskan dengan bahasa Indonesia sederhana:
+a. Batas Waktu Pengajuan Klaim (Claim Submission Deadline): Tenggat waktu yang ditentukan dalam ketentuan polis, dihitung sejak tanggal pengobatan selesai atau tanggal pasien keluar dari rumah sakit, di mana berkas klaim harus diserahkan kepada pihak asuransi.
+b. Pemberitahuan Klaim (Claim Notification): Informasi awal atau laporan tertulis yang disampaikan peserta mengenai terjadinya peristiwa sakit sebelum seluruh berkas fisik/digital lengkap diserahkan.
+c. Dokumen Persyaratan Wajib (Required Documents): Kumpulan berkas administratif, keuangan, dan medis yang wajib dilampirkan oleh peserta sesuai jenis klaim yang diajukan agar dapat diproses.
+d. Dokumen Belum Lengkap (Incomplete Documents): Kondisi berkas klaim yang telah diterima namun masih kekurangan satu atau beberapa dokumen persyaratan pokok (misal resume dokter belum ditandatangani atau kuitansi belum dilampirkan).
+e. Pemenuhan Dokumen (Document Completion): Proses penyerahan berkas susulan oleh peserta untuk melengkapi kekurangan dokumen yang diminta oleh penanggung.
+f. Dokumen Tambahan (Additional Documentation): Berkas pelengkap di luar dokumen standar yang diminta penanggung untuk memperjelas kronologi perawatan (seperti hasil laboratorium penunjang atau rincian obat farmasi).
+g. Permintaan Klarifikasi (Clarification Request): Surat atau permohonan resmi dari penanggung kepada pihak fasilitas kesehatan atau peserta untuk meminta penjelasan atas catatan medis atau rincian biaya yang belum jelas.
+h. Pengajuan Terlambat (Late Submission): Pengajuan klaim yang diserahkan melampaui batas waktu yang berlaku dalam ketentuan polis.
+i. Verifikasi Dokumen (Document Verification): Pemeriksaan keaslian, kejelasan teks, stempel resmi, tanda tangan dokter, dan kelengkapan berkas yang diserahkan.
+j. Status Kelengkapan Dokumen (Claim Document Status): Catatan status administratif yang menunjukkan posisi berkas dalam proses penapisan dokumen (seperti Submitted, Incomplete, atau Complete).
+
+5. KETENTUAN
+Kebijakan dan aturan operasional yang mendasari tata kelola batas waktu dan kelengkapan dokumen meliputi:
+a. Kepatuhan Batas Waktu Pengajuan: Pengajuan klaim harus mengikuti batas waktu yang tercantum dalam ketentuan polis masing-masing peserta atau parameter simulasi akademik yang digunakan.
+b. Pencatatan Tanggal Pengajuan: Tanggal pengajuan klaim harus dicatat secara akurat agar dapat digunakan untuk memeriksa kepatuhan batas waktu pengajuan.
+c. Penapisan Kelengkapan Mendahului Verifikasi: Dokumen yang diterima harus diperiksa kelengkapannya terlebih dahulu sebelum diteruskan ke tahap verifikasi lanjutan (N_1 dan N_2).
+d. Kewajiban Informasi Kekurangan Dokumen: Jika dokumen belum lengkap, peserta harus diberi informasi tertulis mengenai dokumen yang masih kurang secara jelas dan spesifik.
+e. Tenggat Pelengkapan Dokumen Administratif: Peserta dapat melengkapi dokumen sesuai batas waktu yang berlaku dalam simulasi.
+f. Pencatatan Dokumen Tambahan: Dokumen tambahan yang diterima harus dicatat tanggal penerimaannya dan digabungkan ke dalam berkas klaim terkait.
+g. Prosedur Klarifikasi Medis: Jika dokumen medis memerlukan klarifikasi, prosesnya harus mengikuti ketentuan yang relevan dalam SOP_03.
+h. Asas Pemeriksaan Keterlambatan: Keterlambatan pengajuan tidak boleh langsung dianggap sebagai alasan penolakan mutlak tanpa memeriksa ketentuan polis dan alasan keterlambatan peserta (seperti adanya keadaan kahar/force majeure, bencana alam, atau kondisi koma darurat yang didukung bukti resmi).
+i. Ketentuan Status Closed Without Prejudice: Jika dokumen tetap tidak dilengkapi sampai batas waktu yang ditentukan tanpa pemberitahuan dari peserta, status klaim dapat ditutup sementara secara administratif (Closed Without Prejudice) sesuai ketentuan polis. Penutupan administratif sementara ini BUKAN otomatis merupakan keputusan penolakan substantif terhadap isi klaim; berkas dapat dibuka kembali (reopened) apabila peserta mengajukan permohonan pembukaan kembali disertai kelengkapan dokumen yang disyaratkan dan alasan yang dapat diterima sesuai ketentuan polis.
+j. Dokumen Lengkap Bukan Jaminan Persetujuan: Dokumen yang telah lengkap tidak otomatis menjamin klaim pasti disetujui.
+k. Perlindungan Kerahasiaan Data: Semua informasi peserta dan dokumen medis harus dijaga kerahasiaannya sesuai peraturan perundang-undangan.
+l. Penyelarasan Batas Waktu Parameter Simulasi Akademik:
+   1) Parameter Batas Pelengkapan Dokumen Administratif (Konteks SOP_01): Sesuai dengan yang telah diselaraskan pada SOP_01, batas waktu untuk melengkapi kekurangan dokumen administratif yang pending ditetapkan maksimal 30 hari kalender sejak pemberitahuan diterbitkan.
+   2) Parameter Batas Waktu Klarifikasi Medis (Konteks SOP_03): Sesuai dengan SOP_03, batas waktu konfirmasi klarifikasi keraguan medis ke dokter penanggung jawab atau fasilitas kesehatan ditetapkan maksimal 14 hari kalender.
+   3) Batas Waktu Pengajuan Awal: Batas waktu penyerahan berkas awal mengacu pada ketentuan buku polis masing-masing peserta; adapun penggunaan contoh batas waktu penyerahan awal dalam skenario simulasi dimodelkan 30 hari kalender sejak pengobatan selesai sebagai parameter simulasi akademik.
+   Catatan penting: Kedua batas waktu ini tidak boleh disamakan karena tujuannya berbeda (30 hari untuk kelengkapan berkas administratif nasabah; 14 hari untuk konfirmasi teknis medis dokter/faskes). Seluruh angka hari ini merupakan PARAMETER SIMULASI AKADEMIK, bukan ketentuan universal untuk semua perusahaan asuransi.
+
+6. PROSEDUR
+Urutan langkah operasional pemeriksaan batas waktu dan penapisan kelengkapan berkas dilaksanakan melalui 15 langkah terperinci dalam 4 tahap berikut:
+
+--- TAHAP A: PENERIMAAN PENGAJUAN KLAIM (SIMPUL UCS: N_0) ---
+- Langkah 1 (Pengajuan Berkas oleh Peserta): Peserta mengajukan klaim melalui saluran pengajuan yang tersedia (portal digital nasabah atau loket kantor layanan).
+- Langkah 2 (Pencatatan Data Penerimaan): Petugas mencatat identitas peserta, nomor klaim (Claim ID), tanggal pengajuan, serta tanggal kejadian atau tanggal perawatan medis yang relevan. Status berkas tercatat sebagai "Submitted".
+- Langkah 3 (Pemeriksaan Batas Waktu Pengajuan): Petugas memeriksa batas waktu pengajuan berdasarkan ketentuan polis atau parameter simulasi (membandingkan tanggal selesai perawatan dengan tanggal penerimaan berkas).
+- Langkah 4 (Pemeriksaan Dokumen Administratif Awal): Petugas memeriksa kelengkapan dokumen administratif berdasarkan jenis klaim (formulir klaim, identitas diri, bukti pembayaran, rincian tagihan, dan resume medis). Status berkas tercatat sebagai "Under Document Review".
+
+--- TAHAP B: PEMERIKSAAN KELENGKAPAN DOKUMEN ---
+- Langkah 5 (Penerusan Berkas Lengkap): Jika dokumen lengkap dan memenuhi checklist, berkas dinyatakan berstatus "Complete" dan pengajuan langsung diteruskan ke proses pemeriksaan berikutnya sesuai SOP_02 dan SOP_03.
+- Langkah 6 (Pencatatan Kekurangan Dokumen): Jika dokumen belum lengkap, petugas mencatat secara spesifik dokumen apa saja yang masih kurang dan memperbarui status menjadi "Incomplete".
+- Langkah 7 (Pemberitahuan kepada Peserta): Petugas mengirim pemberitahuan resmi kepada peserta mengenai dokumen yang harus dilengkapi beserta batas waktu pelengkapan 30 hari kalender (parameter simulasi SOP_01). Status berkas tercatat sebagai "Waiting for Documents".
+- Langkah 8 (Pengiriman Dokumen Tambahan): Peserta mengirim dokumen tambahan sesuai batas waktu pelengkapan dokumen.
+- Langkah 9 (Pemeriksaan Dokumen Tambahan): Petugas mencatat tanggal penerimaan dokumen tambahan dan memeriksa kembali kelengkapannya.
+
+--- TAHAP C: KLARIFIKASI DAN PENANGANAN KETERLAMBATAN ---
+- Langkah 10 (Identifikasi Kebutuhan Klarifikasi): Jika terdapat informasi medis atau administratif yang belum jelas, status berkas diubah menjadi "Clarification Required" dan petugas meminta klarifikasi sesuai prosedur yang relevan.
+- Langkah 11 (Pelaksanaan Klarifikasi Medis Sesuai SOP_03): Jika klarifikasi berkaitan dengan dokumen medis atau tagihan rumah sakit, proses mengikuti SOP_03 dengan batas waktu respons 14 hari kalender (parameter simulasi SOP_03). Status berkas menjadi "Waiting for Documents (Medical)".
+- Langkah 12 (Penanganan Kasus Pengajuan Terlambat): Jika peserta terlambat mengajukan klaim atau melengkapi dokumen, petugas memeriksa ketentuan polis, alasan keterlambatan, dan bukti pendukung (misalnya bukti force majeure) sebelum menentukan tindak lanjut, dengan status berkas "Late Submission" atau "Escalated for Review".
+- Langkah 13 (Tindak Lanjut Dokumen Tidak Dilengkapi): Jika dokumen tidak dilengkapi sampai batas waktu simulasi 30 hari kalender tanpa konfirmasi dari peserta, petugas mencatat status dan alasan tindak lanjut, memperbarui status menjadi "Closed Without Prejudice", serta menyampaikan pemberitahuan penutupan administratif sementara kepada peserta.
+
+--- TAHAP D: PENUTUPAN PEMERIKSAAN DOKUMEN ---
+- Langkah 14 (Pembaruan Status Menjadi Complete): Jika dokumen sudah lengkap dan informasi yang dibutuhkan tersedia secara sah, petugas memperbarui status dokumen menjadi "Complete".
+- Langkah 15 (Penerusan ke Tahap Verifikasi Lanjutan): Petugas meneruskan pengajuan berstatus Complete ke tahapan verifikasi klaim berikutnya (N_1 – Cek Polis, dilanjutkan ke N_2, N_3, N_4, dan N_5 secara runtut).
+
+Rangkuman Pembedaan 8 Status Dokumen:
+1) Submitted: Klaim sudah diajukan dan tercatat di sistem.
+2) Under Document Review: Dokumen sedang diperiksa kelengkapan fisik dan tenggat waktunya.
+3) Incomplete: Dokumen belum lengkap berdasarkan checklist wajib.
+4) Waiting for Documents: Menunggu dokumen tambahan dari peserta (batas simulasi 30 hari).
+5) Clarification Required: Membutuhkan klarifikasi medis/administratif dari faskes (batas simulasi 14 hari).
+6) Complete: Dokumen telah lengkap dan siap diverifikasi substansinya.
+7) Late Submission: Pengajuan melewati batas waktu yang berlaku dalam ketentuan polis.
+8) Escalated for Review: Membutuhkan pemeriksaan lebih lanjut oleh komite atau pejabat berwenang.
+
+7. DOKUMEN PENDUKUNG
+Dokumen yang dikelola dan diarsipkan dalam prosedur ini meliputi:
+a. Formulir pengajuan klaim resmi yang telah diisi lengkap dan ditandatangani.
+b. Kartu peserta atau identitas kepesertaan asuransi (fisik/digital).
+c. Salinan kartu identitas sah peserta/pemohon (KTP/Paspor/KIA).
+d. Informasi ikhtisar polis nasabah yang memuat ketentuan batas waktu pengajuan.
+e. Kuitansi atau bukti pembayaran sesuai ketentuan yang berlaku dari fasilitas kesehatan.
+f. Rincian tagihan rumah sakit (itemized hospital bill).
+g. Resume medis dokter yang mencantumkan diagnosis dan tanggal perawatan.
+h. Resep obat dan hasil pemeriksaan penunjang (lab/radiologi) jika diperlukan.
+i. Surat keterangan atau dokumen tambahan yang mendukung alasan pengajuan.
+j. Surat pemberitahuan kekurangan dokumen (Incomplete Document Notice).
+k. Bukti pengiriman atau tanda terima dokumen tambahan.
+l. Formulir klarifikasi medis atau administratif.
+m. Catatan sistem mengenai tanggal dan waktu penerimaan dokumen (audit trail timestamp).
+
+8. CONTOH KASUS
+
+Kasus 1 – Dokumen Klaim Lengkap (Alur Standar Tepat Waktu):
+- Permasalahan: Ibu Rina mengajukan klaim reimbursement pengobatan rawat jalan pada tanggal 12 Mei 2026 (7 hari setelah berobat) dengan melampirkan formulir klaim, kuitansi atau bukti pembayaran sesuai ketentuan yang berlaku sebesar Rp850.000,-, rincian tagihan, dan resume medis yang diperlukan.
+- Pemeriksaan Dokumen: Petugas mencatat tanggal pengajuan dan memeriksa berkas berdasarkan checklist wajib. Seluruh dokumen yang dipersyaratkan dinyatakan telah tersedia dan memenuhi syarat administratif.
+- Alur Status: Submitted → Under Document Review → Complete.
+- Tindakan Lanjutan: Berkas dinyatakan lengkap (Complete) dan langsung diteruskan ke proses pemeriksaan berikutnya pada simpul N_1 – Cek Polis sesuai SOP_02.
+
+Kasus 2 – Dokumen Klaim Belum Lengkap (Penyelarasan Batas 30 Hari SOP_01):
+- Permasalahan: Bapak Andi mengajukan klaim biaya rawat jalan sebesar Rp2.100.000,- pada tanggal 20 April 2026, namun belum menyertakan hasil pemeriksaan laboratorium yang diperlukan untuk memvalidasi tagihan tes darah.
+- Pemeriksaan Dokumen:
+  1) Petugas mencatat berkas sebagai "Submitted", kemudian saat ditelaah status menjadi "Incomplete".
+  2) Petugas mengirim pemberitahuan kekurangan dokumen kepada Bapak Andi dan memperbarui status menjadi "Waiting for Documents" dengan batas waktu 30 hari kalender (parameter simulasi yang diselaraskan dengan SOP_01).
+  3) Pada tanggal 28 April 2026 (8 hari setelah pemberitahuan), Bapak Andi mengirimkan dokumen tambahan berupa lembar hasil laboratorium resmi dari rumah sakit.
+  4) Petugas mencatat tanggal penerimaan dokumen tambahan dan memeriksa kembali kelengkapannya. Dokumen diverifikasi lengkap.
+- Alur Status: Submitted → Incomplete → Waiting for Documents → Complete.
+- Tindakan Lanjutan: Dokumen diperiksa kembali dan pengajuan diteruskan ke tahap N_1 – Cek Polis dan N_2 – Verifikasi Dokumen Medis.
+
+Kasus 3 – Klarifikasi Medis dan Keterlambatan Informasi (Penyelarasan Batas 14 Hari SOP_03):
+- Permasalahan: Ibu Sari telah mengajukan klaim rawat inap dengan diagnosis vertigo dan sakit kepala sebesar Rp6.500.000,-. Dokumen administratif awal telah diserahkan, namun terdapat catatan riwayat keluhan medis yang belum jelas dan berpotensi memerlukan penegasan apakah berkaitan dengan kondisi medis masa lalu.
+- Pemeriksaan Dokumen & Klarifikasi:
+  1) Dokumen awal diperiksa (Under Document Review), kemudian petugas mengubah status menjadi "Clarification Required" untuk meminta klarifikasi medis tambahan kepada dokter spesialis yang merawat di rumah sakit.
+  2) Proses klarifikasi medis menggunakan parameter simulasi 14 hari kalender sesuai konteks SOP_03, dan status berkas dicatat sebagai "Waiting for Documents (Medical)".
+  3) Pihak penanggung tidak langsung menyatakan klaim ditolak hanya karena klarifikasi belum selesai; proses ditahan sementara secara objektif untuk menunggu penjelasan medis.
+  4) Pada hari ke-6, dokter penanggung jawab rumah sakit memberikan surat penjelasan medis yang mengonfirmasi bahwa kondisi tersebut adalah episode vertigo posisi paroksismal jinak akut baru yang tidak berkaitan dengan penyakit kronis sebelumnya.
+- Alur Status: Under Document Review → Clarification Required → Waiting for Documents → Complete.
+- Tindakan Lanjutan: Setelah klarifikasi medis selesai dan dokumen lengkap, status dokumen diperbarui menjadi "Complete", kemudian pengajuan diteruskan ke tahap N_1 – Cek Polis untuk pemeriksaan keabsahan polis dan masa tunggu, sebelum berlanjut ke tahapan verifikasi berikutnya (N_2, N_3, N_4, dan N_5) secara runtut sesuai alur sistem.
+
+Catatan Penting: Seluruh batas waktu (30 hari pelengkapan dokumen dan 14 hari klarifikasi medis), estimasi biaya, dan skenario kasus di atas merupakan PARAMETER SIMULASI AKADEMIK untuk pembelajaran sistem AI, bukan ketentuan mutlak yang berlaku pada seluruh entitas asuransi.
+
+9. SUMBER INFORMASI
+- Status Dokumen: SIMULASI AKADEMIK. Dokumen ini disusun khusus sebagai bahan korpus basis pengetahuan dalam rangka penyelesaian Tugas Besar Mata Kuliah Kecerdasan Buatan (10S3001), Program Studi Sarjana Sistem Informasi, FITE, Institut Teknologi Del.
+- Disclaimer Keaslian: Dokumen ini BUKAN Standard Operating Procedure (SOP) resmi milik PT Asuransi Allianz Life Indonesia. Batas waktu pelaporan, masa tenggang dokumen pending, dan kebijakan administrasi pada industri asuransi nyata sepenuhnya mengacu pada buku polis dan tata kelola internal perusahaan penanggung masing-masing.
+- Rujukan Regulasi Resmi dan Konsistensi Korpus:
+  1) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+  2) Peraturan Otoritas Jasa Keuangan (POJK) Nomor 69/POJK.05/2016 tentang Penyelenggaraan Usaha Perusahaan Asuransi, Perusahaan Asuransi Syariah, Perusahaan Reasuransi, dan Perusahaan Reasuransi Syariah, sebagaimana telah diubah dengan POJK Nomor 36 Tahun 2024.
+  3) Standar Operasional Penerimaan Dokumen dan Layanan Klaim Asosiasi Asuransi Jiwa Indonesia (AAJI).
+  4) Keterkaitan Harmonis Korpus Proyek Terpadu:
+     - SOP_01: Prosedur Pengajuan Klaim Asuransi Kesehatan (N_0 - Intake Berkas).
+     - SOP_02: Prosedur Pemeriksaan Status Polis dan Masa Tunggu (N_1 - Verifikasi Polis).
+     - SOP_03: Prosedur Verifikasi Dokumen Medis dan Tagihan Rumah Sakit (N_2 - Telaah Medis).
+     - SOP_08: Prosedur Pengajuan Keberatan atas Penolakan Klaim (Banding N_4).
+     - SOP_10: Prosedur Persetujuan Akhir dan Pembayaran Klaim (Otorisasi N_4 & Pencairan N_5).
+     - Ketentuan Buku Polis Asuransi Kesehatan masing-masing peserta sebagai rujukan utama hak dan kewajiban pertanggungan.
+================================================================================
